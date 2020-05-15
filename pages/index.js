@@ -1,12 +1,12 @@
 import React from "react"
 import Link from "next/link"
 import Layout from "../components/layout"
-//import SEO from "../components/seo"
+import SEO from "../components/seo"
 
 const IndexPage = () => {
   return (
     <>
-      {/* <SEO title="Home" /> */}
+      <SEO title="Home" />
       <Layout className="max-w-2xl text-lg">
         <p className="mt-8">
           Looking for someone to help you build a JAMstack website or

@@ -1,3 +1,91 @@
 @tailwind base;
+
+html,
+body {
+  @apply bg-gray-50;
+}
+
+p a,
+footer a {
+  @apply text-key;
+}
+
 @tailwind components;
+
+/* purgecss start ignore */
+.markdown > * {
+  @apply mt-4;
+}
+
+.markdown a {
+  @apply font-semibold;
+}
+
+.markdown ol {
+  @apply list-decimal list-inside;
+}
+
+.markdown ul {
+  @apply list-inside list-disc;
+}
+
+.markdown pre {
+  @apply my-8 text-base leading-normal text-gray-100 bg-gray-900;
+}
+
+.markdown h2 {
+  @apply mt-16 text-xl font-bold;
+}
+
+.rich-text {
+  & p {
+    @apply mt-6;
+  }
+
+  & pre,
+  & code {
+    @apply px-1 py-px mt-6 leading-normal break-words whitespace-pre-wrap bg-gray-900 rounded text-gray-50;
+  }
+
+  & pre {
+    @apply p-4;
+  }
+
+  & * + h1,
+  & * + h2 {
+    @apply mt-20;
+  }
+
+  & h1,
+  & h2 {
+    @apply font-bold;
+  }
+
+  & h1 {
+    @apply text-4xl;
+  }
+  & h2 {
+    @apply text-2xl;
+  }
+}
+
+.primary,
+.secondary {
+  @apply fill-current;
+}
+
+.primary {
+  @apply text-indigo-300;
+}
+
+.secondary {
+  @apply text-indigo-700;
+}
+
+path.secondary {
+  @apply text-gray-900;
+}
+/* purgecss end ignore */
+
 @tailwind utilities;
+
