@@ -1,14 +1,16 @@
 # Next Blog
 
-## Blog
+## TODO
+
+### Blog
 
 - [ ] Setup MDX posts
 
-## Redesign
+### Redesign
 
 - [ ] Mimic Paco's site
 
-## SEO
+### SEO
 
 - [ ] Setup Fathom
 - [ ] Setup Statickit
