@@ -37,11 +37,9 @@ const Header = () => {
               onClick={handleMenuClick}
             >
               {!isOpen ? (
-                +
-                {/* <MenuIcon className="w-8 h-8" /> */}
+                'Open'
               ) : (
-                -
-                {/* <CloseIcon className="w-8 h-8" /> */}
+                'Close'
               )}
             </button>
           </div>
