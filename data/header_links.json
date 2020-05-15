@@ -1,0 +1,19 @@
+[
+  {
+    "title": "Blog",
+    "to": "/writing"
+  },
+  {
+    "title": "OmniFocus",
+    "to": "/focusing"
+  },
+  {
+    "title": "Contact",
+    "to": "/available"
+  },
+  {
+    "title": "Patronage",
+    "to": "/grateful"
+  }
+]
+
