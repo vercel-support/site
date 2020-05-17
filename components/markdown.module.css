@@ -1,5 +1,6 @@
+/* purgecss start ignore */
 .markdown > * {
-  @apply mt-4;
+  @apply mt-4 text-lg;
 }
 
 .markdown a {
@@ -11,45 +12,24 @@
 }
 
 .markdown ul {
-  @apply list-inside list-disc;
+  @apply list-disc list-inside;
 }
 
 .markdown pre {
-  @apply my-8 text-base leading-normal text-gray-100 bg-gray-900;
+  @apply my-8 leading-normal text-gray-100 bg-gray-900;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3 {
+  @apply mt-16 font-bold;
+}
+
+.markdown h1 {
+  @apply text-3xl;
 }
 
 .markdown h2 {
-  @apply mt-16 text-xl font-bold;
+  @apply text-xl;
 }
-
-.rich-text {
-  & p {
-    @apply mt-6;
-  }
-
-  & pre,
-  & code {
-    @apply px-1 py-px mt-6 leading-normal break-words whitespace-pre-wrap bg-gray-900 rounded text-gray-50;
-  }
-
-  & pre {
-    @apply p-4;
-  }
-
-  & * + h1,
-  & * + h2 {
-    @apply mt-20;
-  }
-
-  & h1,
-  & h2 {
-    @apply font-bold;
-  }
-
-  & h1 {
-    @apply text-4xl;
-  }
-  & h2 {
-    @apply text-2xl;
-  }
-}
+/* purgecss end ignore */

@@ -114,6 +114,6 @@ pre {
   font-style: italic;
 }
 code.language-text {
-  @apply text-gray-900 bg-gray-50 font-normal whitespace-pre-wrap;
+  @apply text-gray-900 bg-gray-100 font-normal whitespace-pre-wrap;
 }
 /* purgecss end ignore */

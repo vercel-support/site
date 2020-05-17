@@ -1,6 +1,6 @@
 ---
 title: Learning Rambda(x)
-slug: learning-rambda
+slug: learning-rambda-x
 description: On-going journey to learn all the functions in Rambda(x)
 image: "./black-lamb.jpg"
 date: 2020-01-22T15:00:00.000+00:00

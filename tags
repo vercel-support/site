@@ -5,7 +5,7 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
 Cta.propTypes.href	components/cta.js	/^  href: PropTypes.string,$/;"	p
-Layout.defaultProps.className	components/layout.js	/^  className: "container",$/;"	p
+MyApp	pages/_app.js	/^function MyApp({ Component, pageProps }) {$/;"	f
 PostTags.defaultProps.tags	components/post_tags.js	/^  tags: [],$/;"	p
 __webpack_require__	.next/static/runtime/webpack.js	/^\/******\/ 	function __webpack_require__(moduleId) {$/;"	f
 __webpack_require__.d	.next/static/runtime/webpack.js	/^\/******\/ 	__webpack_require__.d = function(exports, name, getter) {$/;"	f
@@ -44,7 +44,7 @@ hotCreateModule.hot._acceptedDependencies	.next/static/runtime/webpack.js	/^\/**
 hotCreateRequire	.next/static/runtime/webpack.js	/^\/******\/ 	function hotCreateRequire(moduleId) {$/;"	f
 hotCreateRequire.ObjectFactory	.next/static/runtime/webpack.js	/^\/******\/ 		var ObjectFactory = function ObjectFactory(name) {$/;"	f
 hotCurrentChildModule	.next/static/runtime/webpack.js	/^\/******\/ 	var hotCurrentChildModule;$/;"	v
-hotCurrentHash	.next/static/runtime/webpack.js	/^\/******\/ 	var hotCurrentHash = "038f61e3edd14f52f7c1";$/;"	v
+hotCurrentHash	.next/static/runtime/webpack.js	/^\/******\/ 	var hotCurrentHash = "c43d2fc721bf35ee8405";$/;"	v
 hotCurrentParents	.next/static/runtime/webpack.js	/^\/******\/ 	var hotCurrentParents = [];$/;"	v
 hotCurrentParentsTemp	.next/static/runtime/webpack.js	/^\/******\/ 	var hotCurrentParentsTemp = [];$/;"	v
 hotDeferred	.next/static/runtime/webpack.js	/^\/******\/ 	var hotDeferred;$/;"	v

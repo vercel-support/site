@@ -7,7 +7,7 @@ import HeaderLinks from "../data/header_links.json"
 
 const links = HeaderLinks
 
-const Header = () => {
+export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
   //const trackMobileMenuGoal = useGoal("RYQBIEQE")
 
@@ -80,5 +80,3 @@ const Header = () => {
     </header>
   )
 }
-
-export default Header

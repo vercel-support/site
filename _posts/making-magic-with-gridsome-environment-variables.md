@@ -1,6 +1,6 @@
 ---
 title: Making Magic with Gridsome Environment Variables
-slug: magic-gridsome-environment-variables
+slug: making-magic-with-gridsome-environment-variables
 description: You can do some pretty interesting things with GRIDSOME environment variables.
 image: "./grant-ritchie-x1w_Q78xNEY-unsplash.jpg"
 date: 2019-12-08T13:00:00.000+00:00

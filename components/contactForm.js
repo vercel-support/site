@@ -1,7 +1,6 @@
-import React from "react"
 import { useForm } from "@statickit/react"
 
-const ContactForm = () => {
+export default function ContactForm  () {
   const [state, handleSubmit] = useForm("contact-form")
 
   if (state.succeeded) {
@@ -63,5 +62,3 @@ const ContactForm = () => {
     </form>
   )
 }
-
-export default ContactForm

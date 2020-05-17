@@ -1,16 +1,16 @@
 const fancy = require("tailwindcss-plugin-fancy")
+// const customForms = require('@tailwindcss/custom-forms')
 const defaultTheme = require("tailwindcss/defaultTheme")
 const whitelist = [/markdown/, /rich-text/]
 
 module.exports = {
   purge: {
-    mode: "all",
     options: {
       keyframes: true,
       whitelistPatterns: whitelist,
       whitelistPatternsChildren: whitelist,
     },
-    content: ["./components/**/*.js", "./pages/**/*.js", "./pages/**/*.mdx", "./components/**/*.mdx"],
+    content: ["./components/**/*.js", "./pages/**/*.js", "./pages/**/*.mdx"],
   },
 
   theme: {
@@ -42,6 +42,7 @@ module.exports = {
         },
       })
     },
+    // customForms
     fancy,
   ],
 }

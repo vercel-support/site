@@ -1,13 +1,12 @@
-import React from "react"
 import Link from "next/link"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const IndexPage = () => {
+export default function Index () {
   return (
     <>
-      <SEO title="Home" />
-      <Layout className="max-w-2xl text-lg">
+      <SEO title="Home" description="Brandon's new Next.js blog." />
+      <Layout className="max-w-2xl">
         <p className="mt-8">
           Looking for someone to help you build a JAMstack website or
           frontend-heavy application? You may not even need a backend. If you
@@ -93,5 +92,3 @@ const IndexPage = () => {
     </>
   )
 }
-
-export default IndexPage

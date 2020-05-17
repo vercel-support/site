@@ -1,3 +1,5 @@
+import cn from 'classnames'
+import styles from '../components/markdown.module.css'
 import SEO from '../components/seo.js'
 import Cta from '../components/cta.js'
 import Layout from '../components/layout.js'
@@ -5,10 +7,9 @@ import Layout from '../components/layout.js'
 <Layout>
 <SEO title="Focusing" description="Overview of Brandon Pittman's AppleScript library for OmniFocus." />
 
-<div className="max-w-2xl mx-auto rich-text">
+<div className={styles["markdown"] + " max-w-2xl mx-auto rich-text"}>
 
 # The OmniFocus AppleScript Library
-
 
 I had previously written an OmniFocus library using JavaScript for
 Automation, but it's got issues that vanilla AppleScript does not.

@@ -1,35 +1,22 @@
 import React from "react"
-import { ReactComponent as TwitterIcon } from "../images/icon-twitter.svg"
-import { ReactComponent as GithubIcon } from "../images/icon-github.svg"
-import { ReactComponent as DribbbleIcon } from "../images/icon-dribbble.svg"
-import Image from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
-import useGoal from "../hooks/use-goal"
+import { trackGoal } from 'fathom-client'
+import TwitterIcon from "../public/assets/images/icon-twitter.svg"
+import GithubIcon from "../public/assets/images/icon-github.svg"
+import DribbbleIcon from "../public/assets/images/icon-dribbble.svg"
+import cn from 'classnames'
 
-const Author = () => {
-  const trackTwitterGoal = useGoal("IFOPB1RM", true)
-  const trackGithubGoal = useGoal("JOZATR2E")
-  const trackDribbbleGoal = useGoal("EGN48GIU")
-
-  const query = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "brandon.png" }) {
-        childImageSharp {
-          fixed(width: 128) {
-            ...GatsbyImageSharpFixed_withWebp
-          }
-        }
-      }
-    }
-  `)
+export default function Author ({className}) {
+  const trackTwitterGoal = () => trackGoal("IFOPB1RM", 0)
+  const trackGithubGoal = () => trackGoal("JOZATR2E", 0)
+  const trackDribbbleGoal = () => trackGoal("EGN48GIU", 0)
 
   return (
-    <aside className="max-w-lg mx-auto">
+    <aside className={cn(className, "max-w-lg mx-auto")}>
       <div className="flex justify-center text-gray-900">
-        <Image
+        <img
           alt="Brandon Pittman"
           className="shadow-outline-gray w-32 h-32 rounded-full"
-          fixed={query.file.childImageSharp.fixed}
+          src="/assets/images/brandon.png"
         />
       </div>
 
@@ -86,34 +73,34 @@ const Author = () => {
 
       <div className="flex justify-center mt-6">
         <a
+          onClick={trackTwitterGoal}
           href="http://twitter.com/brandonpittman"
           target="_blank"
           rel="noopener noreferrer"
         >
           <TwitterIcon
-            onClick={trackTwitterGoal}
             className="w-8 h-8 mr-4 text-blue-400 fill-current"
           />
         </a>
 
         <a
+          onClick={trackGithubGoal}
           href="http://github.com/brandonpittman"
           target="_blank"
           rel="noopener noreferrer"
         >
           <GithubIcon
-            onClick={trackGithubGoal}
             className="w-8 h-8 mr-4 text-gray-900 fill-current"
           />
         </a>
 
         <a
+          onClick={trackDribbbleGoal}
           href="http://dribbble.com/pittman"
           target="_blank"
           rel="noopener noreferrer"
         >
           <DribbbleIcon
-            onClick={trackDribbbleGoal}
             className="w-8 h-8 mr-4 text-gray-900 fill-current"
           />
         </a>
@@ -121,5 +108,3 @@ const Author = () => {
     </aside>
   )
 }
-
-export default Author
