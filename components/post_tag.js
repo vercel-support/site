@@ -1,5 +1,5 @@
 import React from "react"
-// import { ReactComponent as TagIcon } from "../images/icon-tag.svg"
+import TagIcon from "../public/assets/images/icon-tag.svg"
 import Link from 'next/link'
 import _ from "lodash"
 
@@ -14,7 +14,7 @@ const PostTag = ({ tag }) => {
       >
         <a className="flex items-end text-gray-900 hover:opacity-75"
           >
-          <img src="/assets/images/icon-tag.svg" className="block w-4 h-4 mr-1" />
+          <TagIcon className="block w-4 h-4 mr-1" />
           {tag}
         </a>
       </Link>
