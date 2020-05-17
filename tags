@@ -6,7 +6,6 @@
 !_TAG_PROGRAM_VERSION	5.8	//
 Cta.propTypes.href	components/cta.js	/^  href: PropTypes.string,$/;"	p
 MyApp	pages/_app.js	/^function MyApp({ Component, pageProps }) {$/;"	f
-PostTags.defaultProps.tags	components/post_tags.js	/^  tags: [],$/;"	p
 __webpack_require__	.next/static/runtime/webpack.js	/^\/******\/ 	function __webpack_require__(moduleId) {$/;"	f
 __webpack_require__.d	.next/static/runtime/webpack.js	/^\/******\/ 	__webpack_require__.d = function(exports, name, getter) {$/;"	f
 __webpack_require__.e	.next/static/runtime/webpack.js	/^\/******\/ 	__webpack_require__.e = function requireEnsure(chunkId) {$/;"	f
@@ -29,7 +28,6 @@ fn	.next/static/runtime/webpack.js	/^\/******\/ 		var fn = function(request) {$/
 fn.e	.next/static/runtime/webpack.js	/^\/******\/ 		fn.e = function(chunkId) {$/;"	f
 fn.e.finishChunkLoading	.next/static/runtime/webpack.js	/^\/******\/ 			function finishChunkLoading() {$/;"	f
 fn.t	.next/static/runtime/webpack.js	/^\/******\/ 		fn.t = function(value, mode) {$/;"	f
-function.isOverLimit	components/post_tags.js	/^  function isOverLimit() {$/;"	f
 hotAddUpdateChunk	.next/static/runtime/webpack.js	/^\/******\/ 	function hotAddUpdateChunk(chunkId, moreModules) {$/;"	f
 hotApply	.next/static/runtime/webpack.js	/^\/******\/ 	function hotApply(options) {$/;"	f
 hotApplyInternal	.next/static/runtime/webpack.js	/^\/******\/ 	function hotApplyInternal(options) {$/;"	f
@@ -44,7 +42,7 @@ hotCreateModule.hot._acceptedDependencies	.next/static/runtime/webpack.js	/^\/**
 hotCreateRequire	.next/static/runtime/webpack.js	/^\/******\/ 	function hotCreateRequire(moduleId) {$/;"	f
 hotCreateRequire.ObjectFactory	.next/static/runtime/webpack.js	/^\/******\/ 		var ObjectFactory = function ObjectFactory(name) {$/;"	f
 hotCurrentChildModule	.next/static/runtime/webpack.js	/^\/******\/ 	var hotCurrentChildModule;$/;"	v
-hotCurrentHash	.next/static/runtime/webpack.js	/^\/******\/ 	var hotCurrentHash = "c43d2fc721bf35ee8405";$/;"	v
+hotCurrentHash	.next/static/runtime/webpack.js	/^\/******\/ 	var hotCurrentHash = "4dfefbba8b234e4afc2f";$/;"	v
 hotCurrentParents	.next/static/runtime/webpack.js	/^\/******\/ 	var hotCurrentParents = [];$/;"	v
 hotCurrentParentsTemp	.next/static/runtime/webpack.js	/^\/******\/ 	var hotCurrentParentsTemp = [];$/;"	v
 hotDeferred	.next/static/runtime/webpack.js	/^\/******\/ 	var hotDeferred;$/;"	v
@@ -61,8 +59,10 @@ hotUpdateDownloaded	.next/static/runtime/webpack.js	/^\/******\/ 	function hotUp
 hotWaitingFiles	.next/static/runtime/webpack.js	/^\/******\/ 	var hotWaitingFiles = 0;$/;"	v
 idx	.next/static/runtime/webpack.js	/^\/******\/ 		var idx;$/;"	v
 installedChunks.static/runtime/webpack.js	.next/static/runtime/webpack.js	/^\/******\/ 		"static\/runtime\/webpack.js": 0$/;"	p
+isOverLimit	components/post_tags.js	/^  function isOverLimit() {$/;"	f
 jsonpScriptSrc	.next/static/runtime/webpack.js	/^\/******\/ 	function jsonpScriptSrc(chunkId) {$/;"	f
 module.exports.plugins	postcss.config.js	/^  plugins: [$/;"	p
+module.exports.purge	tailwind.config.js	/^  purge: {$/;"	p
 moduleId	.next/static/runtime/webpack.js	/^\/******\/ 		var moduleId, chunkId, i = 0, resolves = [];$/;"	v
 moduleOutdatedDependencies	.next/static/runtime/webpack.js	/^\/******\/ 		var moduleOutdatedDependencies;$/;"	v
 moreModules	.next/static/runtime/webpack.js	/^\/******\/ 		var moreModules = data[1];$/;"	v

@@ -2,7 +2,7 @@
 date: 2019-02-02
 title: Vue Watchers and SSR
 slug: vue-watchers-and-ssr
-image: "./sad-cat.jpg"
+image: "/assets/posts/sad-cat.jpg"
 description: "How to handle Vue watchers with Gridsome."
 tags: ['javascript','vue','gridsome']
 icon: code

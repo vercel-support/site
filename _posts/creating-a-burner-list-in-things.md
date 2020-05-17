@@ -2,7 +2,7 @@
 title: Creating a Burner List in Things
 slug: creating-a-burner-list-in-things
 description: Adapting Jake Knapp's Burner List to work with Things' Today list.
-image: "./1*kow_oGdYNmcZFwMDQwVAGQ.png"
+image: "/assets/posts/1*kow_oGdYNmcZFwMDQwVAGQ.png"
 date: 2020-01-03T00:00:00+09:00
 tags:
 - macOS

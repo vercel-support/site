@@ -5,7 +5,7 @@ date: 2019-10-30
 tags: ["svelte", "vue", "tailwind", "purgecss"]
 category: Blog Post
 description: "Lured by the dark side of Svelte.js, I leave the comfy confines of Vue."
-image: "./blur.jpg"
+image: "/assets/posts/blur.jpg"
 ---
 
 Don't get me wrong—I love Vue. But I can't help getting excited by shining new

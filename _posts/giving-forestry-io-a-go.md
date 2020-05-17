@@ -2,7 +2,7 @@
 title: Giving Forestry.io a Go
 slug: giving-forestry-io-a-go
 description: The one where I check out another headless CMS, for the second time.
-image: "./sebastian-unrau-sp-p7uuT0tw-unsplash.jpg"
+image: "/assets/posts/sebastian-unrau-sp-p7uuT0tw-unsplash.jpg"
 date: 2019-12-05T17:00:00+09:00
 tags:
 - jamstack

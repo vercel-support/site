@@ -1,20 +1,21 @@
 import PostTag from "../components/post_tag"
-// import { ReactComponent as HorizontalDotsIcon } from "../images/icon-dots-horizontal.svg"
-import React, { useState } from "react"
+import HorizontalDotsIcon from "../public/assets/images/icon-dots-horizontal.svg"
+import React, { useMemo, useState } from "react"
 
-const PostTags = ({ tags, limit }) => {
+export default function PostTags ({ tags, limit }) {
   const [isFullDisplay, setIsFullDisplay] = useState(false)
+  const pageTags = useMemo(() => JSON.parse(tags))
 
   function displayedTags() {
     if (isFullDisplay) {
-      return tags
+      return pageTags
     }
 
-    return tags.slice(0, 2)
+    return pageTags.slice(0, 2)
   }
 
   function isOverLimit() {
-    return tags.length > limit && !isFullDisplay
+    return pageTags.length > limit && !isFullDisplay
   }
 
   return (
@@ -29,17 +30,10 @@ const PostTags = ({ tags, limit }) => {
             onClick={() => setIsFullDisplay(true)}
           >
             <img src="/assets/images/icon-dots-horizontal.svg" alt="" />
-            {/* <HorizontalDotsIcon /> */}
+            <HorizontalDotsIcon />
           </button>
         </li>
       )}
     </ul>
   )
 }
-
-PostTags.defaultProps = {
-  tags: [],
-  limit: 2,
-}
-
-export default PostTags

@@ -1,7 +1,21 @@
 const fancy = require("tailwindcss-plugin-fancy")
-// const customForms = require('@tailwindcss/custom-forms')
+const customForms = require('@tailwindcss/custom-forms')
 const defaultTheme = require("tailwindcss/defaultTheme")
 const whitelist = [/markdown/, /rich-text/]
+
+const utilities = {
+  ".visuallyhidden": {
+    position: "absolute",
+    top: "0",
+    left: "0",
+    width: "100%",
+    height: "100%",
+    opacity: "0",
+    overflow: "hidden",
+    textIndent: "-9999px",
+    zIndex: "0",
+  },
+};
 
 module.exports = {
   purge: {
@@ -28,7 +42,8 @@ module.exports = {
   variants: {},
 
   plugins: [
-    function ({ addBase }) {
+    function ({ addBase, addUtilities }) {
+      addUtilities(utilities),
       addBase({
         ".markdown": {
           "img, pre": {
@@ -42,7 +57,7 @@ module.exports = {
         },
       })
     },
-    // customForms
-    fancy,
+    customForms
+    //fancy,
   ],
 }

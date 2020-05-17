@@ -3,11 +3,15 @@ import Author from "../../components/author"
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 import markdownToHtml from "../../lib/markdownToHtml";
 import styles from "../../components/markdown.module.css";
+import PostMeta from "../../components/post_meta"
 
 export default function Post({ post }) {
   return (
     <Layout>
       <div className="max-w-2xl mx-auto">
+        <h1 className="font-bold text-3xl">{post.title}</h1>
+        <PostMeta post={post}/>
+        <div className="my-8"><img src={post.image} alt="" /></div>
         <div
           className={styles["markdown"]}
           dangerouslySetInnerHTML={{ __html: post.content }}
@@ -20,7 +24,7 @@ export default function Post({ post }) {
 }
 
 export async function getStaticProps({ params }) {
-  const post = getPostBySlug(params.slug, ["title", "content"]);
+  const post = getPostBySlug(params.slug, ["title", "content", "date", "timeToRead", "image"]);
   const content = await markdownToHtml(post.content || "");
 
   return {

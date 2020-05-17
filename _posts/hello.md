@@ -2,7 +2,7 @@
 title: Welcome to the JAMstack
 slug: hello
 date: 2019-01-13 09:00:00
-image: "./hello-neon.jpg"
+image: "/assets/posts/hello-neon.jpg"
 description: "My first test post for the new Gridsome-based blog."
 icon: book
 tags: ['welcome']

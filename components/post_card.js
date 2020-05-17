@@ -16,13 +16,13 @@ const PostCard = ({ post }) => {
       <PostMeta post={post} />
 
       <div className="flex flex-col flex-1 mt-6 text-gray-900">
-        <p className="flex-1">{post.title}</p>
+        <p className="flex-1">{post.description}</p>
       </div>
 
       <PostTags tags={post.tags} />
 
       <Link href={'/posts/'+ post.slug}>
-        <a className="visually-hidden">
+        <a className="visuallyhidden">
           {post.title}
         </a>
       </Link>

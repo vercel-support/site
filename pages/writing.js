@@ -6,7 +6,12 @@ import {getAllPosts} from '../lib/api'
 export async function getStaticProps() {
   const posts = getAllPosts([
     'title',
+    'description',
     'slug',
+    'timeToRead',
+    'image',
+    'tags',
+    'date',
   ])
 
   return {
@@ -15,7 +20,6 @@ export async function getStaticProps() {
 }
 
 export default function Writing ({ posts }) {
-  console.log(posts)
   return (
     <Layout>
       <SEO
