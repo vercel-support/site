@@ -1,19 +1,19 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import HeaderLinks from "../data/header_links.json";
-// import { ReactComponent as MenuIcon } from "../images/icon-menu.svg"
-// import { ReactComponent as CloseIcon } from "../images/icon-close.svg"
-//import useGoal from "../hooks/use-goal"
+import MenuIcon from "../public/assets/images/icon-menu.svg";
+import CloseIcon from "../public/assets/images/icon-close.svg";
+import { trackGoal } from "fathom-client";
 
 const links = HeaderLinks;
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  //const trackMobileMenuGoal = useGoal("RYQBIEQE")
+  const trackMobileMenuGoal = () => trackGoal("RYQBIEQE", 0);
 
   const handleMenuClick = () => {
     setIsOpen(!isOpen);
-    // if (!isOpen) trackMobileMenuGoal()
+    if (!isOpen) trackMobileMenuGoal();
   };
 
   return (
@@ -36,7 +36,11 @@ export default function Header() {
               className="flex items-center focus:outline-none"
               onClick={handleMenuClick}
             >
-              {!isOpen ? "Open" : "Close"}
+              {!isOpen ? (
+                <MenuIcon className="w-8 h-8" />
+              ) : (
+                <CloseIcon className="w-8 h-8" />
+              )}
             </button>
           </div>
 

@@ -5,7 +5,6 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
 Cta.propTypes.href	components/cta.js	/^  href: PropTypes.string,$/;"	p
-MyApp	pages/_app.js	/^function MyApp({ Component, pageProps }) {$/;"	f
 SEO.defaultProps.description	components/seo.js	/^  description: "Brandon's site.",$/;"	p
 SEO.defaultProps.image	components/seo.js	/^  image: "https:\/\/blp.is\/assets\/images\/brandon.png"$/;"	p
 SEO.defaultProps.lang	components/seo.js	/^  lang: "en",$/;"	p
@@ -44,7 +43,7 @@ hotCreateModule.hot._acceptedDependencies	.next/static/runtime/webpack.js	/^\/**
 hotCreateRequire	.next/static/runtime/webpack.js	/^\/******\/ 	function hotCreateRequire(moduleId) {$/;"	f
 hotCreateRequire.ObjectFactory	.next/static/runtime/webpack.js	/^\/******\/ 		var ObjectFactory = function ObjectFactory(name) {$/;"	f
 hotCurrentChildModule	.next/static/runtime/webpack.js	/^\/******\/ 	var hotCurrentChildModule;$/;"	v
-hotCurrentHash	.next/static/runtime/webpack.js	/^\/******\/ 	var hotCurrentHash = "e117f09914c8669d8960";$/;"	v
+hotCurrentHash	.next/static/runtime/webpack.js	/^\/******\/ 	var hotCurrentHash = "0dfe430663288f275b11";$/;"	v
 hotCurrentParents	.next/static/runtime/webpack.js	/^\/******\/ 	var hotCurrentParents = [];$/;"	v
 hotCurrentParentsTemp	.next/static/runtime/webpack.js	/^\/******\/ 	var hotCurrentParentsTemp = [];$/;"	v
 hotDeferred	.next/static/runtime/webpack.js	/^\/******\/ 	var hotDeferred;$/;"	v

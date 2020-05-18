@@ -1,22 +1,17 @@
-// CSS
 import "../styles/tailwind.css";
 import "../styles/dank-mono.css";
 import "../styles/prism-night-owl.css";
-
-// React stuff
 import React, { useEffect } from "react";
 import Router from "next/router";
 import { StaticKitProvider } from "@statickit/react";
 import * as Fathom from "fathom-client";
 import Head from "next/head";
-// import App from 'next/app'
 
-// Record a pageview when route changes
 Router.events.on("routeChangeComplete", () => {
   Fathom.trackPageview();
 });
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }) {
   useEffect(() => {
     if (process.env.NODE_ENV === "production") {
       Fathom.load();
@@ -47,5 +42,3 @@ function MyApp({ Component, pageProps }) {
     </StaticKitProvider>
   );
 }
-
-export default MyApp;

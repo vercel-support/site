@@ -1,4 +1,4 @@
-// const fancy = require("tailwindcss-plugin-fancy");
+const fancy = require("tailwindcss-plugin-fancy/packages/aspect");
 const ui = require("@tailwindcss/ui");
 const defaultTheme = require("tailwindcss/defaultTheme");
 const whitelist = [/markdown/, /rich-text/, /primary/, /secondary/];

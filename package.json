@@ -30,10 +30,10 @@
     "unified": "^9.0.0"
   },
   "devDependencies": {
-    "tailwindcss": "^1.4.6",
     "@tailwindcss/custom-forms": "^0.2.1",
     "@tailwindcss/ui": "^0.3.0",
-    "tailwindcss-plugin-fancy": "^1.2.22"
+    "tailwindcss": "^1.4.6",
+    "tailwindcss-plugin-fancy": "^2.0.0-beta.1"
   },
   "license": "ISC"
 }
