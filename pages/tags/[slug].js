@@ -1,49 +1,42 @@
-import Layout from "../../components/layout"
-import PostCard from "../../components/post_card"
-import SEO from "../../components/seo"
-import {getAllPosts} from '../../lib/api'
-import { useRouter } from 'next/router'
+import Layout from "../../components/layout";
+import PostCard from "../../components/post_card";
+import SEO from "../../components/seo";
+import { getAllPosts, getAllTags } from "../../lib/api";
+import { useRouter } from "next/router";
 
-export async function getStaticProps({params}) {
+export async function getStaticProps({ params }) {
   const posts = getAllPosts([
-    'title',
-    'description',
-    'slug',
-    'timeToRead',
-    'image',
-    'tags',
-    'date',
-  ]).filter(post => JSON.parse(post.tags).includes(params.slug))
+    "title",
+    "description",
+    "slug",
+    "timeToRead",
+    "image",
+    "tags",
+    "date"
+  ]).filter(post => JSON.parse(post.tags).includes(params.slug));
 
   return {
-    props: { posts, title: params.slug },
-  }
+    props: { posts, title: params.slug }
+  };
 }
 
 export async function getStaticPaths() {
+  const tags = getAllTags();
+
   return {
-    paths: [
-      { params: {slug: 'javascript'} },
-      { params: {slug: 'fp'} },
-      { params: {slug: 'nodejs'} },
-      { params: {slug: 'gridsome'} },
-      { params: {slug: 'purescript'} },
-      { params: {slug: 'elm'} },
-      { params: {slug: 'functional-programming'} },
-    ],
+    paths: tags.map(tag => ({ params: { slug: tag } })),
     fallback: true
-  }
+  };
 }
 
-
-export default function Tags ({ posts, title }) {
-  const router = useRouter()
+export default function Tags({ posts, title }) {
+  const router = useRouter();
 
   return (
     <Layout>
-      {router.isFallback
-        ? <p className="text-center font-bold">Loading...</p>
-        :
+      {router.isFallback ? (
+        <p className="text-center font-bold">Loading...</p>
+      ) : (
         <>
           <SEO
             title={title}
@@ -61,7 +54,7 @@ export default function Tags ({ posts, title }) {
             ))}
           </ul>
         </>
-      }
+      )}
     </Layout>
-  )
+  );
 }
