@@ -1,9 +1,9 @@
-import React from "react"
-import { ReactComponent as TagIcon } from "../images/icon-tag.svg"
-import PostCard from "../components/post_card"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { graphql } from "gatsby"
+import React from "react";
+import { ReactComponent as TagIcon } from "../images/icon-tag.svg";
+import PostCard from "../components/post_card";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import { graphql } from "gatsby";
 //  import ProjectCard from '@/components/ProjectCard'
 
 export const query = graphql`
@@ -33,7 +33,7 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
 const TagTemplate = ({ pageContext, data }) => {
   return (
@@ -59,7 +59,7 @@ const TagTemplate = ({ pageContext, data }) => {
         ))}
       </ul>
     </Layout>
-  )
-}
+  );
+};
 
-export default TagTemplate
+export default TagTemplate;

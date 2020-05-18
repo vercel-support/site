@@ -1,5 +1,5 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from "react";
+import PropTypes from "prop-types";
 
 const Cta = ({ href, children }) => {
   return (
@@ -9,12 +9,12 @@ const Cta = ({ href, children }) => {
     >
       {children}
     </a>
-  )
-}
+  );
+};
 
 Cta.propTypes = {
   href: PropTypes.string,
-  children: PropTypes.node,
-}
+  children: PropTypes.node
+};
 
-export default Cta
+export default Cta;

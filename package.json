@@ -1,5 +1,5 @@
 {
-  "name": "with-mdx",
+  "name": "blp-blog",
   "version": "1.0.1",
   "scripts": {
     "dev": "next",
@@ -7,10 +7,10 @@
     "start": "next start"
   },
   "dependencies": {
+    "@mapbox/rehype-prism": "^0.4.0",
     "@mdx-js/loader": "^1.6.1",
     "@next/mdx": "^9.4.1",
     "@statickit/react": "^2.1.1",
-    "@tailwindcss/custom-forms": "^0.2.1",
     "classnames": "^2.2.6",
     "date-fns": "^2.13.0",
     "fathom-client": "^2.0.3",
@@ -22,11 +22,18 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "reading-time": "^1.2.0",
+    "rehype-stringify": "^7.0.0",
     "remark": "^12.0.0",
     "remark-html": "^11.0.2",
+    "remark-parse": "^8.0.2",
+    "remark-rehype": "^6.0.0",
+    "unified": "^9.0.0"
+  },
+  "devDependencies": {
     "tailwindcss": "^1.4.6",
+    "@tailwindcss/custom-forms": "^0.2.1",
+    "@tailwindcss/ui": "^0.3.0",
     "tailwindcss-plugin-fancy": "^1.2.22"
   },
-  "devDependencies": {},
   "license": "ISC"
 }

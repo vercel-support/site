@@ -6,6 +6,9 @@
 !_TAG_PROGRAM_VERSION	5.8	//
 Cta.propTypes.href	components/cta.js	/^  href: PropTypes.string,$/;"	p
 MyApp	pages/_app.js	/^function MyApp({ Component, pageProps }) {$/;"	f
+SEO.defaultProps.description	components/seo.js	/^  description: "Brandon's site.",$/;"	p
+SEO.defaultProps.image	components/seo.js	/^  image: "https:\/\/blp.is\/assets\/images\/brandon.png"$/;"	p
+SEO.defaultProps.lang	components/seo.js	/^  lang: "en",$/;"	p
 __webpack_require__	.next/static/runtime/webpack.js	/^\/******\/ 	function __webpack_require__(moduleId) {$/;"	f
 __webpack_require__.d	.next/static/runtime/webpack.js	/^\/******\/ 	__webpack_require__.d = function(exports, name, getter) {$/;"	f
 __webpack_require__.e	.next/static/runtime/webpack.js	/^\/******\/ 	__webpack_require__.e = function requireEnsure(chunkId) {$/;"	f
@@ -17,11 +20,10 @@ __webpack_require__.r	.next/static/runtime/webpack.js	/^\/******\/ 	__webpack_re
 __webpack_require__.t	.next/static/runtime/webpack.js	/^\/******\/ 	__webpack_require__.t = function(value, mode) {$/;"	f
 addAllToSet	.next/static/runtime/webpack.js	/^\/******\/ 		function addAllToSet(a, b) {$/;"	f
 checkDeferredModules	.next/static/runtime/webpack.js	/^\/******\/ 	function checkDeferredModules() {$/;"	f
-defaultProps.description	components/seo.js	/^  description: "Brandon's site.",$/;"	p
-defaultProps.image	components/seo.js	/^  image: "https:\/\/blp.is\/assets\/images\/brandon.png"$/;"	p
-defaultProps.lang	components/seo.js	/^  lang: "en",$/;"	p
+const..visuallyhidden	tailwind.config.js	/^  ".visuallyhidden": {$/;"	p
 deferredModules	.next/static/runtime/webpack.js	/^\/******\/ 	var deferredModules = [];$/;"	v
 dependency	.next/static/runtime/webpack.js	/^\/******\/ 		var dependency;$/;"	v
+displayedTags	components/post_tags.js	/^  function displayedTags() {$/;"	f
 error	.next/static/runtime/webpack.js	/^\/******\/ 		var error = null;$/;"	v
 executeModules	.next/static/runtime/webpack.js	/^\/******\/ 		var executeModules = data[2];$/;"	v
 fn	.next/static/runtime/webpack.js	/^\/******\/ 		var fn = function(request) {$/;"	f
@@ -42,7 +44,7 @@ hotCreateModule.hot._acceptedDependencies	.next/static/runtime/webpack.js	/^\/**
 hotCreateRequire	.next/static/runtime/webpack.js	/^\/******\/ 	function hotCreateRequire(moduleId) {$/;"	f
 hotCreateRequire.ObjectFactory	.next/static/runtime/webpack.js	/^\/******\/ 		var ObjectFactory = function ObjectFactory(name) {$/;"	f
 hotCurrentChildModule	.next/static/runtime/webpack.js	/^\/******\/ 	var hotCurrentChildModule;$/;"	v
-hotCurrentHash	.next/static/runtime/webpack.js	/^\/******\/ 	var hotCurrentHash = "4e6d9bed32ebea3e7b7f";$/;"	v
+hotCurrentHash	.next/static/runtime/webpack.js	/^\/******\/ 	var hotCurrentHash = "e117f09914c8669d8960";$/;"	v
 hotCurrentParents	.next/static/runtime/webpack.js	/^\/******\/ 	var hotCurrentParents = [];$/;"	v
 hotCurrentParentsTemp	.next/static/runtime/webpack.js	/^\/******\/ 	var hotCurrentParentsTemp = [];$/;"	v
 hotDeferred	.next/static/runtime/webpack.js	/^\/******\/ 	var hotDeferred;$/;"	v

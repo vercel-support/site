@@ -1,21 +1,21 @@
-import PostTag from "../components/post_tag"
-import HorizontalDotsIcon from "../public/assets/images/icon-dots-horizontal.svg"
-import React, { useMemo, useState } from "react"
+import PostTag from "../components/post_tag";
+import HorizontalDotsIcon from "../public/assets/images/icon-dots-horizontal.svg";
+import React, { useMemo, useState } from "react";
 
-export default function PostTags ({ tags, limit }) {
-  const [isFullDisplay, setIsFullDisplay] = useState(false)
-  const pageTags = useMemo(() => JSON.parse(tags))
+export default function PostTags({ tags, limit }) {
+  const [isFullDisplay, setIsFullDisplay] = useState(false);
+  const pageTags = useMemo(() => JSON.parse(tags));
 
   function displayedTags() {
     if (isFullDisplay) {
-      return pageTags
+      return pageTags;
     }
 
-    return pageTags.slice(0, 2)
+    return pageTags.slice(0, 2);
   }
 
   function isOverLimit() {
-    return pageTags.length > limit && !isFullDisplay
+    return pageTags.length > limit && !isFullDisplay;
   }
 
   return (
@@ -35,5 +35,5 @@ export default function PostTags ({ tags, limit }) {
         </li>
       )}
     </ul>
-  )
+  );
 }

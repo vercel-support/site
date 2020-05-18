@@ -1,8 +1,8 @@
-import cn from 'classnames'
-import styles from '../components/markdown.module.css'
-import SEO from '../components/seo.js'
-import Cta from '../components/cta.js'
-import Layout from '../components/layout.js'
+import cn from "classnames";
+import styles from "../components/markdown.module.css";
+import SEO from "../components/seo.js";
+import Cta from "../components/cta.js";
+import Layout from "../components/layout.js";
 
 <Layout>
 <SEO title="Focusing" description="Overview of Brandon Pittman's AppleScript library for OmniFocus." />
@@ -20,9 +20,9 @@ readable. I hope you find this new library useful.
 
 <div className="flex justify-center">
   <Cta
-  rel="noreferrer noopener"
-  target="_blank"
-  href="https://github.com/brandonpittman/omnifocus"
+    rel="noreferrer noopener"
+    target="_blank"
+    href="https://github.com/brandonpittman/omnifocus"
   >
     Get started
   </Cta>
@@ -57,7 +57,7 @@ For those who don't know about transport text, it's a format that
 OmniFocus uses to parse task information like so:
 
 `Do something! @home ::misc #5pm #tomorrow //This is a note`
-      
+  
 The `!` makes `Do something` a flagged task. `@home` sets the context to
 "home". `::` is used for matching a project. Both `@` and `::` will fuzzy match
 existing contexts and projects. The first `#` is used for a defer date, while

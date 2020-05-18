@@ -1,10 +1,10 @@
-import { useForm } from "@statickit/react"
+import { useForm } from "@statickit/react";
 
-export default function ContactForm  () {
-  const [state, handleSubmit] = useForm("contact-form")
+export default function ContactForm() {
+  const [state, handleSubmit] = useForm("contact-form");
 
   if (state.succeeded) {
-    return <p>Thanks! I'll be in touch.</p>
+    return <p>Thanks! I'll be in touch.</p>;
   }
 
   return (
@@ -60,5 +60,5 @@ export default function ContactForm  () {
         </button>
       </div>
     </form>
-  )
+  );
 }

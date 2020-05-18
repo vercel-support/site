@@ -5,7 +5,7 @@ description: On-going journey to learn all the functions in Rambda(x)
 image: "/assets/posts/black-lamb.jpg"
 date: 2020-01-22T15:00:00.000+00:00
 tags:
-- functional programming
+- fp
 - javascript
 ---
 

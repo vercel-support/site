@@ -12,7 +12,6 @@ footer a {
 
 @tailwind components;
 
-/* purgecss start ignore */
 .primary,
 .secondary {
   @apply fill-current;
@@ -29,7 +28,5 @@ footer a {
 path.secondary {
   @apply text-gray-900;
 }
-/* purgecss end ignore */
 
 @tailwind utilities;
-

@@ -1,14 +1,14 @@
-import React from "react"
-import { trackGoal } from 'fathom-client'
-import TwitterIcon from "../public/assets/images/icon-twitter.svg"
-import GithubIcon from "../public/assets/images/icon-github.svg"
-import DribbbleIcon from "../public/assets/images/icon-dribbble.svg"
-import cn from 'classnames'
+import React from "react";
+import { trackGoal } from "fathom-client";
+import TwitterIcon from "../public/assets/images/icon-twitter.svg";
+import GithubIcon from "../public/assets/images/icon-github.svg";
+import DribbbleIcon from "../public/assets/images/icon-dribbble.svg";
+import cn from "classnames";
 
-export default function Author ({className}) {
-  const trackTwitterGoal = () => trackGoal("IFOPB1RM", 0)
-  const trackGithubGoal = () => trackGoal("JOZATR2E", 0)
-  const trackDribbbleGoal = () => trackGoal("EGN48GIU", 0)
+export default function Author({ className }) {
+  const trackTwitterGoal = () => trackGoal("IFOPB1RM", 0);
+  const trackGithubGoal = () => trackGoal("JOZATR2E", 0);
+  const trackDribbbleGoal = () => trackGoal("EGN48GIU", 0);
 
   return (
     <aside className={cn(className, "max-w-lg mx-auto")}>
@@ -78,9 +78,7 @@ export default function Author ({className}) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <TwitterIcon
-            className="w-8 h-8 mr-4 text-blue-400 fill-current"
-          />
+          <TwitterIcon className="w-8 h-8 mr-4 text-blue-400 fill-current" />
         </a>
 
         <a
@@ -89,9 +87,7 @@ export default function Author ({className}) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <GithubIcon
-            className="w-8 h-8 mr-4 text-gray-900 fill-current"
-          />
+          <GithubIcon className="w-8 h-8 mr-4 text-gray-900 fill-current" />
         </a>
 
         <a
@@ -100,11 +96,9 @@ export default function Author ({className}) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <DribbbleIcon
-            className="w-8 h-8 mr-4 text-gray-900 fill-current"
-          />
+          <DribbbleIcon className="w-8 h-8 mr-4 text-gray-900 fill-current" />
         </a>
       </div>
     </aside>
-  )
+  );
 }

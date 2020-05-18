@@ -1,5 +1,5 @@
-import React from "react"
-import Card from "./card"
+import React from "react";
+import Card from "./card";
 
 const MediaCard = ({ image, children, title }) => {
   return (
@@ -13,7 +13,7 @@ const MediaCard = ({ image, children, title }) => {
         {children}
       </div>
     </Card>
-  )
-}
+  );
+};
 
-export default MediaCard
+export default MediaCard;

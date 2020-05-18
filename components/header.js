@@ -1,20 +1,20 @@
-import Link from 'next/link'
-import React, { useState } from "react"
-import HeaderLinks from "../data/header_links.json"
+import Link from "next/link";
+import React, { useState } from "react";
+import HeaderLinks from "../data/header_links.json";
 // import { ReactComponent as MenuIcon } from "../images/icon-menu.svg"
 // import { ReactComponent as CloseIcon } from "../images/icon-close.svg"
 //import useGoal from "../hooks/use-goal"
 
-const links = HeaderLinks
+const links = HeaderLinks;
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   //const trackMobileMenuGoal = useGoal("RYQBIEQE")
 
   const handleMenuClick = () => {
-    setIsOpen(!isOpen)
+    setIsOpen(!isOpen);
     // if (!isOpen) trackMobileMenuGoal()
-  }
+  };
 
   return (
     <header className="w-full">
@@ -36,22 +36,15 @@ export default function Header() {
               className="flex items-center focus:outline-none"
               onClick={handleMenuClick}
             >
-              {!isOpen ? (
-                'Open'
-              ) : (
-                'Close'
-              )}
+              {!isOpen ? "Open" : "Close"}
             </button>
           </div>
 
           <ul className="hidden md:flex">
             {links.map(link => (
               <li key={link.title}>
-                <Link
-                  href={link.to}
-                >
-                  <a className="block ml-8 text-sm font-semibold tracking-wide text-gray-700 md:inline-block md:mt-0 transform transition-all ease-in-out duration-75 hover:text-gray-900"
-                  >
+                <Link href={link.to}>
+                  <a className="block ml-8 text-sm font-semibold tracking-wide text-gray-700 md:inline-block md:mt-0 transform transition-all ease-in-out duration-75 hover:text-gray-900">
                     {link.title}
                   </a>
                 </Link>
@@ -65,10 +58,8 @@ export default function Header() {
           <ul>
             {links.map(link => (
               <li key={link.title}>
-                <Link
-                  href={link.to}
-                >
-                  <a className="block py-3 font-semibold text-gray-700 hover:text-gray-900"                  >
+                <Link href={link.to}>
+                  <a className="block py-3 font-semibold text-gray-700 hover:text-gray-900">
                     {link.title}
                   </a>
                 </Link>
@@ -78,5 +69,5 @@ export default function Header() {
         </div>
       </nav>
     </header>
-  )
+  );
 }

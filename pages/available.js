@@ -1,7 +1,7 @@
-import Card from "../components/card"
-import ContactForm from "../components/contactForm"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Card from "../components/card";
+import ContactForm from "../components/contactForm";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
 const Available = () => {
   return (
@@ -16,8 +16,7 @@ const Available = () => {
         <ContactForm />
       </Card>
     </Layout>
-  )
-}
+  );
+};
 
-export default Available
-
+export default Available;

@@ -1,31 +1,28 @@
-import Layout from "../components/layout"
-import PostCard from "../components/post_card"
-import SEO from "../components/seo"
-import {getAllPosts} from '../lib/api'
+import Layout from "../components/layout";
+import PostCard from "../components/post_card";
+import SEO from "../components/seo";
+import { getAllPosts } from "../lib/api";
 
 export async function getStaticProps() {
   const posts = getAllPosts([
-    'title',
-    'description',
-    'slug',
-    'timeToRead',
-    'image',
-    'tags',
-    'date',
-  ])
+    "title",
+    "description",
+    "slug",
+    "timeToRead",
+    "image",
+    "tags",
+    "date"
+  ]);
 
   return {
-    props: { posts },
-  }
+    props: { posts }
+  };
 }
 
-export default function Writing ({ posts }) {
+export default function Writing({ posts }) {
   return (
     <Layout>
-      <SEO
-        title="Blog"
-        description="Recent blog posts from Brandon Pittman."
-      />
+      <SEO title="Blog" description="Recent blog posts from Brandon Pittman." />
 
       <h2 className="text-2xl font-bold">Recent Blog Posts</h2>
 
@@ -40,5 +37,5 @@ export default function Writing ({ posts }) {
         ))}
       </ul>
     </Layout>
-  )
+  );
 }

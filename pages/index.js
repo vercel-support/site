@@ -1,8 +1,8 @@
-import Link from "next/link"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Link from "next/link";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
-export default function Index () {
+export default function Index() {
   return (
     <>
       <SEO title="Home" description="Brandon's new Next.js blog." />
@@ -37,7 +37,10 @@ export default function Index () {
 
         <p className="mt-4">
           You can read check out things I've written on the{" "}
-          <Link href="/writing"><a>blog</a></Link> or follow me on{" "}
+          <Link href="/writing">
+            <a>blog</a>
+          </Link>{" "}
+          or follow me on{" "}
           <a
             href="https://twitter.com/brandonpittman"
             target="_blank"
@@ -78,17 +81,13 @@ export default function Index () {
         </p>
 
         <div className="flex justify-center">
-          <Link
-            href="/available"
-          >
-            <a
-              className="inline-block px-3 py-2 mt-8 font-semibold text-white rounded shadow-lg bg-key hover:shadow focus:shadow transform transition-all duration-100 ease-in-out hover:translate-y-px"
-            >
+          <Link href="/available">
+            <a className="inline-block px-3 py-2 mt-8 font-semibold text-white rounded shadow-lg bg-key hover:shadow focus:shadow transform transition-all duration-100 ease-in-out hover:translate-y-px">
               Send me a message
             </a>
           </Link>
         </div>
       </Layout>
     </>
-  )
+  );
 }

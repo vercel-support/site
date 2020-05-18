@@ -5,10 +5,9 @@ description: The one where I check out another headless CMS, for the second time
 image: "/assets/posts/sebastian-unrau-sp-p7uuT0tw-unsplash.jpg"
 date: 2019-12-05T17:00:00+09:00
 tags:
-- jamstack
-- forestry
-- cms
-- headless cms
+  - jamstack
+  - forestry
+  - cms
 ---
 
 Not much to say here. Just testing out [Forestry.io](https://forestry.io). I'm rather impressed by the ease of setup. I swear I tried this out earlier in the year, and had some sort of issue with it. This time, however, it was a breeze to set up, and I'm really digging it—at least until [TinaCMS](https://tinacms.org) is ready to work with Vue/Gridsome. Until then, this should do nicely! 🥳

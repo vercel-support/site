@@ -1,11 +1,11 @@
-import React from "react"
-import Layout from "../components/layout"
-import { graphql } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import Image from "gatsby-image"
-import PostMeta from "../components/post_meta"
-import SEO from "../components/seo"
-import Author from "../components/author"
+import React from "react";
+import Layout from "../components/layout";
+import { graphql } from "gatsby";
+import { MDXRenderer } from "gatsby-plugin-mdx";
+import Image from "gatsby-image";
+import PostMeta from "../components/post_meta";
+import SEO from "../components/seo";
+import Author from "../components/author";
 
 export const query = graphql`
   query($slug: String!) {
@@ -28,7 +28,7 @@ export const query = graphql`
       body
     }
   }
-`
+`;
 
 const PostTemplate = ({ data: { mdx: post } }) => (
   <Layout>
@@ -45,7 +45,7 @@ const PostTemplate = ({ data: { mdx: post } }) => (
       <Image
         fluid={post.frontmatter.image.sharp.fluid}
         className="my-8 -mx-4 sm:mx-0"
-      ></Image>
+      />
 
       <div className="mt-8 markdown">
         <MDXRenderer>{post.body}</MDXRenderer>
@@ -55,6 +55,6 @@ const PostTemplate = ({ data: { mdx: post } }) => (
       <Author />
     </div>
   </Layout>
-)
+);
 
-export default PostTemplate
+export default PostTemplate;
