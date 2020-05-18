@@ -24,7 +24,7 @@ export default function Writing({ posts }) {
     <Layout>
       <SEO title="Blog" description="Recent blog posts from Brandon Pittman." />
 
-      <h2 className="text-2xl font-bold">Recent Blog Posts</h2>
+      <h1 className="text-3xl font-bold">Recent Blog Posts</h1>
 
       <ul className="flex flex-wrap -mx-4">
         {posts.map(post => (

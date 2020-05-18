@@ -9,11 +9,7 @@ const PostTag = ({ tag }) => {
       tag={tag.path}
       className="relative inline-block p-2 mb-2 mr-2 text-sm bg-gray-200 rounded-lg z-10"
     >
-      <Link
-        prefetch={false}
-        href="/tags/[slug]"
-        as={`/tags/${_.kebabCase(tag)}`}
-      >
+      <Link href="/tags/[slug]" as={`/tags/${_.kebabCase(tag)}`}>
         <a className="flex items-end text-gray-900 hover:opacity-75">
           <TagIcon className="block w-4 h-4 mr-1" />
           {tag}

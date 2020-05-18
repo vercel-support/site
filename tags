@@ -8,79 +8,8 @@ Cta.propTypes.href	components/cta.js	/^  href: PropTypes.string,$/;"	p
 SEO.defaultProps.description	components/seo.js	/^  description: "Brandon's site.",$/;"	p
 SEO.defaultProps.image	components/seo.js	/^  image: "https:\/\/blp.is\/assets\/images\/brandon.png"$/;"	p
 SEO.defaultProps.lang	components/seo.js	/^  lang: "en",$/;"	p
-__webpack_require__	.next/static/runtime/webpack.js	/^\/******\/ 	function __webpack_require__(moduleId) {$/;"	f
-__webpack_require__.d	.next/static/runtime/webpack.js	/^\/******\/ 	__webpack_require__.d = function(exports, name, getter) {$/;"	f
-__webpack_require__.e	.next/static/runtime/webpack.js	/^\/******\/ 	__webpack_require__.e = function requireEnsure(chunkId) {$/;"	f
-__webpack_require__.h	.next/static/runtime/webpack.js	/^\/******\/ 	__webpack_require__.h = function() { return hotCurrentHash; };$/;"	f
-__webpack_require__.n	.next/static/runtime/webpack.js	/^\/******\/ 	__webpack_require__.n = function(module) {$/;"	f
-__webpack_require__.o	.next/static/runtime/webpack.js	/^\/******\/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };$/;"	f
-__webpack_require__.oe	.next/static/runtime/webpack.js	/^\/******\/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };$/;"	f
-__webpack_require__.r	.next/static/runtime/webpack.js	/^\/******\/ 	__webpack_require__.r = function(exports) {$/;"	f
-__webpack_require__.t	.next/static/runtime/webpack.js	/^\/******\/ 	__webpack_require__.t = function(value, mode) {$/;"	f
-addAllToSet	.next/static/runtime/webpack.js	/^\/******\/ 		function addAllToSet(a, b) {$/;"	f
-checkDeferredModules	.next/static/runtime/webpack.js	/^\/******\/ 	function checkDeferredModules() {$/;"	f
 const..visuallyhidden	tailwind.config.js	/^  ".visuallyhidden": {$/;"	p
-deferredModules	.next/static/runtime/webpack.js	/^\/******\/ 	var deferredModules = [];$/;"	v
-dependency	.next/static/runtime/webpack.js	/^\/******\/ 		var dependency;$/;"	v
 displayedTags	components/post_tags.js	/^  function displayedTags() {$/;"	f
-error	.next/static/runtime/webpack.js	/^\/******\/ 		var error = null;$/;"	v
-executeModules	.next/static/runtime/webpack.js	/^\/******\/ 		var executeModules = data[2];$/;"	v
-fn	.next/static/runtime/webpack.js	/^\/******\/ 		var fn = function(request) {$/;"	f
-fn.e	.next/static/runtime/webpack.js	/^\/******\/ 		fn.e = function(chunkId) {$/;"	f
-fn.e.finishChunkLoading	.next/static/runtime/webpack.js	/^\/******\/ 			function finishChunkLoading() {$/;"	f
-fn.t	.next/static/runtime/webpack.js	/^\/******\/ 		fn.t = function(value, mode) {$/;"	f
-hotAddUpdateChunk	.next/static/runtime/webpack.js	/^\/******\/ 	function hotAddUpdateChunk(chunkId, moreModules) {$/;"	f
-hotApply	.next/static/runtime/webpack.js	/^\/******\/ 	function hotApply(options) {$/;"	f
-hotApplyInternal	.next/static/runtime/webpack.js	/^\/******\/ 	function hotApplyInternal(options) {$/;"	f
-hotApplyInternal.getAffectedStuff	.next/static/runtime/webpack.js	/^\/******\/ 		function getAffectedStuff(updateModuleId) {$/;"	f
-hotApplyInvalidatedModule	.next/static/runtime/webpack.js	/^\/******\/ 	function hotApplyInvalidatedModule(moduleId) {$/;"	f
-hotApplyInvalidatedModules	.next/static/runtime/webpack.js	/^\/******\/ 	function hotApplyInvalidatedModules() {$/;"	f
-hotApplyOnUpdate	.next/static/runtime/webpack.js	/^\/******\/ 	var hotApplyOnUpdate = true;$/;"	v
-hotCheck	.next/static/runtime/webpack.js	/^\/******\/ 	function hotCheck(apply) {$/;"	f
-hotChunksLoading	.next/static/runtime/webpack.js	/^\/******\/ 	var hotChunksLoading = 0;$/;"	v
-hotCreateModule	.next/static/runtime/webpack.js	/^\/******\/ 	function hotCreateModule(moduleId) {$/;"	f
-hotCreateModule.hot._acceptedDependencies	.next/static/runtime/webpack.js	/^\/******\/ 			_acceptedDependencies: {},$/;"	p
-hotCreateRequire	.next/static/runtime/webpack.js	/^\/******\/ 	function hotCreateRequire(moduleId) {$/;"	f
-hotCreateRequire.ObjectFactory	.next/static/runtime/webpack.js	/^\/******\/ 		var ObjectFactory = function ObjectFactory(name) {$/;"	f
-hotCurrentChildModule	.next/static/runtime/webpack.js	/^\/******\/ 	var hotCurrentChildModule;$/;"	v
-hotCurrentHash	.next/static/runtime/webpack.js	/^\/******\/ 	var hotCurrentHash = "ef4b691852701b2cb872";$/;"	v
-hotCurrentParents	.next/static/runtime/webpack.js	/^\/******\/ 	var hotCurrentParents = [];$/;"	v
-hotCurrentParentsTemp	.next/static/runtime/webpack.js	/^\/******\/ 	var hotCurrentParentsTemp = [];$/;"	v
-hotDeferred	.next/static/runtime/webpack.js	/^\/******\/ 	var hotDeferred;$/;"	v
-hotDisposeChunk	.next/static/runtime/webpack.js	/^\/******\/ 	function hotDisposeChunk(chunkId) {$/;"	f
-hotDownloadManifest	.next/static/runtime/webpack.js	/^\/******\/ 	function hotDownloadManifest(requestTimeout) {$/;"	f
-hotDownloadUpdateChunk	.next/static/runtime/webpack.js	/^\/******\/ 	function hotDownloadUpdateChunk(chunkId) {$/;"	f
-hotEnsureUpdateChunk	.next/static/runtime/webpack.js	/^\/******\/ 	function hotEnsureUpdateChunk(chunkId) {$/;"	f
-hotRequestTimeout	.next/static/runtime/webpack.js	/^\/******\/ 	var hotRequestTimeout = 10000;$/;"	v
-hotSetStatus	.next/static/runtime/webpack.js	/^\/******\/ 	function hotSetStatus(newStatus) {$/;"	f
-hotStatus	.next/static/runtime/webpack.js	/^\/******\/ 	var hotStatus = "idle";$/;"	v
-hotStatusHandlers	.next/static/runtime/webpack.js	/^\/******\/ 	var hotStatusHandlers = [];$/;"	v
-hotUpdate	.next/static/runtime/webpack.js	/^\/******\/ 	var hotUpdate, hotUpdateNewHash, hotQueuedInvalidatedModules;$/;"	v
-hotUpdateDownloaded	.next/static/runtime/webpack.js	/^\/******\/ 	function hotUpdateDownloaded() {$/;"	f
-hotWaitingFiles	.next/static/runtime/webpack.js	/^\/******\/ 	var hotWaitingFiles = 0;$/;"	v
-idx	.next/static/runtime/webpack.js	/^\/******\/ 		var idx;$/;"	v
-installedChunks.static/runtime/webpack.js	.next/static/runtime/webpack.js	/^\/******\/ 		"static\/runtime\/webpack.js": 0$/;"	p
 isOverLimit	components/post_tags.js	/^  function isOverLimit() {$/;"	f
-jsonpScriptSrc	.next/static/runtime/webpack.js	/^\/******\/ 	function jsonpScriptSrc(chunkId) {$/;"	f
 module.exports.plugins	postcss.config.js	/^  plugins: [$/;"	p
 module.exports.purge	tailwind.config.js	/^  purge: {$/;"	p
-moduleId	.next/static/runtime/webpack.js	/^\/******\/ 		var moduleId, chunkId, i = 0, resolves = [];$/;"	v
-moduleOutdatedDependencies	.next/static/runtime/webpack.js	/^\/******\/ 		var moduleOutdatedDependencies;$/;"	v
-moreModules	.next/static/runtime/webpack.js	/^\/******\/ 		var moreModules = data[1];$/;"	v
-oldJsonpFunction	.next/static/runtime/webpack.js	/^\/******\/ 	var oldJsonpFunction = jsonpArray.push.bind(jsonpArray);$/;"	v
-onScriptComplete	.next/static/runtime/webpack.js	/^\/******\/ 				onScriptComplete = function (event) {$/;"	f
-outdatedModules	.next/static/runtime/webpack.js	/^\/******\/ 		var outdatedModules = [];$/;"	v
-outdatedSelfAcceptedModules	.next/static/runtime/webpack.js	/^\/******\/ 		var outdatedSelfAcceptedModules = [];$/;"	v
-parentHotUpdateCallback	.next/static/runtime/webpack.js	/^\/******\/ 	var parentHotUpdateCallback = window["webpackHotUpdate"];$/;"	v
-parentJsonpFunction	.next/static/runtime/webpack.js	/^\/******\/ 	var parentJsonpFunction = oldJsonpFunction;$/;"	v
-queue	.next/static/runtime/webpack.js	/^\/******\/ 		var queue = outdatedModules.slice();$/;"	v
-requireEnsure	.next/static/runtime/webpack.js	/^\/******\/ 	__webpack_require__.e = function requireEnsure(chunkId) {$/;"	f
-result.moduleId	.next/static/runtime/webpack.js	/^\/******\/ 						moduleId: id$/;"	p
-result.type	.next/static/runtime/webpack.js	/^\/******\/ 						type: "disposed",$/;"	p
-return	.next/static/runtime/webpack.js	/^\/******\/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };$/;"	c
-return.hasOwnProperty	.next/static/runtime/webpack.js	/^\/******\/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };$/;"	m
-threw	.next/static/runtime/webpack.js	/^\/******\/ 		var threw = true;$/;"	v
-toModuleId	.next/static/runtime/webpack.js	/^\/******\/ 	function toModuleId(id) {$/;"	f
-warnUnexpectedRequire	.next/static/runtime/webpack.js	/^\/******\/ 		var warnUnexpectedRequire = function warnUnexpectedRequire() {$/;"	f
-webpackHotUpdateCallback	.next/static/runtime/webpack.js	/^\/******\/ 	function webpackHotUpdateCallback(chunkId, moreModules) {$/;"	f
-window	.next/static/runtime/webpack.js	/^\/******\/ 	window["webpackHotUpdate"] = \/\/ eslint-disable-next-line no-unused-vars$/;"	f
