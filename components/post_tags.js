@@ -2,7 +2,7 @@ import PostTag from "../components/post_tag";
 import HorizontalDotsIcon from "../public/assets/images/icon-dots-horizontal.svg";
 import React, { useMemo, useState } from "react";
 
-export default function PostTags({ tags, limit }) {
+export default function PostTags({ tags, limit = 2 }) {
   const [isFullDisplay, setIsFullDisplay] = useState(false);
   const pageTags = useMemo(() => JSON.parse(tags));
 
@@ -26,10 +26,9 @@ export default function PostTags({ tags, limit }) {
       {isOverLimit() && (
         <li>
           <button
-            className="relative block w-8 h-8 p-2 mb-2 mr-2 text-sm bg-gray-200 rounded-lg cursor-pointer z-10"
+            className="relative block w-9 h-9 p-2 mb-2 mr-2 text-sm bg-gray-200 rounded-lg cursor-pointer z-10"
             onClick={() => setIsFullDisplay(true)}
           >
-            <img src="/assets/images/icon-dots-horizontal.svg" alt="" />
             <HorizontalDotsIcon />
           </button>
         </li>

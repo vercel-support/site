@@ -5,11 +5,11 @@ description: I love Vue but lately I've been worried about the community around 
 image: "/assets/posts/jametlene-reskp-gVfGGb62Fpo-unsplash.jpg"
 date: 2020-04-18T00:00:00+09:00
 tags:
-- fp
-- javascript
-- reason
-- react
-- vue
+  - fp
+  - javascript
+  - reason
+  - react
+  - vue
 ---
 
 I've been a heavy Vue.js user for about 3 years now. I learned Vue before I learned enough about JavaScript to feel comfortable in vanilla JS even. (That may not have been a good thing.) I learned Vue because Laravel people used Vue and I had been learning Laravel at the time. React (and JSX) looked too hard because lots of JavaScript felt too difficult at the time. Had I felt more comfortable with JS—or hadn't been coming from Laravel—I may have wound up starting with React instead of Vue.

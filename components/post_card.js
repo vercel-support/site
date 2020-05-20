@@ -16,7 +16,7 @@ const PostCard = ({ post }) => {
         <p className="flex-1">{post.description}</p>
       </div>
 
-      <PostTags tags={post.tags} />
+      <PostTags tags={post.tags} limit="3" />
 
       <Link href="/posts/[slug]" as={"/posts/" + post.slug}>
         <a className="visuallyhidden">{post.title}</a>
