@@ -2,22 +2,20 @@ import "../styles/tailwind.css";
 import "../styles/dank-mono.css";
 import "../styles/prism-night-owl.css";
 import React, { useEffect } from "react";
-import Router from "next/router";
+// import Router from "next/router";
 import { StaticKitProvider } from "@statickit/react";
-import * as Fathom from "fathom-client";
 import Head from "next/head";
 
-Router.events.on("routeChangeComplete", () => {
-  Fathom.trackPageview();
-});
-
-export default function MyApp({ Component, pageProps }) {
+export default function App({ Component, pageProps }) {
   useEffect(() => {
-    if (process.env.NODE_ENV === "production") {
-      Fathom.load();
-      Fathom.setSiteId("EXCJWHRT");
-      Fathom.trackPageview();
-    }
+    let tracker = window.document.createElement("script");
+    let firstScript = window.document.getElementsByTagName("script")[0];
+    tracker.defer = true;
+    tracker.setAttribute("site", "EXCJWHRT");
+    tracker.setAttribute("spa", "auto");
+    tracker.setAttribute("excluded-domains", "now.sh,localhost");
+    tracker.src = "https://cdn.usefathom.com/script.js";
+    firstScript.parentNode.insertBefore(tracker, firstScript);
   }, []);
 
   return (
