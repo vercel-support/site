@@ -1,4 +1,4 @@
-const fancy = require("tailwindcss-plugin-fancy/packages/aspect");
+//const fancy = require("tailwindcss-plugin-fancy/packages/aspect");
 const ui = require("@tailwindcss/ui");
 const defaultTheme = require("tailwindcss/defaultTheme");
 const whitelist = [/markdown/, /rich-text/, /primary/, /secondary/];
@@ -43,21 +43,20 @@ module.exports = {
 
   plugins: [
     function({ addBase, addUtilities }) {
-      addUtilities(utilities),
-        addBase({
-          ".markdown": {
-            "img, pre": {
-              marginLeft: "-1rem",
-              marginRight: "-1rem",
-              "@media (min-width: 640px)": {
-                marginLeft: "0",
-                marginRight: "0"
-              }
+      addBase({
+        ".markdown": {
+          "img, pre": {
+            marginLeft: "-1rem",
+            marginRight: "-1rem",
+            "@media (min-width: 640px)": {
+              marginLeft: "0",
+              marginRight: "0"
             }
           }
-        });
+        }
+      });
+      addUtilities(utilities);
     },
     ui
-    // fancy
   ]
 };
