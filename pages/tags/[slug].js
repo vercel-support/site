@@ -49,7 +49,7 @@ export default function Tags({ posts, title }) {
                 key={post.slug}
                 className="flex w-full px-4 mt-12 md:w-1/2 lg:w-1/3"
               >
-                <PostCard post={post} />
+                <PostCard post={{...post, __resourcePath: `/blog/${post.slug}`}} />
               </li>
             ))}
           </ul>

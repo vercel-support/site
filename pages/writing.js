@@ -1,25 +1,11 @@
 import Layout from "../components/layout";
 import PostCard from "../components/post_card";
 import SEO from "../components/seo";
-import { getAllPosts } from "../lib/api";
+import { frontMatter as blogPosts } from "./blog/*.mdx";
 
-export async function getStaticProps() {
-  const posts = getAllPosts([
-    "title",
-    "description",
-    "slug",
-    "timeToRead",
-    "image",
-    "tags",
-    "date"
-  ]);
+export default function Writing() {
+  const posts = blogPosts.sort((a,b) => new Date(b.date) - new Date(a.date))
 
-  return {
-    props: { posts }
-  };
-}
-
-export default function Writing({ posts }) {
   return (
     <Layout>
       <SEO title="Blog" description="Recent blog posts from Brandon Pittman." />

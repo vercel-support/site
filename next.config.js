@@ -1,14 +1,23 @@
 const withPlugins = require("next-compose-plugins");
-const optimizedImages = require("next-optimized-images");
 const withSvgr = require("next-svgr");
-const withMDX = require("@next/mdx")({
-  extension: /\.mdx?$/,
-  options: {
-    remarkPlugins: [],
-    rehypePlugins: [require("@mapbox/rehype-prism")]
+const withMdxEnhanced = require("next-mdx-enhanced");
+const readingTime = require("reading-time");
+
+const withMdx = withMdxEnhanced({
+  layoutPath: "layouts",
+  defaultLayout: true,
+  fileExtensions: ["mdx"],
+  remarkPlugins: [],
+  rehypePlugins: [require("@mapbox/rehype-prism")],
+  extendFrontMatter: {
+    process: mdxContent => {
+      return {
+        timeToRead: readingTime(mdxContent).text
+      };
+    }
   }
 });
-module.exports = withPlugins([withMDX, withSvgr, optimizedImages], {
-  handleImages: ["jpeg", "png", "webp", "gif"],
+
+module.exports = withPlugins([withMdx, withSvgr], {
   pageExtensions: ["js", "jsx", "mdx"]
 });

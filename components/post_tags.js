@@ -4,7 +4,9 @@ import React, { useMemo, useState } from "react";
 
 export default function PostTags({ tags, limit = 2 }) {
   const [isFullDisplay, setIsFullDisplay] = useState(false);
-  const pageTags = useMemo(() => JSON.parse(tags));
+  const pageTags = useMemo(() =>
+    typeof tags === "string" ? JSON.parse(tags) : tags
+  );
 
   function displayedTags() {
     if (isFullDisplay) {

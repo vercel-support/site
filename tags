@@ -29,6 +29,7 @@ fn	.next/static/runtime/webpack.js	/^\/******\/ 		var fn = function(request) {$/
 fn.e	.next/static/runtime/webpack.js	/^\/******\/ 		fn.e = function(chunkId) {$/;"	f
 fn.e.finishChunkLoading	.next/static/runtime/webpack.js	/^\/******\/ 			function finishChunkLoading() {$/;"	f
 fn.t	.next/static/runtime/webpack.js	/^\/******\/ 		fn.t = function(value, mode) {$/;"	f
+formatPath	components/post_card.js	/^function formatPath(p) {$/;"	f
 hotAddUpdateChunk	.next/static/runtime/webpack.js	/^\/******\/ 	function hotAddUpdateChunk(chunkId, moreModules) {$/;"	f
 hotApply	.next/static/runtime/webpack.js	/^\/******\/ 	function hotApply(options) {$/;"	f
 hotApplyInternal	.next/static/runtime/webpack.js	/^\/******\/ 	function hotApplyInternal(options) {$/;"	f
@@ -43,7 +44,7 @@ hotCreateModule.hot._acceptedDependencies	.next/static/runtime/webpack.js	/^\/**
 hotCreateRequire	.next/static/runtime/webpack.js	/^\/******\/ 	function hotCreateRequire(moduleId) {$/;"	f
 hotCreateRequire.ObjectFactory	.next/static/runtime/webpack.js	/^\/******\/ 		var ObjectFactory = function ObjectFactory(name) {$/;"	f
 hotCurrentChildModule	.next/static/runtime/webpack.js	/^\/******\/ 	var hotCurrentChildModule;$/;"	v
-hotCurrentHash	.next/static/runtime/webpack.js	/^\/******\/ 	var hotCurrentHash = "11c0d0d141d0475b5d9d";$/;"	v
+hotCurrentHash	.next/static/runtime/webpack.js	/^\/******\/ 	var hotCurrentHash = "99b9105d9f1d215f4961";$/;"	v
 hotCurrentParents	.next/static/runtime/webpack.js	/^\/******\/ 	var hotCurrentParents = [];$/;"	v
 hotCurrentParentsTemp	.next/static/runtime/webpack.js	/^\/******\/ 	var hotCurrentParentsTemp = [];$/;"	v
 hotDeferred	.next/static/runtime/webpack.js	/^\/******\/ 	var hotDeferred;$/;"	v

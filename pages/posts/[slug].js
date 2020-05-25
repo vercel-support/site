@@ -10,7 +10,7 @@ export default function Post({ post }) {
     <Layout>
       <div className="max-w-2xl mx-auto">
         <h1 className="font-bold text-3xl">{post.title}</h1>
-        <PostMeta post={post} />
+        {/* <PostMeta post={post} /> */}
         <div className="my-8">
           <img src={post.image} alt="" />
         </div>
