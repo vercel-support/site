@@ -4,7 +4,7 @@ import SEO from "../components/seo";
 import { frontMatter as blogPosts } from "./blog/*.mdx";
 
 export default function Writing() {
-  const posts = blogPosts.sort((a,b) => new Date(b.date) - new Date(a.date))
+  const posts = blogPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
   return (
     <Layout>

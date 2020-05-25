@@ -10,7 +10,7 @@ const withMdx = withMdxEnhanced({
   remarkPlugins: [],
   rehypePlugins: [require("@mapbox/rehype-prism")],
   extendFrontMatter: {
-    process: mdxContent => {
+    process: (mdxContent, frontMatter) => {
       return {
         timeToRead: readingTime(mdxContent).text
       };
@@ -19,5 +19,5 @@ const withMdx = withMdxEnhanced({
 });
 
 module.exports = withPlugins([withMdx, withSvgr], {
-  pageExtensions: ["js", "jsx", "mdx"]
+  // pageExtensions: ["js", "jsx", "mdx"]
 });
