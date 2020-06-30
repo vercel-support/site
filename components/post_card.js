@@ -8,7 +8,7 @@ function formatPath(p) {
 }
 
 const PostCard = ({ post }) => {
-  const postCardHeading = title => (
+  const postCardHeading = (title) => (
     <h3 className="text-xl font-bold text-gray-900">{title}</h3>
   );
 

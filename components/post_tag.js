@@ -7,7 +7,7 @@ const PostTag = ({ tag }) => {
   return (
     <li
       tag={tag.path}
-      className="relative inline-block p-2 mb-2 mr-2 text-sm bg-gray-200 rounded-lg z-10"
+      className="relative z-10 inline-block p-2 mb-2 mr-2 text-sm bg-gray-200 rounded-lg"
     >
       <Link href="/tags/[slug]" as={`/tags/${_.kebabCase(tag)}`}>
         <a className="flex items-end text-gray-900 hover:opacity-75">

@@ -22,13 +22,13 @@ export default function PostTags({ tags, limit = 2 }) {
 
   return (
     <ul className="flex flex-wrap items-center mt-6">
-      {displayedTags().map(tag => (
+      {displayedTags().map((tag) => (
         <PostTag key={tag} tag={tag} />
       ))}
       {isOverLimit() && (
         <li>
           <button
-            className="relative block w-9 h-9 p-2 mb-2 mr-2 text-sm bg-gray-200 rounded-lg cursor-pointer z-10"
+            className="relative z-10 block p-2 mb-2 mr-2 text-sm bg-gray-200 rounded-lg cursor-pointer w-9 h-9"
             onClick={() => setIsFullDisplay(true)}
           >
             <HorizontalDotsIcon />

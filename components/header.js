@@ -45,7 +45,7 @@ export default function Header() {
           </div>
 
           <ul className="hidden md:flex">
-            {links.map(link => (
+            {links.map((link) => (
               <li key={link.title}>
                 <Link href={link.to}>
                   <a className="block ml-8 text-sm font-semibold tracking-wide text-gray-700 md:inline-block md:mt-0 transform transition-all ease-in-out duration-75 hover:text-gray-900">
@@ -60,7 +60,7 @@ export default function Header() {
         {/* Mobile nav Links */}
         <div className={`w-full my-16 md:hidden ${!isOpen ? "hidden" : ""}`}>
           <ul>
-            {links.map(link => (
+            {links.map((link) => (
               <li key={link.title}>
                 <Link href={link.to}>
                   <a className="block py-3 font-semibold text-gray-700 hover:text-gray-900">

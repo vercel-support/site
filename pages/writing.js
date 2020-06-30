@@ -13,7 +13,7 @@ export default function Writing() {
       <h1 className="text-3xl font-bold">Recent Blog Posts</h1>
 
       <ul className="flex flex-wrap -mx-4">
-        {posts.map(post => (
+        {posts.map((post) => (
           <li
             key={post.slug}
             className="flex w-full px-4 mt-12 md:w-1/2 lg:w-1/3"

@@ -1,5 +1,5 @@
 ---
-layout: ../components/layout
+layout: ../layouts/standalone
 ---
 
 import cn from "classnames";
@@ -58,7 +58,7 @@ For those who don't know about transport text, it's a format that
 OmniFocus uses to parse task information like so:
 
 `Do something! @home ::misc #5pm #tomorrow //This is a note`
-  
+
 The `!` makes `Do something` a flagged task. `@home` sets the context to
 "home". `::` is used for matching a project. Both `@` and `::` will fuzzy match
 existing contexts and projects. The first `#` is used for a defer date, while

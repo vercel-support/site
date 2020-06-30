@@ -7,8 +7,8 @@ export default function BlogLayout(frontmatter) {
   return ({ children: content }) => {
     return (
       <Layout>
-        <div className="max-w-2xl mx-auto">
-          <h1 className="font-bold text-3xl">{frontmatter.title}</h1>
+        <div className="max-w-3xl mx-auto">
+          <h1 className="text-3xl font-bold">{frontmatter.title}</h1>
           <PostMeta post={frontmatter} />
           <div className="my-8">
             <img src={frontmatter.image} alt="" />

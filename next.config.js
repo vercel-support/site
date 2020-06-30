@@ -12,10 +12,10 @@ const withMdx = withMdxEnhanced({
   extendFrontMatter: {
     process: (mdxContent, frontMatter) => {
       return {
-        timeToRead: readingTime(mdxContent).text
+        timeToRead: readingTime(mdxContent).text,
       };
-    }
-  }
+    },
+  },
 });
 
 module.exports = withPlugins([withMdx, withSvgr], {

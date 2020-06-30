@@ -15,7 +15,7 @@ export default function Author({ className }) {
       <div className="flex justify-center text-gray-900">
         <img
           alt="Brandon Pittman"
-          className="shadow-outline-gray w-32 h-32 rounded-full"
+          className="w-32 h-32 rounded-full shadow-outline-gray"
           src="/assets/images/brandon.png"
         />
       </div>
