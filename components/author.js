@@ -16,7 +16,7 @@ export default function Author({ className }) {
         <img
           alt="Brandon Pittman"
           className="w-32 h-32 rounded-full shadow-outline-gray"
-          src="/assets/images/brandon.png"
+          src="/favicon-192x192.png"
         />
       </div>
 
