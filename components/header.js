@@ -6,10 +6,10 @@ import CloseIcon from "../public/assets/images/icon-close.svg";
 import { trackGoal } from "fathom-client";
 
 const links = HeaderLinks;
+const trackMobileMenuGoal = () => trackGoal("RYQBIEQE", 0);
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const trackMobileMenuGoal = () => trackGoal("RYQBIEQE", 0);
 
   const handleMenuClick = () => {
     setIsOpen(!isOpen);

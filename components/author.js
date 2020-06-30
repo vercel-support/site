@@ -5,11 +5,11 @@ import GithubIcon from "../public/assets/images/icon-github.svg";
 import DribbbleIcon from "../public/assets/images/icon-dribbble.svg";
 import cn from "classnames";
 
-export default function Author({ className }) {
-  const trackTwitterGoal = () => trackGoal("IFOPB1RM", 0);
-  const trackGithubGoal = () => trackGoal("JOZATR2E", 0);
-  const trackDribbbleGoal = () => trackGoal("EGN48GIU", 0);
+const trackTwitterGoal = () => trackGoal("IFOPB1RM", 0);
+const trackGithubGoal = () => trackGoal("JOZATR2E", 0);
+const trackDribbbleGoal = () => trackGoal("EGN48GIU", 0);
 
+export default function Author({ className }) {
   return (
     <aside className={cn(className, "max-w-lg mx-auto")}>
       <div className="flex justify-center text-gray-900">
