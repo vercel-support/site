@@ -25,7 +25,7 @@ export default function Header() {
               <a className="py-2">
                 <img
                   className="w-12 h-12 rounded-full shadow shadow-outline-gray"
-                  src="/assets/images/brandon.png"
+                  src="favicon-192x192.png"
                 />
               </a>
             </Link>
