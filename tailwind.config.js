@@ -25,11 +25,9 @@ module.exports = {
       whitelistPatternsChildren: whitelist,
     },
     content: [
-      "./components/**/*.js",
-      "./layouts/**/*.js",
-      "./pages/**/*.js",
-      "./pages/**/*.mdx",
-      "./_posts/**/*.md",
+      "./src/components/**/*.j{s,sx}",
+      "./src/pages/**/*.{mdx,js}",
+      "./content/**/*.md",
     ],
   },
 
