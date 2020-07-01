@@ -24,6 +24,7 @@ export default function Header() {
             <Link href="/">
               <a className="py-2">
                 <img
+                  alt="Brandon in a black kimono"
                   className="w-12 h-12 rounded-full shadow shadow-outline-gray"
                   src="/favicon-192x192.png"
                 />

@@ -11,7 +11,7 @@ export default function Post({ post }) {
       <div className="max-w-2xl mx-auto">
         <h1 className="text-3xl font-bold">{post.title}</h1>
         <PostMeta post={post} />
-        <div className="my-8">
+        <div className="my-8 -mx-4 sm:mx-0">
           <img src={post.image} alt="" />
         </div>
         <div

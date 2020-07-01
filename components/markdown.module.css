@@ -16,7 +16,13 @@
 }
 
 .markdown pre {
-  @apply my-8 leading-normal text-gray-100 bg-gray-900;
+  @apply my-8 -mx-4 leading-normal text-gray-100 bg-gray-900;
+}
+
+@screen sm {
+  .markdown pre {
+    @apply mx-0;
+  }
 }
 
 .markdown h1,
