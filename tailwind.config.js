@@ -25,11 +25,11 @@ module.exports = {
       whitelistPatternsChildren: whitelist,
     },
     content: [
-      "./components/**/*.jsx?",
-      "./layouts/**/*.jsx?",
-      "./pages/**/*.jsx?",
-      "./pages/**/*.mdx?",
-      "./_posts/**/*.mdx?",
+      "./components/**/*.js",
+      "./layouts/**/*.js",
+      "./pages/**/*.js",
+      "./pages/**/*.mdx",
+      "./_posts/**/*.md",
     ],
   },
 
