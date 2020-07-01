@@ -3,10 +3,6 @@ import MediaCard from "./media_card";
 import PostMeta from "./post_meta";
 import PostTags from "./post_tags";
 
-function formatPath(p) {
-  return p.replace(/\.mdx$/, "");
-}
-
 const PostCard = ({ post }) => {
   const postCardHeading = (title) => (
     <h3 className="text-xl font-bold text-gray-900">{title}</h3>
@@ -22,7 +18,7 @@ const PostCard = ({ post }) => {
 
       <PostTags tags={post.tags} limit="3" />
 
-      <Link href={formatPath(post.__resourcePath)}>
+      <Link href="/posts/[slug]" as={"/posts/" + post.slug}>
         <a className="visuallyhidden">{post.title}</a>
       </Link>
     </MediaCard>
