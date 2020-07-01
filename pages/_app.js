@@ -21,7 +21,10 @@ export default function App({ Component, pageProps }) {
   return (
     <StaticKitProvider site="a3b65ef2871d">
       <Head>
-        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/inter.css"
+        />
 
         <link rel="apple-touch-icon" sizes="57x57" href="/favicon-57x57.png" />
         <link rel="apple-touch-icon" sizes="60x60" href="/favicon-60x60.png" />
