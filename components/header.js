@@ -26,7 +26,7 @@ export default function Header() {
                 <img
                   alt="Brandon in a black kimono"
                   className="w-12 h-12 rounded-full shadow shadow-outline-gray"
-                  src="/favicon-192x192.png"
+                  src="/favicon-57x57.png"
                 />
               </a>
             </Link>
