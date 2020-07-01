@@ -1,6 +1,6 @@
 //const fancy = require("tailwindcss-plugin-fancy/packages/aspect");
 const ui = require("@tailwindcss/ui");
-const defaultTheme = require("tailwindcss/defaultTheme");
+// const defaultTheme = require("tailwindcss/defaultTheme");
 const whitelist = [/markdown/, /rich-text/, /primary/, /secondary/];
 
 const utilities = {
@@ -34,9 +34,9 @@ module.exports = {
 
   theme: {
     extend: {
-      fontFamily: {
-        sans: ["Inter", ...defaultTheme.fontFamily.sans],
-      },
+      // fontFamily: {
+      //   sans: ["Inter", ...defaultTheme.fontFamily.sans],
+      // },
       colors: {
         key: "rgb(0, 112, 243)",
       },
