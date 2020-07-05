@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 
-const SEO = ({ title, lang, description, image }) => (
+const SEO = ({ title, description, image }) => (
   <Head>
     <title>{title + " | Brandon Pittman"}</title>
     <meta name="description" content={description} />

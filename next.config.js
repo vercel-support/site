@@ -1,5 +1,4 @@
 const withPlugins = require("next-compose-plugins");
-// const withSvgr = require("next-svgr");
 const withImages = require("next-optimized-images");
 
 const withMdx = require("@next/mdx")({

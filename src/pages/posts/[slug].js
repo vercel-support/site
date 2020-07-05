@@ -1,14 +1,23 @@
 import Layout from "@components/layout";
+import SEO from "@components/seo";
 import Author from "@components/author";
 import { getPostBySlug, getAllPosts } from "@lib/api";
 import markdownToHtml from "@lib/markdownToHtml";
 import styles from "@components/markdown.module.css";
 import PostMeta from "@components/post_meta";
 import Img from "react-optimized-image";
+import { SITE_URL } from "@lib/constants";
 
 export default function Post({ post }) {
   return (
     <Layout>
+      <SEO
+        title={post.title}
+        description={post.description}
+        image={
+          SITE_URL + require(`../../../content/posts/images/${post.image}`)
+        }
+      />
       <div className="max-w-2xl mx-auto">
         <h1 className="text-3xl font-bold">{post.title}</h1>
         <PostMeta post={post} />
@@ -37,7 +46,8 @@ export async function getStaticProps({ params }) {
     "content",
     "date",
     "timeToRead",
-    "image"
+    "image",
+    "description"
   ]);
   const content = await markdownToHtml(post.content || "");
 

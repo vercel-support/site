@@ -5,7 +5,7 @@ import SEO from "@components/seo";
 export default function Index() {
   return (
     <>
-      <SEO title="Home" description="Brandon's new Next.js blog." />
+      <SEO title="Home" description="Brandon Pittman's personal website." />
       <Layout className="max-w-2xl">
         <p className="mt-8">
           Looking for someone to help you build a JAMstack website or
