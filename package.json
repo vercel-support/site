@@ -19,6 +19,7 @@
     "next": "latest",
     "next-compose-plugins": "^2.2.0",
     "next-mdx-remote": "^0.4.0",
+    "next-offline": "^5.0.2",
     "next-optimized-images": "^3.0.0-canary.0",
     "postcss-preset-env": "^6.7.0",
     "react": "^16.13.1",

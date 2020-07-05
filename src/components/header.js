@@ -26,7 +26,6 @@ export default function Header() {
               <a className="py-2">
                 <Img
                   src={ProfileImg}
-                  webp
                   alt="Brandon in a black kimono"
                   className="w-12 h-12 rounded-full shadow shadow-outline-gray"
                 />

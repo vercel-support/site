@@ -14,17 +14,14 @@ Router.events.on("routeChangeComplete", () => {
 export default function App({ Component, pageProps }) {
   useEffect(() => {
     Fathom.load("EXCJWHRT", {
-      excludedDomains: ["vercel.app", "now.sh", "localhost"],
+      excludedDomains: ["vercel.app", "now.sh", "localhost"]
     });
   }, []);
 
   return (
     <StaticKitProvider site="a3b65ef2871d">
       <Head>
-        {/* <link                                                                                 */}
-        {/*   href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" */}
-        {/*   rel="stylesheet"                                                                    */}
-        {/* />                                                                                    */}
+        <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css" />
 
         <link rel="apple-touch-icon" sizes="57x57" href="/favicon-57x57.png" />
         <link rel="apple-touch-icon" sizes="60x60" href="/favicon-60x60.png" />
