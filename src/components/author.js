@@ -50,9 +50,9 @@ export default function Author({ className }) {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://gatsbyjs.org/"
+          href="https://nextjs.org/"
         >
-          Gatsby
+          Next.js
         </a>
         , and
         <a
