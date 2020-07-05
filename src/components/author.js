@@ -1,8 +1,10 @@
 import React from "react";
 import { trackGoal } from "fathom-client";
-import TwitterIcon from "@images/twitter.svg";
+import TwitterIcon from "../images/twitter.svg";
 import GithubIcon from "@images/github.svg";
 import DribbbleIcon from "@images/dribbble.svg";
+import Img, { Svg } from "react-optimized-image";
+import ProfileImg from "../../public/favicon-192x192.png";
 import cn from "classnames";
 
 const trackTwitterGoal = () => trackGoal("IFOPB1RM", 0);
@@ -13,10 +15,11 @@ export default function Author({ className }) {
   return (
     <aside className={cn(className, "max-w-lg mx-auto")}>
       <div className="flex justify-center text-gray-900">
-        <img
-          alt="Brandon Pittman"
+        <Img
+          src={ProfileImg}
+          webp
+          alt="Brandon in a black kimono"
           className="w-32 h-32 rounded-full shadow-outline-gray"
-          src="/favicon-192x192.png"
         />
       </div>
 
@@ -78,7 +81,10 @@ export default function Author({ className }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <TwitterIcon className="w-8 h-8 mr-4 text-blue-400 fill-current" />
+          <Svg
+            src={TwitterIcon}
+            className="w-8 h-8 mr-4 text-blue-400 fill-current"
+          />
         </a>
 
         <a
@@ -87,7 +93,10 @@ export default function Author({ className }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <GithubIcon className="w-8 h-8 mr-4 text-gray-900 fill-current" />
+          <Svg
+            src={GithubIcon}
+            className="w-8 h-8 mr-4 text-gray-900 fill-current"
+          />
         </a>
 
         <a
@@ -96,7 +105,10 @@ export default function Author({ className }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <DribbbleIcon className="w-8 h-8 mr-4 text-gray-900 fill-current" />
+          <Svg
+            src={DribbbleIcon}
+            className="w-8 h-8 mr-4 text-gray-900 fill-current"
+          />
         </a>
       </div>
     </aside>

@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import HeaderLinks from "@lib/header_links.json";
 import { X, Menu } from "@images/heroicons/solid";
 import { trackGoal } from "fathom-client";
+import Img from "react-optimized-image";
+import ProfileImg from "../../public/favicon-60x60.png";
 
 const links = HeaderLinks;
 const trackMobileMenuGoal = () => trackGoal("RYQBIEQE", 0);
@@ -22,10 +24,11 @@ export default function Header() {
           <h1>
             <Link href="/">
               <a className="py-2">
-                <img
+                <Img
+                  src={ProfileImg}
+                  webp
                   alt="Brandon in a black kimono"
                   className="w-12 h-12 rounded-full shadow shadow-outline-gray"
-                  src="/favicon-57x57.png"
                 />
               </a>
             </Link>
@@ -45,7 +48,7 @@ export default function Header() {
           </div>
 
           <ul className="hidden md:flex">
-            {links.map((link) => (
+            {links.map(link => (
               <li key={link.title}>
                 <Link href={link.to}>
                   <a className="block ml-8 text-sm font-semibold tracking-wide text-gray-700 md:inline-block md:mt-0 transform transition-all ease-in-out duration-75 hover:text-gray-900">
@@ -60,7 +63,7 @@ export default function Header() {
         {/* Mobile nav Links */}
         <div className={`w-full my-16 md:hidden ${!isOpen ? "hidden" : ""}`}>
           <ul>
-            {links.map((link) => (
+            {links.map(link => (
               <li key={link.title}>
                 <Link href={link.to}>
                   <a className="block py-3 font-semibold text-gray-700 hover:text-gray-900">
