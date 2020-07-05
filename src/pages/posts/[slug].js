@@ -4,6 +4,7 @@ import { getPostBySlug, getAllPosts } from "@lib/api";
 import markdownToHtml from "@lib/markdownToHtml";
 import styles from "@components/markdown.module.css";
 import PostMeta from "@components/post_meta";
+import Img from "react-optimized-image";
 
 export default function Post({ post }) {
   return (
@@ -12,7 +13,11 @@ export default function Post({ post }) {
         <h1 className="text-3xl font-bold">{post.title}</h1>
         <PostMeta post={post} />
         <div className="my-8 -mx-4 sm:mx-0">
-          <img src={post.image} alt="" />
+          <Img
+            webp
+            src={require(`../../../content/posts/images/${post.image}`)}
+            alt=""
+          />
         </div>
         <div
           className={styles["markdown"]}

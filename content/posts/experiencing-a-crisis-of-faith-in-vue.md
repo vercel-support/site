@@ -2,7 +2,7 @@
 title: Experiencing a Crisis of Faith (in Vue)
 slug: experiencing-a-crisis-of-faith-in-vue
 description: I love Vue but lately I've been worried about the community around it.
-image: "/assets/posts/jametlene-reskp-gVfGGb62Fpo-unsplash.jpg"
+image: "jametlene-reskp-gVfGGb62Fpo-unsplash.jpg"
 date: 2020-04-18T00:00:00+09:00
 tags:
   - fp

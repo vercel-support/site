@@ -10,7 +10,7 @@ tags:
 - netlify
 - javascript
 - vue
-image: "/assets/posts/filling-form.jpg"
+image: "filling-form.jpg"
 
 ---
 If you didn't notice already, I've added a [form](/contact) to this here site.

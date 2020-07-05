@@ -1,7 +1,7 @@
 ---
 date: 2019-01-27
 description: "How I went about creating my own build system for templates needed for a project at work."
-image: "/assets/posts/nodejs.png"
+image: "nodejs.png"
 tags: ['node', 'javascript']
 title: Keeping Node Scripts Alive
 slug: keeping-node-scripts-alive

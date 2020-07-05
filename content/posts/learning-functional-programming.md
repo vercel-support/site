@@ -2,7 +2,7 @@
 title: Learning Functional Programming
 slug: learning-functional-programming
 description: 'How I started with functional programming. '
-image: "/assets/posts/victor-garcia-3YW2jxSblE8-unsplash.jpg"
+image: "victor-garcia-3YW2jxSblE8-unsplash.jpg"
 date: 2020-04-11T00:00:00+09:00
 tags:
 - purescript

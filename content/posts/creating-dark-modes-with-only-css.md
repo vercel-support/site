@@ -3,7 +3,7 @@ title: Creating Dark Modes With Only CSS
 slug: creating-dark-modes-with-only-css
 description: Developers often reach for JavaScript to implement dark modes, but it
   can be done with just CSS.
-image: "/assets/posts/todd-trapani-1tYLMbhn2MU-unsplash.jpg"
+image: "todd-trapani-1tYLMbhn2MU-unsplash.jpg"
 date: 2019-12-12T00:00:00+09:00
 tags:
 - tailwindcss
