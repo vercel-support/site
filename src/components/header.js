@@ -38,6 +38,7 @@ export default function Header() {
               className="flex items-center focus:outline-none"
               onClick={handleMenuClick}
             >
+              <span className="sr-only">Toggle menu</span>
               {!isOpen ? (
                 <Menu className="w-8 h-8" />
               ) : (
