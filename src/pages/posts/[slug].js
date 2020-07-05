@@ -15,6 +15,7 @@ export default function Post({ post }) {
         <div className="my-8 -mx-4 sm:mx-0">
           <Img
             webp
+            sizes={[480, 800]}
             src={require(`../../../content/posts/images/${post.image}`)}
             alt=""
           />
