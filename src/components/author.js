@@ -1,6 +1,6 @@
 import React from "react";
 import { trackGoal } from "fathom-client";
-import TwitterIcon from "../images/twitter.svg";
+import TwitterIcon from "@images/twitter.svg";
 import GithubIcon from "@images/github.svg";
 import DribbbleIcon from "@images/dribbble.svg";
 import Img, { Svg } from "react-optimized-image";
