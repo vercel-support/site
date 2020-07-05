@@ -17,14 +17,6 @@ const withOffline = require("next-offline")({
         }
       }
     ]
-  },
-  async rewrites() {
-    return [
-      {
-        source: "/service-worker.js",
-        destination: "/_next/static/service-worker.js"
-      }
-    ];
   }
 });
 
@@ -33,5 +25,13 @@ const withMdx = require("@next/mdx")({
 });
 
 module.exports = withPlugins([withOffline, withMdx, withImages], {
-  pageExtensions: ["js", "jsx", "ts", "tsx", "mdx"]
+  pageExtensions: ["js", "jsx", "ts", "tsx", "mdx"],
+  async rewrites() {
+    return [
+      {
+        source: "/service-worker.js",
+        destination: "/_next/static/service-worker.js"
+      }
+    ];
+  }
 });
