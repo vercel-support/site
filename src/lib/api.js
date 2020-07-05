@@ -1,13 +1,13 @@
 import fs from "fs";
-import { join } from "path";
+import { join, basename } from "path";
 import matter from "gray-matter";
 import readingTime from "reading-time";
+import globby from "globby";
 
 const postsDirectory = join(process.cwd(), "content/posts");
 
-export function getPostSlugs() {
-  return fs.readdirSync(postsDirectory);
-}
+export const getPostSlugs = () =>
+  globby.sync(`${postsDirectory}/**.md`).map(path => basename(path));
 
 export function getPostBySlug(slug, fields = []) {
   const realSlug = slug.replace(/\.md$/, "");
@@ -17,7 +17,7 @@ export function getPostBySlug(slug, fields = []) {
 
   const items = {};
 
-  fields.forEach((field) => {
+  fields.forEach(field => {
     if (field === "slug") {
       items[field] = realSlug;
     }
@@ -48,7 +48,7 @@ export function getPostBySlug(slug, fields = []) {
 export function getAllPosts(fields = []) {
   const slugs = getPostSlugs();
   const posts = slugs
-    .map((slug) => getPostBySlug(slug, fields))
+    .map(slug => getPostBySlug(slug, fields))
     // sort posts by date in descending order
     .sort((post1, post2) => (post1.date > post2.date ? "-1" : "1"));
   return posts;
@@ -57,7 +57,7 @@ export function getAllPosts(fields = []) {
 export function getAllTags() {
   const slugs = getPostSlugs();
   const tags = slugs
-    .map((slug) => getPostBySlug(slug, ["tags"]))
+    .map(slug => getPostBySlug(slug, ["tags"]))
     .reduce((acc, val) => [...acc, JSON.parse(val.tags)], [])
     .flat();
 

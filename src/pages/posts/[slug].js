@@ -31,7 +31,7 @@ export async function getStaticProps({ params }) {
     "content",
     "date",
     "timeToRead",
-    "image",
+    "image"
   ]);
   const content = await markdownToHtml(post.content || "");
 
@@ -39,9 +39,9 @@ export async function getStaticProps({ params }) {
     props: {
       post: {
         ...post,
-        content,
-      },
-    },
+        content
+      }
+    }
   };
 }
 
@@ -49,13 +49,13 @@ export async function getStaticPaths() {
   const posts = getAllPosts(["slug"]);
 
   return {
-    paths: posts.map((posts) => {
+    paths: posts.map(posts => {
       return {
         params: {
-          slug: posts.slug,
-        },
+          slug: posts.slug
+        }
       };
     }),
-    fallback: false,
+    fallback: false
   };
 }
