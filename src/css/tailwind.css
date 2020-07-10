@@ -11,22 +11,4 @@ footer a {
 }
 
 @tailwind components;
-
-.primary,
-.secondary {
-  @apply fill-current;
-}
-
-.primary {
-  @apply text-indigo-300;
-}
-
-.secondary {
-  @apply text-indigo-700;
-}
-
-path.secondary {
-  @apply text-gray-900;
-}
-
 @tailwind utilities;
