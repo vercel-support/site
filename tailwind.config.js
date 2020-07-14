@@ -1,6 +1,7 @@
 //const fancy = require("tailwindcss-plugin-fancy/packages/aspect");
 const ui = require("@tailwindcss/ui");
 const defaultTheme = require("tailwindcss/defaultTheme");
+const typography = require("@tailwindcss/typography");
 const whitelist = [/markdown/, /rich-text/, /primary/, /secondary/];
 
 const utilities = {
@@ -13,8 +14,8 @@ const utilities = {
     opacity: "0",
     overflow: "hidden",
     textIndent: "-9999px",
-    zIndex: "0"
-  }
+    zIndex: "0",
+  },
 };
 
 module.exports = {
@@ -22,31 +23,31 @@ module.exports = {
     options: {
       keyframes: true,
       whitelistPatterns: whitelist,
-      whitelistPatternsChildren: whitelist
+      whitelistPatternsChildren: whitelist,
     },
     content: [
       "./src/components/**/*.j{s,sx}",
       "./src/pages/**/*.{mdx,js}",
-      "./content/**/*.md"
-    ]
+      "./content/**/*.md",
+    ],
   },
 
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", ...defaultTheme.fontFamily.sans]
+        sans: ["Inter", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        key: "rgb(0, 112, 243)"
-      }
+        key: "rgb(0, 112, 243)",
+      },
     },
-    container: { center: true, padding: "1rem" }
+    container: { center: true, padding: "1rem" },
   },
 
   variants: {},
 
   plugins: [
-    function({ addBase, addUtilities }) {
+    function ({ addBase, addUtilities }) {
       addBase({
         ".markdown": {
           "img, pre": {
@@ -54,13 +55,14 @@ module.exports = {
             marginRight: "-1rem",
             "@media (min-width: 640px)": {
               marginLeft: "0",
-              marginRight: "0"
-            }
-          }
-        }
+              marginRight: "0",
+            },
+          },
+        },
       });
       addUtilities(utilities);
     },
-    ui
-  ]
+    ui,
+    typography,
+  ],
 };

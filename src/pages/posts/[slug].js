@@ -3,7 +3,7 @@ import SEO from "@components/seo";
 import Author from "@components/author";
 import { getPostBySlug, getAllPosts } from "@lib/api";
 import markdownToHtml from "@lib/markdownToHtml";
-import styles from "@components/markdown.module.css";
+// import styles from "@components/markdown.module.css";
 import PostMeta from "@components/post_meta";
 import Img from "react-optimized-image";
 import { SITE_URL } from "@lib/constants";
@@ -30,7 +30,7 @@ export default function Post({ post }) {
           />
         </div>
         <div
-          className={styles["markdown"]}
+          className="prose"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
 
@@ -47,7 +47,7 @@ export async function getStaticProps({ params }) {
     "date",
     "timeToRead",
     "image",
-    "description"
+    "description",
   ]);
   const content = await markdownToHtml(post.content || "");
 
@@ -55,9 +55,9 @@ export async function getStaticProps({ params }) {
     props: {
       post: {
         ...post,
-        content
-      }
-    }
+        content,
+      },
+    },
   };
 }
 
@@ -65,13 +65,13 @@ export async function getStaticPaths() {
   const posts = getAllPosts(["slug"]);
 
   return {
-    paths: posts.map(posts => {
+    paths: posts.map((posts) => {
       return {
         params: {
-          slug: posts.slug
-        }
+          slug: posts.slug,
+        },
       };
     }),
-    fallback: false
+    fallback: false,
   };
 }
