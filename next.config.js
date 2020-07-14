@@ -10,5 +10,19 @@ const withMdx = require("@next/mdx")({
 });
 
 module.exports = withPlugins([withPWA, withMdx, withImages], {
-  pageExtensions: ["js", "jsx", "ts", "tsx", "mdx"]
+  pageExtensions: ["js", "jsx", "ts", "tsx", "mdx"],
+  async redirects() {
+    return [
+      // 308 temporary redirect
+      {
+        source: "/here",
+        destination: "/",
+        permanent: true
+      },
+      {
+        source: "/tailwind-purge-config/",
+        destination: "/posts/tailwind-and-purge-css-config-for-gridsome/"
+      }
+    ];
+  }
 });
