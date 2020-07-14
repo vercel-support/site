@@ -7,7 +7,7 @@ export default function Index() {
     <>
       <SEO title="Home" description="Brandon Pittman's personal website." />
       <Layout className="max-w-2xl">
-        <div className="prose prose-lg">
+        <div className="prose sm:prose-lg">
           <p className="mt-8">
             Looking for someone to help you build a JAMstack website or
             frontend-heavy application? You may not even need a backend. If you

@@ -10,7 +10,7 @@ import { SITE_URL } from "@lib/constants";
 
 export default function Post({ post }) {
   return (
-    <Layout>
+    <Layout class="prose sm:prose-lg">
       <SEO
         title={post.title}
         description={post.description}
@@ -18,19 +18,21 @@ export default function Post({ post }) {
           SITE_URL + require(`../../../content/posts/images/${post.image}`)
         }
       />
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-2xl mx-auto prose sm:prose-lg">
         <h1 className="text-3xl font-bold">{post.title}</h1>
-        <PostMeta post={post} />
-        <div className="my-8 -mx-4 sm:mx-0">
+        <div className="-mt-12">
+          <PostMeta post={post} />
+        </div>
+        {/* <div className="my-8 -mx-4 sm:mx-0">
           <Img
             webp
             sizes={[480, 800]}
             src={require(`../../../content/posts/images/${post.image}`)}
             alt=""
           />
-        </div>
+        </div> */}
         <div
-          className="prose"
+          className="mt-8 prose sm:prose-lg"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
 
@@ -47,7 +49,7 @@ export async function getStaticProps({ params }) {
     "date",
     "timeToRead",
     "image",
-    "description",
+    "description"
   ]);
   const content = await markdownToHtml(post.content || "");
 
@@ -55,9 +57,9 @@ export async function getStaticProps({ params }) {
     props: {
       post: {
         ...post,
-        content,
-      },
-    },
+        content
+      }
+    }
   };
 }
 
@@ -65,13 +67,13 @@ export async function getStaticPaths() {
   const posts = getAllPosts(["slug"]);
 
   return {
-    paths: posts.map((posts) => {
+    paths: posts.map(posts => {
       return {
         params: {
-          slug: posts.slug,
-        },
+          slug: posts.slug
+        }
       };
     }),
-    fallback: false,
+    fallback: false
   };
 }

@@ -13,7 +13,7 @@ const trackDribbbleGoal = () => trackGoal("EGN48GIU", 0);
 
 export default function Author({ className }) {
   return (
-    <aside className={cn(className, "max-w-lg mx-auto")}>
+    <aside className={cn(className, "max-w-lg mx-auto prose sm:prose-lg")}>
       <div className="flex justify-center text-gray-900">
         <Img
           src={ProfileImg}
@@ -47,11 +47,7 @@ export default function Author({ className }) {
           React
         </a>
         ,{" "}
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://nextjs.org/"
-        >
+        <a target="_blank" rel="noopener noreferrer" href="https://nextjs.org/">
           Next.js
         </a>
         , and
