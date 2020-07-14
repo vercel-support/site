@@ -6,6 +6,7 @@ const Cta = ({ href, children }) => {
     <a
       href={href}
       className="inline-block px-3 py-2 mt-8 font-semibold text-white rounded shadow-lg bg-key hover:shadow focus:shadow transform transition-all duration-100 ease-in-out hover:translate-y-px"
+      style={{ color: white }}
     >
       {children}
     </a>
@@ -14,7 +15,7 @@ const Cta = ({ href, children }) => {
 
 Cta.propTypes = {
   href: PropTypes.string,
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 export default Cta;
