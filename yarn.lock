@@ -1933,15 +1933,15 @@
     mini-svg-data-uri "^1.0.3"
     traverse "^0.6.6"
 
-"@tailwindcss/typography@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/typography/-/typography-0.1.2.tgz#41fb4f862b7810e6c8eb03ad2de465b53380f0c0"
-  integrity sha512-Qc52tzH2HGWhgn1IWyqzQ5GuuyXnEWCKflAZDiDHSYHq/Rhapsdlqd4ItqDdYjtpl8+6EC8/tV9nGfG3jifdPg==
+"@tailwindcss/typography@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/typography/-/typography-0.1.3.tgz#df8213d3a306457287dfed8be255efbaf28b8f32"
+  integrity sha512-I9jUUuiYExJiaQy6o9YTw7W7qMaYz9nMDg5+znRop7xo0WqqaIJP1HfkbdJpoZBchU4i5COaewpXQLx1alCYLg==
 
-"@tailwindcss/ui@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/ui/-/ui-0.3.0.tgz#846e489c61bdeb60bdd4e2c32033db770ad8d429"
-  integrity sha512-LucyddG60/XAGN7aau+Jn84dsl2BFMZya7o/rGVKSXBVXUv+9SoaGmkbPdl0G3kkpcfQrGndDPSkdUgVTS0y8g==
+"@tailwindcss/ui@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/ui/-/ui-0.3.1.tgz#5ae5dc0ede9f62c265aad6765c35b80183f6cd91"
+  integrity sha512-Hj6+c/EcwxflbvM5c0CxRxjNwjlNNkJ6aOK9eT06N7X7z1ZDsnKup8NaRBDc7XFY5CTmIYfLzNRyN1pfw6bSSw==
   dependencies:
     "@tailwindcss/custom-forms" "^0.2.1"
     hex-rgb "^4.1.0"
@@ -5624,10 +5624,10 @@ next-compose-plugins@^2.2.0:
   resolved "https://registry.yarnpkg.com/next-compose-plugins/-/next-compose-plugins-2.2.0.tgz#95cd8eb40ab0652070d76572fb648354191628b0"
   integrity sha512-ChUlpT9tWfJ7YxqGw/WQ2T1gf8EeX93n1XqeQw0lkvGa7seszahvF4eOZUJoq7Hetsbzg4UHVnPoCXfXTyQR3g==
 
-next-mdx-remote@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/next-mdx-remote/-/next-mdx-remote-0.4.0.tgz#ce7cf594ddd40a066f0855f5f997d0627684f05f"
-  integrity sha512-h1b3KNiXTUn8oEN9oyEbc/sAMiwgmXA/2/raaqtBVpUCqEYxQOYu1u7DhzwbEQq/WLuXMYHHhrjRuOARmaF0HA==
+next-mdx-remote@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/next-mdx-remote/-/next-mdx-remote-0.5.0.tgz#3135894c1d5e11ce719422f41a77825b11620793"
+  integrity sha512-x6+a4TPCVZd3+k0JFJCFKLZkQIV7jKF/EGsxQOvpg7ShsKUIiiYOmorlBC4BTYTvIMHrUATtsYJ5Bn0+ybjX1Q==
   dependencies:
     "@babel/core" "^7.9.6"
     "@babel/preset-env" "^7.9.6"
@@ -5635,7 +5635,6 @@ next-mdx-remote@^0.4.0:
     "@mdx-js/react" "^1.6.1"
     react "^16.13.1"
     react-dom "^16.13.1"
-    require-from-string "^2.0.2"
 
 next-optimized-images@^3.0.0-canary.0:
   version "3.0.0-canary.0"
@@ -5646,10 +5645,10 @@ next-optimized-images@^3.0.0-canary.0:
     optimized-images-loader "^0.2.1"
     react-optimized-image "^0.2.0"
 
-next-pwa@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/next-pwa/-/next-pwa-3.0.1.tgz#ac9d3bf86eae8f72a05f75022533f952ea0bbe74"
-  integrity sha512-yWRf1wOarWZiGvO+XO2s5WSWzkPWx08QgUesV6/eTvfN0j+E/cBh87x+YzWgO+LuGyhkIBbQ8zbPWyjEnNbaTA==
+next-pwa@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/next-pwa/-/next-pwa-3.0.3.tgz#e1976b5b615028972f30f7a1c5f9482625c22194"
+  integrity sha512-LT1jFCOYfB+JpZujriX6gHG35Swgmc+ApSxP4+hkr/fu29k9Jm6L8MGjEnQc1OBWb6fs+ywo8ITT+TKydaV4+g==
   dependencies:
     clean-webpack-plugin "^3.0.0"
     globby "^11.0.0"
@@ -7364,11 +7363,6 @@ replace-ext@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/replace-ext/-/replace-ext-1.0.0.tgz#de63128373fcbf7c3ccfa4de5a480c45a67958eb"
   integrity sha1-3mMSg3P8v3w8z6TeWkgMRaZ5WOs=
-
-require-from-string@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/require-from-string/-/require-from-string-2.0.2.tgz#89a7fdd938261267318eafe14f9c32e598c36909"
-  integrity sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==
 
 resolve-from@^3.0.0:
   version "3.0.0"

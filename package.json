@@ -11,7 +11,7 @@
     "@mdx-js/loader": "^1.6.6",
     "@next/mdx": "^9.4.4",
     "@statickit/react": "^2.1.1",
-    "@tailwindcss/typography": "^0.1.2",
+    "@tailwindcss/typography": "^0.1.3",
     "classnames": "^2.2.6",
     "date-fns": "^2.14.0",
     "fathom-client": "^3.0.0",
@@ -19,9 +19,9 @@
     "gray-matter": "^4.0.2",
     "next": "latest",
     "next-compose-plugins": "^2.2.0",
-    "next-mdx-remote": "^0.4.0",
+    "next-mdx-remote": "^0.5.0",
     "next-optimized-images": "^3.0.0-canary.0",
-    "next-pwa": "^3.0.1",
+    "next-pwa": "^3.0.3",
     "postcss-preset-env": "^6.7.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -34,7 +34,7 @@
     "unified": "^9.0.0"
   },
   "devDependencies": {
-    "@tailwindcss/ui": "^0.3.0",
+    "@tailwindcss/ui": "^0.3.1",
     "tailwindcss": "^1.4.6",
     "tailwindcss-plugin-fancy": "^2.0.0-beta.1"
   },
