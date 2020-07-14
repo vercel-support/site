@@ -4,7 +4,7 @@ import SEO from "@components/seo";
 
 const Grateful = () => {
   return (
-    <Layout className="max-w-2xl text-lg">
+    <Layout className="max-w-2xl text-lg prose">
       <SEO
         title="Patronage"
         description="Support Brandon Pittman's open source work."
