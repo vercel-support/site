@@ -1,4 +1,4 @@
-import "../css/tailwind.css";
+import "tailwindcss/tailwind.css";
 import "../css/dank-mono.css";
 import "../css/prism-night-owl.css";
 import React, { useEffect } from "react";

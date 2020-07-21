@@ -4,7 +4,7 @@ import PostMeta from "./post_meta";
 import PostTags from "./post_tags";
 
 const PostCard = ({ post }) => {
-  const postCardHeading = (title) => (
+  const postCardHeading = title => (
     <h3 className="text-xl font-bold text-gray-900">{title}</h3>
   );
 
@@ -18,7 +18,7 @@ const PostCard = ({ post }) => {
 
       <PostTags tags={post.tags} limit="3" />
 
-      <Link href="/posts/[slug]" as={"/posts/" + post.slug}>
+      <Link href="/writing/[slug]" as={"/writing/" + post.slug}>
         <a className="visuallyhidden">{post.title}</a>
       </Link>
     </MediaCard>
