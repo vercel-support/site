@@ -7,7 +7,6 @@ const MediaCard = ({ image, children, title }) => {
       <div>
         <Img
           webp
-          sizes={[480]}
           src={require(`../../content/posts/images/${image}`)}
           className="object-cover w-full h-64"
         />
