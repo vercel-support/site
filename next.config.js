@@ -11,20 +11,18 @@ const withMdx = require("@next/mdx")({
 
 module.exports = withPlugins([withPWA, withMdx, withImages], {
   pageExtensions: ["js", "jsx", "ts", "tsx", "mdx"],
-  experimental: {
-    async redirects() {
-      return [
-        {
-          source: "/posts/(.*)",
-          destination: "/writing/$1",
-          permanent: true
-        },
-        {
-          source: "/here",
-          destination: "/",
-          permanent: true
-        }
-      ];
-    }
+  async redirects() {
+    return [
+      {
+        source: "/posts/(.*)",
+        destination: "/writing/$1",
+        permanent: true
+      },
+      {
+        source: "/here",
+        destination: "/",
+        permanent: true
+      }
+    ];
   }
 });
