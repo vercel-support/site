@@ -15,6 +15,11 @@ module.exports = withPlugins([withPWA, withMdx, withImages], {
     async redirects() {
       return [
         {
+          source: "/posts/(.*)",
+          destination: "/writing/$1",
+          permanent: true
+        },
+        {
           source: "/here",
           destination: "/",
           permanent: true
