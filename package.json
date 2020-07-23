@@ -20,7 +20,7 @@
     "next": "latest",
     "next-compose-plugins": "^2.2.0",
     "next-mdx-remote": "^0.6.0",
-    "next-optimized-images": "^3.0.0-canary.1",
+    "next-optimized-images": "3.0.0-canary.0",
     "next-pwa": "^3.1.0",
     "postcss-preset-env": "^6.7.0",
     "react": "^16.13.1",
@@ -31,8 +31,7 @@
     "remark-html": "^11.0.2",
     "remark-parse": "^8.0.3",
     "remark-rehype": "^7.0.0",
-    "unified": "^9.0.0",
-    "webpack": "^4.43.0"
+    "unified": "^9.0.0"
   },
   "devDependencies": {
     "@tailwindcss/ui": "^0.4.0",
