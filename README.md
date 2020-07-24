@@ -5,18 +5,14 @@
 ### Assets
 
 - [ ] Setup up optimized images
-- [ ] Add postcss plugins
-- [ ] Setup SVG plugin
+- [x] Add postcss plugins
+- [x] Setup SVG plugin
 
 ### Blog
 
-- [ ] Setup MDX posts
-
-### Redesign
-
-- [ ] Mimic Paco's site
+- [x] Setup MDX posts
 
 ### SEO
 
-- [ ] Setup Fathom
-- [ ] Setup Statickit
+- [x] Setup Fathom
+- [x] Setup Statickit
