@@ -9,7 +9,7 @@ export default function ContactForm() {
 
   return (
     <form name="contact" onSubmit={handleSubmit}>
-      <div className="mt-4">
+      <div>
         <label htmlFor="name" className="block text-sm font-bold text-gray-700">
           Name
         </label>
@@ -54,7 +54,7 @@ export default function ContactForm() {
       <div className="flex justify-center">
         <button
           disabled={state.submitting}
-          className="w-full px-3 py-2 mt-4 font-semibold text-white rounded shadow-md focus:shadow-outline bg-key"
+          className="w-full px-3 py-2 mt-4 font-semibold text-white shadow-md rounded-md focus:shadow-outline bg-key"
         >
           Submit
         </button>

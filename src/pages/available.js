@@ -5,14 +5,12 @@ import SEO from "@components/seo";
 
 const Available = () => {
   return (
-    <Layout>
+    <Layout className="prose sm:prose-lg">
       <SEO title="Contact" description="Get in touch with Brandon Pittman." />
 
-      <Card className="max-w-sm px-6 py-8 mx-auto mt-8">
-        <h1 className="max-w-md mx-auto text-2xl font-bold text-gray-900">
-          Send me a message
-        </h1>
+      <h1 className="mx-auto text-center">Send me a message</h1>
 
+      <Card className="max-w-md px-6 py-8 mx-auto mt-8">
         <ContactForm />
       </Card>
     </Layout>
