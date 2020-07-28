@@ -9,18 +9,18 @@
   "dependencies": {
     "@mapbox/rehype-prism": "^0.5.0",
     "@mdx-js/loader": "^1.6.14",
-    "@next/mdx": "^9.4.4",
+    "@next/mdx": "^9.5.0",
     "@statickit/react": "^2.1.1",
     "classnames": "^2.2.6",
     "date-fns": "^2.15.0",
     "fathom-client": "^3.0.0",
     "globby": "^11.0.1",
     "gray-matter": "^4.0.2",
-    "next": "^9.4.5-canary.43",
+    "next": "^9.5.0",
     "next-compose-plugins": "^2.2.0",
     "next-mdx-remote": "^0.6.0",
     "next-optimized-images": "^3.0.0-canary.4",
-    "next-pwa": "^3.1.0",
+    "next-pwa": "^3.1.1",
     "postcss-preset-env": "^6.7.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "@tailwindcss/ui": "^0.4.0",
-    "tailwindcss": "^1.5.2"
+    "tailwindcss": "^1.6.0"
   },
   "license": "ISC"
 }
