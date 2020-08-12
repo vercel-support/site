@@ -57,6 +57,30 @@ module.exports = {
   variants: {},
 
   plugins: [
+    function({ addComponents, theme }) {
+      addComponents({
+        ".float-label": {
+          position: "relative",
+          display: "flex",
+          alignItems: "center",
+          paddingTop: "2rem",
+          "& span": {
+            position: "absolute",
+            transform: "translateX(.75rem)",
+            transition: "transform 150ms ease-in-out, color 150ms ease-in-out",
+            transformOrigin: "0%",
+            fontWeight: 700
+          },
+          "& input:not(:placeholder-shown) ~ span": {
+            transform: "scale(.9) translateX(.75rem) translateY(-2.25rem)"
+          },
+          "&:focus-within span": {
+            transform: "scale(.9) translateX(.75rem) translateY(-2.25rem)",
+            color: theme("colors.key")
+          }
+        }
+      });
+    },
     function({ addBase, addUtilities }) {
       addBase({
         ".markdown": {
