@@ -1,16 +1,22 @@
-# Next Blog
+# Next.js Site for [blp.is](https://blp.is)
 
-## TODO
+## Next Actions
 
 ### Assets
 
-- [ ] Setup up optimized images
+- [x] Setup up optimized images
 - [x] Add postcss plugins
 - [x] Setup SVG plugin
+- [ ] Create Cloudinary workflow
+
+### Infrastructure
+
+- [ ] Migrate JavaScript to ReScript
 
 ### Blog
 
 - [x] Setup MDX posts
+- [ ] Implement [next-mdx-remote](https://github.com/hashicorp/next-mdx-remote)
 
 ### SEO
 
