@@ -2,23 +2,21 @@
 
 ## Next Actions
 
-### Assets
-
-- [x] Setup up optimized images
-- [x] Add postcss plugins
-- [x] Setup SVG plugin
-- [ ] Create Cloudinary workflow
-
-### Infrastructure
-
+- [ ] Redesign blog-related pages to not use images
+- [ ] Transition from blog to a more *documents*-style presentation
+- [ ] Implement TinaCMS
+- [ ] Implement [next-mdx-remote](https://github.com/hashicorp/next-mdx-remote)
 - [ ] Migrate JavaScript to ReScript
 
-### Blog
+## Someday
 
-- [x] Setup MDX posts
-- [ ] Implement [next-mdx-remote](https://github.com/hashicorp/next-mdx-remote)
+- [ ] Create Cloudinary workflow
 
-### SEO
+## Archive
 
 - [x] Setup Fathom
 - [x] Setup Statickit
+- [x] Setup MDX posts
+- [x] Setup up optimized images
+- [x] Add postcss plugins
+- [x] Setup SVG plugin
