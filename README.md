@@ -12,7 +12,7 @@
 
 - [ ] Create Cloudinary workflow
 
-## Archive
+## Completed
 
 - [x] Setup Fathom
 - [x] Setup Statickit
