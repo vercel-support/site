@@ -4,33 +4,28 @@ import SEO from "../../components/seo";
 import { getAllPosts, getAllTags } from "../../lib/api";
 
 export async function getStaticProps({ params }) {
-  const posts = getAllPosts([
-    "title",
-    "description",
-    "slug",
-    "timeToRead",
-    "image",
-    "tags",
-    "date",
-  ]).filter((post) => JSON.parse(post.tags).includes(params.slug));
+  const allPosts = await getAllPosts();
+  const posts = allPosts.filter((post: any) =>
+    post.data.tags.includes(params.slug)
+  );
 
   return {
-    props: { posts, title: params.slug },
+    props: { posts, title: params.slug }
   };
 }
 
 export async function getStaticPaths() {
-  const tags = getAllTags();
+  const tags = await getAllTags();
 
   return {
-    paths: tags.map((tag) => ({ params: { slug: tag } })),
-    fallback: false,
+    paths: tags.map(tag => ({ params: { slug: tag } })),
+    fallback: false
   };
 }
 
 export default function Tags({ posts, title }) {
   return (
-    <Layout className="">
+    <Layout>
       <>
         <SEO
           title={title}
@@ -38,9 +33,9 @@ export default function Tags({ posts, title }) {
         />
         <h1 className="text-3xl font-bold">Posts tagged "{title}"</h1>
         <ul className="flex flex-wrap -mx-4">
-          {posts.map((post) => (
+          {posts.map(post => (
             <li
-              key={post.slug}
+              key={post.data.slug}
               className="flex w-full px-4 mt-12 md:w-1/2 lg:w-1/3"
             >
               <PostCard post={post} />

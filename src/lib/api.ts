@@ -21,7 +21,7 @@ export async function queryPost(slug: string) {
   const source = await renderToString(content);
   data = {
     ...data,
-    data: data.date.toISOString(),
+    date: data.date.toISOString(),
     timeToRead: readingTime(content).text
   };
 
@@ -35,55 +35,13 @@ export async function queryPost(slug: string) {
 export const getPostSlugs = () =>
   globby.sync(`${postsDirectory}/**.md`).map(path => basename(path));
 
-export function getPostBySlug(slug: string, fields = []) {
-  const realSlug = slug.replace(/\.mdx?$/, "");
-  const fullPath = join(postsDirectory, `${realSlug}.md`);
-  const fileContents = fs.readFileSync(fullPath, "utf8");
-  const { data, content } = matter(fileContents);
-
-  const items = {};
-
-  fields.forEach(field => {
-    if (field === "slug") {
-      items[field] = realSlug;
-    }
-    if (field === "content") {
-      items[field] = content;
-    }
-    if (field === "timeToRead") {
-      items[field] = readingTime(content).text;
-    }
-
-    if (data[field]) {
-      switch (field) {
-        case "tags":
-          items[field] = JSON.stringify(data[field]);
-          break;
-        case "date":
-          items[field] = data[field].toISOString();
-          break;
-        default:
-          items[field] = data[field];
-      }
-    }
-  });
-
-  return items;
-}
-
-export function getAllPosts(fields = []) {
+export async function getAllPosts() {
   const slugs = getPostSlugs();
-  const posts = slugs
-    .map(slug => getPostBySlug(slug, fields))
-    .sort((post1: Post, post2: Post) => (post1.date > post2.date ? -1 : 1));
-  return posts;
+  return await Promise.all(slugs.map(slug => queryPost(slug)));
 }
 
-export function async getAllTags() {
-  const slugs: any[] = getPostSlugs();
-  const tags: any = await Promise.all(slugs.map(slug => queryPost(slug)));
-  console.log(tags);
-  //.reduce((acc: any[], val: any) => [...acc, JSON.parse(val.tags)], []);
-
+export async function getAllTags(): Promise<string[]> {
+  const posts = await getAllPosts();
+  const tags = posts.map(post => post.data.tags).flat(Infinity);
   return Array.from(new Set(tags));
 }

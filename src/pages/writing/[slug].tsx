@@ -21,7 +21,7 @@ export default function Post({ source, data }) {
       <div className="max-w-2xl mx-auto prose sm:prose-lg">
         <h1 className="text-3xl font-bold">{data.title}</h1>
         <div className="-mt-12">
-          <PostMeta post={data} />
+          <PostMeta post={{ data }} />
         </div>
         <div className="mt-8 prose sm:prose-lg">{content}</div>
 
@@ -32,32 +32,28 @@ export default function Post({ source, data }) {
 }
 
 export async function getStaticProps({ params }) {
-  let { data, content, source } = await queryPost(params.slug);
-  data = {
-    ...data,
-    date: data.date.toISOString(),
-  };
+  const { data, content, source } = await queryPost(params.slug);
 
   return {
     props: {
       source,
       content,
-      data,
-    },
+      data
+    }
   };
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(["slug"]);
+  const posts = await getAllPosts();
 
   return {
-    paths: posts.map((posts) => {
+    paths: posts.map(posts => {
       return {
         params: {
-          slug: posts.slug,
-        },
+          slug: posts.data.slug
+        }
       };
     }),
-    fallback: false,
+    fallback: false
   };
 }

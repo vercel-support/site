@@ -4,15 +4,7 @@ import SEO from "../../components/seo";
 import { getAllPosts } from "../../lib/api";
 
 export async function getStaticProps() {
-  const posts = getAllPosts([
-    "title",
-    "description",
-    "slug",
-    "timeToRead",
-    "image",
-    "tags",
-    "date"
-  ]);
+  const posts = await getAllPosts();
 
   return {
     props: { posts }
@@ -22,14 +14,17 @@ export async function getStaticProps() {
 export default function Writing({ posts }) {
   return (
     <Layout>
-      <SEO title="Blog" description="Recent blog posts from Brandon Pittman." />
+      <SEO
+        title="Brandon's Blog"
+        description="Recent blog posts from Brandon Pittman."
+      />
 
       <h1 className="text-3xl font-bold">Recent Blog Posts</h1>
 
       <ul className="flex flex-wrap -mx-4">
         {posts.map(post => (
           <li
-            key={post.slug}
+            key={post.data.slug}
             className="flex w-full px-4 mt-12 md:w-1/2 lg:w-1/3"
           >
             <PostCard post={post} />
