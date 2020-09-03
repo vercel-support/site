@@ -8,9 +8,14 @@ import renderToString from "next-mdx-remote/render-to-string";
 const postsDirectory = join(process.cwd(), "content/posts");
 
 export interface Post {
-  date: Date;
-  tags: string[];
-  description: string;
+  content: string;
+  source: any;
+  data: {
+    date: Date;
+    tags: string[];
+    description: string;
+    title: string;
+  };
 }
 
 export async function queryPost(slug: string) {
@@ -37,7 +42,10 @@ export const getPostSlugs = () =>
 
 export async function getAllPosts() {
   const slugs = getPostSlugs();
-  return await Promise.all(slugs.map(slug => queryPost(slug)));
+  const posts = await Promise.all(slugs.map(slug => queryPost(slug)));
+  return posts.sort((post1: Post, post2: Post) =>
+    post1.data.date > post2.data.date ? -1 : 1
+  );
 }
 
 export async function getAllTags(): Promise<string[]> {
