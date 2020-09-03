@@ -31,9 +31,5 @@ yarn-error.log*
 
 .vercel
 
-# mdx-enhanced
-.mdx-data
-
 .nowtags
-yarn.lock
 public/sw.js*
