@@ -11,11 +11,11 @@ export async function getStaticProps({ params }) {
     "timeToRead",
     "image",
     "tags",
-    "date"
-  ]).filter(post => JSON.parse(post.tags).includes(params.slug));
+    "date",
+  ]).filter((post) => JSON.parse(post.tags).includes(params.slug));
 
   return {
-    props: { posts, title: params.slug }
+    props: { posts, title: params.slug },
   };
 }
 
@@ -23,8 +23,8 @@ export async function getStaticPaths() {
   const tags = getAllTags();
 
   return {
-    paths: tags.map(tag => ({ params: { slug: tag } })),
-    fallback: false
+    paths: tags.map((tag) => ({ params: { slug: tag } })),
+    fallback: false,
   };
 }
 
@@ -38,7 +38,7 @@ export default function Tags({ posts, title }) {
         />
         <h1 className="text-3xl font-bold">Posts tagged "{title}"</h1>
         <ul className="flex flex-wrap -mx-4">
-          {posts.map(post => (
+          {posts.map((post) => (
             <li
               key={post.slug}
               className="flex w-full px-4 mt-12 md:w-1/2 lg:w-1/3"

@@ -3,18 +3,26 @@ import { join, basename } from "path";
 import matter from "gray-matter";
 import readingTime from "reading-time";
 import globby from "globby";
+import renderToString from "next-mdx-remote/render-to-string";
 
 const postsDirectory = join(process.cwd(), "content/posts");
 
-export function queryPost(slug) {
+export async function queryPost(slug) {
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
-  const { data, content } = matter(fileContents);
+  let { data, content } = matter(fileContents);
+  const source = await renderToString(content);
+  data = {
+    ...data,
+    data: data.date.toISOString(),
+    timeToRead: readingTime(content).text,
+  };
 
   return {
     data,
     content,
+    source,
   };
 }
 

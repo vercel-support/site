@@ -4,33 +4,24 @@ import Author from "@components/author";
 import { queryPost, getAllPosts } from "@lib/api";
 import PostMeta from "@components/post_meta";
 import { SITE_URL } from "@lib/constants";
-import readingTime from "reading-time";
-import renderToString from "next-mdx-remote/render-to-string";
 import hydrate from "next-mdx-remote/hydrate";
 
-export default function Post({ source, frontMatter, originalContent }) {
+export default function Post({ source, data }) {
   const content = hydrate(source);
-  frontMatter = JSON.parse(frontMatter);
 
   return (
     <Layout class="prose sm:prose-lg">
       <SEO
-        title={frontMatter.title}
-        description={frontMatter.description}
+        title={data.title}
+        description={data.description}
         image={
-          SITE_URL +
-          require(`../../../content/posts/images/${frontMatter.image}`)
+          SITE_URL + require(`../../../content/posts/images/${data.image}`)
         }
       />
       <div className="max-w-2xl mx-auto prose sm:prose-lg">
-        <h1 className="text-3xl font-bold">{frontMatter.title}</h1>
+        <h1 className="text-3xl font-bold">{data.title}</h1>
         <div className="-mt-12">
-          <PostMeta
-            post={{
-              ...frontMatter,
-              timeToRead: readingTime(originalContent).text,
-            }}
-          />
+          <PostMeta post={data} />
         </div>
         <div className="mt-8 prose sm:prose-lg">{content}</div>
 
@@ -41,14 +32,17 @@ export default function Post({ source, frontMatter, originalContent }) {
 }
 
 export async function getStaticProps({ params }) {
-  const parsedPost = queryPost(params.slug);
-  const mdxSource = await renderToString(parsedPost.content);
+  let { data, content, source } = await queryPost(params.slug);
+  data = {
+    ...data,
+    date: data.date.toISOString(),
+  };
 
   return {
     props: {
-      originalContent: parsedPost.content,
-      source: mdxSource,
-      frontMatter: JSON.stringify(parsedPost.data),
+      source,
+      content,
+      data,
     },
   };
 }
