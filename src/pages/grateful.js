@@ -1,8 +1,7 @@
-import React from "react";
 import Layout from "@components/layout";
 import SEO from "@components/seo";
 
-const Grateful = () => {
+export default function Grateful() {
   return (
     <Layout className="max-w-2xl text-lg prose sm:prose-lg">
       <SEO
@@ -44,6 +43,4 @@ const Grateful = () => {
       </p>
     </Layout>
   );
-};
-
-export default Grateful;
+}

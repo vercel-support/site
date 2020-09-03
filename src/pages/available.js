@@ -3,7 +3,7 @@ import ContactForm from "@components/contactForm";
 import Layout from "@components/layout";
 import SEO from "@components/seo";
 
-const Available = () => {
+export default function Available() {
   return (
     <Layout className="prose sm:prose-lg">
       <SEO title="Contact" description="Get in touch with Brandon Pittman." />
@@ -15,6 +15,4 @@ const Available = () => {
       </Card>
     </Layout>
   );
-};
-
-export default Available;
+}

@@ -1,5 +1,3 @@
-import Layout from "../components/layout";
-
 export default function Playground() {
   return (
     <div className="max-w-lg p-6 mx-auto space-y-6">
