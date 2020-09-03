@@ -79,14 +79,11 @@ export function getAllPosts(fields = []) {
   return posts;
 }
 
-export function getAllTags() {
+export function async getAllTags() {
   const slugs: any[] = getPostSlugs();
-  const tags: any = slugs
-    .flatMap(slug => getPostBySlug(slug, ["tags"]))
-    .flat(Infinity)
-    .reduce((acc: any[], val: any) => [...acc, JSON.parse(val.tags)], []);
-
+  const tags: any = await Promise.all(slugs.map(slug => queryPost(slug)));
   console.log(tags);
+  //.reduce((acc: any[], val: any) => [...acc, JSON.parse(val.tags)], []);
 
   return Array.from(new Set(tags));
 }
