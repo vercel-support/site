@@ -1,4 +1,4 @@
-export default ({ children }) => (
+export default ({ children }: { children: React.ReactNode }) => (
   <button
     style={{
       borderRadius: "3px",

@@ -1,14 +1,15 @@
 import PostTag from "@components/post_tag";
 import { DotsHorizontal } from "@images/heroicons/solid";
-import React, { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 export default function PostTags({ tags, limit = 2 }) {
   const [isFullDisplay, setIsFullDisplay] = useState(false);
-  const pageTags = useMemo(() =>
-    typeof tags === "string" ? JSON.parse(tags) : tags
+  const pageTags = useMemo(
+    () => (typeof tags === "string" ? JSON.parse(tags) : tags),
+    [tags]
   );
 
-  function displayedTags() {
+  function displayedTags(): string[] {
     if (isFullDisplay) {
       return pageTags;
     }

@@ -46,8 +46,7 @@ export default function ContactForm() {
         <textarea
           required
           name="message"
-          type="text"
-          rows="5"
+          rows={5}
           className="w-full mt-1 form-textarea"
         />
       </div>

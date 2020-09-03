@@ -25,7 +25,7 @@ export default function Writing({ posts }) {
         {posts.map(post => (
           <li
             key={post.data.slug}
-            className="flex w-full px-4 mt-12 md:w-1/2 lg:w-1/3"
+            className="flex w-full p-4 mt-12 md:w-1/2 lg:w-1/3"
           >
             <PostCard post={post} />
           </li>

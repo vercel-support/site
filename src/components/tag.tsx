@@ -4,9 +4,8 @@ import { Svg } from "react-optimized-image";
 import PostCard from "../components/post_card";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-//  import ProjectCard from '@/components/ProjectCard'
 
-const TagTemplate = ({ pageContext, data }) => {
+export default function TagTemplate({ pageContext, data }) {
   return (
     <Layout max-width="container">
       <SEO
@@ -31,6 +30,4 @@ const TagTemplate = ({ pageContext, data }) => {
       </ul>
     </Layout>
   );
-};
-
-export default TagTemplate;
+}

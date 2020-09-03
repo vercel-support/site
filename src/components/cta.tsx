@@ -1,7 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
+interface CtaProps {
+  href: string;
+  children: React.ReactNode;
+}
 
-const Cta = ({ href, children }) => {
+const Cta = ({ href, children }: CtaProps) => {
   return (
     <a
       href={href}
@@ -11,11 +13,6 @@ const Cta = ({ href, children }) => {
       {children}
     </a>
   );
-};
-
-Cta.propTypes = {
-  href: PropTypes.string,
-  children: PropTypes.node,
 };
 
 export default Cta;

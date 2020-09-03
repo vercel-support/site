@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Footer() {
   return (
     <footer className="flex justify-center py-16 text-sm text-gray-700">
