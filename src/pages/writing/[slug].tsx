@@ -10,7 +10,7 @@ export default function Post({ source, data }) {
   const content = hydrate(source);
 
   return (
-    <Layout class="prose sm:prose-lg">
+    <Layout className="prose sm:prose-lg">
       <SEO
         title={data.title}
         description={data.description}

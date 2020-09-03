@@ -30,7 +30,7 @@ export async function getStaticPaths() {
 
 export default function Tags({ posts, title }) {
   return (
-    <Layout>
+    <Layout className="">
       <>
         <SEO
           title={title}
