@@ -7,7 +7,13 @@ import renderToString from "next-mdx-remote/render-to-string";
 
 const postsDirectory = join(process.cwd(), "content/posts");
 
-export async function queryPost(slug) {
+export interface Post {
+  date: Date;
+  tags: string[];
+  description: string;
+}
+
+export async function queryPost(slug: string) {
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
@@ -16,20 +22,20 @@ export async function queryPost(slug) {
   data = {
     ...data,
     data: data.date.toISOString(),
-    timeToRead: readingTime(content).text,
+    timeToRead: readingTime(content).text
   };
 
   return {
     data,
     content,
-    source,
+    source
   };
 }
 
 export const getPostSlugs = () =>
-  globby.sync(`${postsDirectory}/**.md`).map((path) => basename(path));
+  globby.sync(`${postsDirectory}/**.md`).map(path => basename(path));
 
-export function getPostBySlug(slug, fields = []) {
+export function getPostBySlug(slug: string, fields = []) {
   const realSlug = slug.replace(/\.mdx?$/, "");
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
@@ -37,7 +43,7 @@ export function getPostBySlug(slug, fields = []) {
 
   const items = {};
 
-  fields.forEach((field) => {
+  fields.forEach(field => {
     if (field === "slug") {
       items[field] = realSlug;
     }
@@ -68,18 +74,19 @@ export function getPostBySlug(slug, fields = []) {
 export function getAllPosts(fields = []) {
   const slugs = getPostSlugs();
   const posts = slugs
-    .map((slug) => getPostBySlug(slug, fields))
-    // sort posts by date in descending order
-    .sort((post1, post2) => (post1.date > post2.date ? "-1" : "1"));
+    .map(slug => getPostBySlug(slug, fields))
+    .sort((post1: Post, post2: Post) => (post1.date > post2.date ? -1 : 1));
   return posts;
 }
 
 export function getAllTags() {
-  const slugs = getPostSlugs();
-  const tags = slugs
-    .map((slug) => getPostBySlug(slug, ["tags"]))
-    .reduce((acc, val) => [...acc, JSON.parse(val.tags)], [])
-    .flat();
+  const slugs: any[] = getPostSlugs();
+  const tags: any = slugs
+    .flatMap(slug => getPostBySlug(slug, ["tags"]))
+    .flat(Infinity)
+    .reduce((acc: any[], val: any) => [...acc, JSON.parse(val.tags)], []);
+
+  console.log(tags);
 
   return Array.from(new Set(tags));
 }
