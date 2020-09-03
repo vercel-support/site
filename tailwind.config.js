@@ -17,6 +17,9 @@ const utilities = {
 };
 
 module.exports = {
+  future: {
+    removeDeprecatedGapUtilities: true
+  },
   purge: {
     options: {
       keyframes: true,
@@ -24,9 +27,9 @@ module.exports = {
       whitelistPatternsChildren: whitelist
     },
     content: [
-      "./src/components/**/*.j{s,sx}",
-      "./src/pages/**/*.{mdx,js}",
-      "./content/**/*.md"
+      "./src/components/**/*.{js,jsx,ts,tsx}",
+      "./src/pages/**/*.{mdx,js,jsx,ts,tsx}",
+      "./content/**/*.{md,mdx}"
     ]
   },
 
