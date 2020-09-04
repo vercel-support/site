@@ -33,3 +33,6 @@ yarn-error.log*
 
 .nowtags
 public/sw.js*
+
+# reason/rescript
+lib
