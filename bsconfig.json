@@ -1,4 +1,12 @@
 {
+  "gentypeconfig": {
+    "language": "typescript",
+    "shims": {},
+    "debug": {
+      "all": false,
+      "basic": false
+    }
+  },
   "name": "blp-blog",
   "reason": { "react-jsx": 3 },
   "bsc-flags": ["-bs-super-errors"],

@@ -14,7 +14,7 @@ Router.events.on("routeChangeComplete", () => {
 export default function App({ Component, pageProps }) {
   useEffect(() => {
     Fathom.load("EXCJWHRT", {
-      excludedDomains: ["vercel.app", "now.sh", "localhost"]
+      excludedDomains: ["vercel.app", "now.sh", "localhost"],
     });
   }, []);
 
