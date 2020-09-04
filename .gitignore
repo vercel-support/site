@@ -33,10 +33,6 @@ yarn-error.log*
 
 .nowtags
 public/sw.js*
-<<<<<<< HEAD
 
-# reason/rescript
-=======
-.merlin
->>>>>>> 62f1936... ♻️ Rewrite footer in Reason
-lib
+# ReasonML/ReScript
+/lib
