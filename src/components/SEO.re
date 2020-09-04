@@ -1,7 +1,7 @@
 [@react.component]
 let make = (~title: string, ~description: string, ~image="") => {
   <Next.Head>
-    <title> {(title ++ " | Brandon Pittman")->Re.s} </title>
+    <title> {(title ++ " | Brandon Pittman")->React.string} </title>
     <meta name="description" content=description />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:creator" content="@brandonpittman" />

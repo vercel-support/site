@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import * as Head from "next/head";
-import * as Re$BlpBlog from "../lib/Re.bs.js";
 
 function SEO(Props) {
   var title = Props.title;
@@ -11,7 +10,7 @@ function SEO(Props) {
   var image = imageOpt !== undefined ? imageOpt : "";
   return React.createElement(Head.default, {
               children: null
-            }, React.createElement("title", undefined, Re$BlpBlog.s(title + " | Brandon Pittman")), React.createElement("meta", {
+            }, React.createElement("title", undefined, title + " | Brandon Pittman"), React.createElement("meta", {
                   content: description,
                   name: "description"
                 }), React.createElement("meta", {
