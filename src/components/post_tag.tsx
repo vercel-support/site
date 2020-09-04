@@ -2,7 +2,7 @@ import { Tag } from "@images/heroicons/solid";
 import Link from "next/link";
 import _ from "lodash";
 
-const PostTag = ({ tag }) => {
+export default function PostTag({ tag }) {
   return (
     <li className="relative z-10 inline-block p-2 mb-2 mr-2 text-xs text-blue-700 rounded bg-blue-50">
       <Link href="/tags/[slug]" as={`/tags/${_.kebabCase(tag)}`}>
@@ -13,6 +13,4 @@ const PostTag = ({ tag }) => {
       </Link>
     </li>
   );
-};
-
-export default PostTag;
+}
