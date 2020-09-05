@@ -36,3 +36,4 @@ public/sw.js*
 
 # ReasonML/ReScript
 /lib
+*.bs.js
