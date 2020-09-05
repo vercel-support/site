@@ -1,10 +1,11 @@
 import Head from "next/head";
+import useOgpImage from "@hooks/use-ogp-image";
 
 export default function SEO({
-  title,
-  description = "Brandon's site.",
-  image = "https://blp.is/assets/images/brandon.png",
+  title = "Brandon's Site",
+  description = "Brandon's site."
 }) {
+  const image = useOgpImage(title);
   return (
     <Head>
       <title>{title + " | Brandon Pittman"}</title>

@@ -1,3 +1,4 @@
+// update to match seo.tsx
 [@react.component]
 let make = (~title: string, ~description: string, ~image="") => {
   <Next.Head>
