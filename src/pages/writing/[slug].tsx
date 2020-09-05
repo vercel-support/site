@@ -15,7 +15,9 @@ export default function Post({ source, data }) {
         title={data.title}
         description={data.description}
         image={
-          SITE_URL + require(`../../../content/posts/images/${data.image}`)
+          data.image && data.image.length > 0
+            ? SITE_URL + require(`../../../content/posts/images/${data.image}`)
+            : ""
         }
       />
       <div className="max-w-2xl mx-auto prose sm:prose-lg">

@@ -1,6 +1,8 @@
 const ui = require("@tailwindcss/ui");
 const defaultTheme = require("tailwindcss/defaultTheme");
 const whitelist = [/markdown/, /rich-text/, /primary/, /secondary/];
+const typography = require("@tailwindcss/typography");
+const forms = require("@tailwindcss/custom-forms");
 
 const utilities = {
   ".visuallyhidden": {
@@ -18,8 +20,11 @@ const utilities = {
 
 module.exports = {
   future: {
-    removeDeprecatedGapUtilities: true
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true
   },
+  dark: "media",
+  experimental: "all",
   purge: {
     options: {
       keyframes: true,
@@ -99,6 +104,8 @@ module.exports = {
       });
       addUtilities(utilities);
     },
-    ui
+    typography,
+    forms
+    //ui
   ]
 };
