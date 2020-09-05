@@ -1,9 +1,9 @@
 import Header from "./header";
-import Footer from "./footer";
+import { make as Footer } from "./footer.bs";
 
 export default function Layout({
   children,
-  className
+  className,
 }: {
   children: React.ReactNode;
   className?: string;

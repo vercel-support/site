@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Layout from "@components/layout";
-import SEO from "@components/seo";
+import { make as Layout } from "../components/Layout.bs";
+import { make as SEO } from "../components/SEO.bs";
 
 export default function Index() {
   return (

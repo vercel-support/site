@@ -1,0 +1,16 @@
+####{BSB GENERATED: NO EDIT
+B lib/bs
+FLG -open BlpBlog
+FLG -ppx '/Users/blp/dev/next-blog/node_modules/bs-platform/darwin/bsc.exe -as-ppx -bs-jsx 3'
+S /Users/blp/dev/next-blog/node_modules/bs-platform/lib/ocaml
+B /Users/blp/dev/next-blog/node_modules/bs-platform/lib/ocaml
+FLG -w +a-4-9-20-40-41-42-50-61-102
+S /Users/blp/dev/next-blog/node_modules/reason-react/lib/ocaml
+B /Users/blp/dev/next-blog/node_modules/reason-react/lib/ocaml
+S src/bindings
+B lib/bs/src/bindings
+S src/lib
+B lib/bs/src/lib
+S src/components
+B lib/bs/src/components
+####BSB GENERATED: NO EDIT}
