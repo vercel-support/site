@@ -15,7 +15,7 @@ const trackDribbbleGoal = () => trackGoal("EGN48GIU", 0);
 export default function Author({ className }) {
   return (
     <Card className="mt-32">
-      <aside className="max-w-md py-8 mx-auto prose sm:prose-lg">
+      <aside className="max-w-md p-8 mx-auto prose sm:prose-lg">
         <div className="flex justify-center">
           <Img
             src={ProfileImg}
