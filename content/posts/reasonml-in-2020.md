@@ -9,7 +9,7 @@ tags: ["reasonml", "javascript", "rescript", "bucklescript"]
 
 ## The Good
 
-I first looked into ReasonML at the beginning on 2020 as part of my functional programming journey. While not strictly an FP language, ReasonML (being an alt-OCAML) has automatically curried functions, immutable data structures, and a much leaner syntax compared to TypeScript. While I've come to appreciate TypeScript (having worked on an Angular project at work since May), I still find TypeScript to be a stop-gap in the world of JavaScript. ReasonML promised to be a more well thought out alternative to TypeScript. It also helps that the BuckleScript compiler (part of the ReasonML to JavaScript toolchain) is much faster than TypeScript's compiler.
+I first looked into ReasonML at the beginning of 2020 as part of my functional programming journey. While not strictly an FP language, ReasonML (being an alt-OCAML) has automatically curried functions, immutable data structures, and a much leaner syntax compared to TypeScript. While I've come to appreciate TypeScript (having worked on an Angular project at work since May), I still find TypeScript to be a stop-gap in the world of JavaScript. ReasonML promised to be a more well thought out alternative to TypeScript. It also helps that the BuckleScript compiler (part of the ReasonML to JavaScript toolchain) is much faster than TypeScript's compiler.
 
 ### My Top 5 ReasonML Features
 
