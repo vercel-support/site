@@ -1,5 +1,5 @@
 import Layout from "../../components/layout";
-import PostCard from "../../components/post_card";
+import Article from "../../components/article";
 import SEO from "../../components/seo";
 import { getAllPosts, getAllTags } from "../../lib/api";
 
@@ -38,7 +38,7 @@ export default function Tags({ posts, title }) {
               key={post.data.slug}
               className="flex w-full px-4 mt-12 md:w-1/2 lg:w-1/3"
             >
-              <PostCard post={post} />
+              <Article post={post} />
             </li>
           ))}
         </ul>
