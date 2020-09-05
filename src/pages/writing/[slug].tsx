@@ -3,29 +3,25 @@ import SEO from "@components/seo";
 import Author from "@components/author";
 import { queryPost, getAllPosts } from "@lib/api";
 import PostMeta from "@components/post_meta";
-import { SITE_URL } from "@lib/constants";
 import hydrate from "next-mdx-remote/hydrate";
 
 export default function Post({ source, data }) {
   const content = hydrate(source);
 
   return (
-    <Layout className="prose sm:prose-lg">
-      <SEO
-        title={data.title}
-        description={data.description}
-        image={
-          data.image && data.image.length > 0
-            ? SITE_URL + require(`../../../content/posts/images/${data.image}`)
-            : ""
-        }
-      />
-      <div className="max-w-2xl mx-auto prose sm:prose-lg">
-        <h1 className="text-3xl font-bold">{data.title}</h1>
-        <div className="-mt-12">
+    <Layout>
+      <SEO title={data.title} description={data.description} />
+      <div className="max-w-2xl mx-auto">
+        <div className="grid gap-2">
+          <h1 className="text-5xl font-bold ">{data.title}</h1>
           <PostMeta post={{ data }} />
         </div>
-        <div className="mt-8 prose sm:prose-lg">{content}</div>
+
+        <p className="pl-4 my-16 border-l-4 border-key border-opacity-50 lead">
+          {data.description}
+        </p>
+
+        <div className="prose sm:prose-lg">{content}</div>
 
         <Author className="mt-32" />
       </div>
