@@ -7,7 +7,8 @@ export default function Card({
 }) {
   return (
     <div
-      className={`${className} flex flex-col overflow-hidden bg-white rounded-lg shadow-lg`}
+      className={`${className ||
+        ""} flex flex-col overflow-hidden bg-white rounded-lg shadow-lg`}
     >
       {children}
     </div>

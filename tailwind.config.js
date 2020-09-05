@@ -4,20 +4,6 @@ const whitelist = [/markdown/, /rich-text/, /primary/, /secondary/];
 const typography = require("@tailwindcss/typography");
 const forms = require("@tailwindcss/custom-forms");
 
-const utilities = {
-  ".visuallyhidden": {
-    position: "absolute",
-    top: "0",
-    left: "0",
-    width: "100%",
-    height: "100%",
-    opacity: "0",
-    overflow: "hidden",
-    textIndent: "-9999px",
-    zIndex: "0"
-  }
-};
-
 module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
@@ -43,26 +29,32 @@ module.exports = {
       default: {
         css: {
           a: {
-            color: "rgb(0, 112, 243)",
+            color: defaultTheme.colors.pink["600"],
             "&:hover": {
-              color: "rgba(0, 112, 243, 0.8)"
+              color: defaultTheme.colors.pink["500"]
             }
           }
         }
       }
     },
     extend: {
+      boxShadow: ui().config.theme.boxShadow,
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans]
       },
       colors: {
+        ...ui().config.theme.colors["cool-gray"],
         key: "rgb(0, 112, 243)"
       }
     },
     container: { center: true, padding: "1rem" }
   },
 
-  variants: {},
+  variants: {
+    borderColor: ["responsive", "hover", "group-hover", "focus"],
+    borderWidth: ["responsive", "hover", "group-hover", "focus"],
+    borderStyle: ["responsive", "hover", "group-hover", "focus"]
+  },
 
   plugins: [
     function({ addComponents, theme }) {
@@ -89,7 +81,7 @@ module.exports = {
         }
       });
     },
-    function({ addBase, addUtilities }) {
+    function({ addBase }) {
       addBase({
         ".markdown": {
           "img, pre": {
@@ -102,10 +94,8 @@ module.exports = {
           }
         }
       });
-      addUtilities(utilities);
     },
     typography,
     forms
-    //ui
   ]
 };

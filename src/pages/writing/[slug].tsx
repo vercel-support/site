@@ -17,7 +17,7 @@ export default function Post({ source, data }) {
           <PostMeta post={{ data }} />
         </div>
 
-        <p className="pl-4 my-16 border-l-4 border-key border-opacity-50 lead">
+        <p className="pl-4 my-16 border-l-4 border-pink-500 border-opacity-50 lead">
           {data.description}
         </p>
 

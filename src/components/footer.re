@@ -15,7 +15,7 @@ let make = () =>
       href="https://nextjs.org"
       target="_blank"
       rel="noreferrer noopener"
-      className="underline text-key">
+      className="text-pink-500 underline">
       "Powered by Next.js."->s
     </a>
   </footer>;

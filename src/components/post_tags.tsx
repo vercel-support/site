@@ -14,7 +14,7 @@ export default function PostTags({ tags, limit = 2 }) {
       return pageTags;
     }
 
-    return pageTags.slice(0, 2);
+    return pageTags.slice(0, limit);
   }
 
   function isOverLimit() {
@@ -22,17 +22,17 @@ export default function PostTags({ tags, limit = 2 }) {
   }
 
   return (
-    <ul className="flex flex-wrap items-center mt-6">
+    <ul className="flex flex-wrap items-center">
       {displayedTags().map(tag => (
         <PostTag key={tag} tag={tag} />
       ))}
       {isOverLimit() && (
         <li>
           <button
-            className="relative z-10 flex items-center justify-center block p-2 mb-2 mr-2 text-xs rounded bg-blue-50"
+            className="relative z-10 flex items-center justify-center block px-2 py-1 mb-2 mr-2 text-xs bg-pink-200 border border-transparent rounded focus:outline-none transition-colors duration-75 ease-in-out focus:border-pink-700"
             onClick={() => setIsFullDisplay(true)}
           >
-            <DotsHorizontal className="w-4 h-4 text-blue-700" />
+            <DotsHorizontal className="w-4 h-4 text-pink-700" />
           </button>
         </li>
       )}
