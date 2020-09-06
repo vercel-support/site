@@ -70,7 +70,7 @@ export default function Header() {
                   {links.map(link => (
                     <li key={link.title}>
                       <Link href={link.to}>
-                        <a className="block py-3 font-medium">{link.title}</a>
+                        <a className="block py-2 font-bold">{link.title}</a>
                       </Link>
                     </li>
                   ))}
