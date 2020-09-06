@@ -23,7 +23,7 @@ export default function Post({ source, data }) {
 
         <div className="prose sm:prose-lg">{content}</div>
 
-        <Author className="mt-32" />
+        <Author className="mt-16" />
       </div>
     </Layout>
   );

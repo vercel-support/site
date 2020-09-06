@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { make as Layout } from "../components/Layout.bs";
 import { make as SEO } from "../components/SEO.bs";
+import Cta from "@components/cta";
 
 export default function Index() {
   return (
     <>
       <SEO title="Home" description="Brandon Pittman's personal website." />
-      <Layout className="max-w-2xl">
+      <Layout className="max-w-2xl grid gap-8">
         <div className="prose sm:prose-lg">
           <p className="mt-8">
             Looking for someone to help you build a JAMstack website or
@@ -83,11 +84,7 @@ export default function Index() {
         </div>
 
         <div className="flex justify-center">
-          <Link href="/available">
-            <a className="inline-block px-3 py-2 mt-8 font-semibold text-white rounded shadow-lg bg-key hover:shadow focus:shadow transform transition-all duration-100 ease-in-out hover:translate-y-px">
-              Send me a message
-            </a>
-          </Link>
+          <Cta href="/available">Send me a message</Cta>
         </div>
       </Layout>
     </>
