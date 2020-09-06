@@ -14,6 +14,7 @@
     "@mdx-js/loader": "^1.6.16",
     "@next/mdx": "^9.5.3",
     "@statickit/react": "^2.1.1",
+    "@tailwindui/react": "^0.1.1",
     "classnames": "^2.2.6",
     "date-fns": "^2.16.1",
     "fathom-client": "^3.0.0",

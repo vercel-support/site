@@ -5,6 +5,8 @@ import { X, Menu } from "@images/heroicons/solid";
 import { trackGoal } from "fathom-client";
 import Img from "react-optimized-image";
 import ProfileImg from "../../public/favicon-60x60.png";
+import { Transition } from "@tailwindui/react";
+import Card from "@components/card";
 
 const links = HeaderLinks;
 const trackMobileMenuGoal = () => trackGoal("RYQBIEQE", 0);
@@ -33,7 +35,7 @@ export default function Header() {
             </Link>
           </h1>
 
-          <div className="block md:hidden">
+          <div className="relative block md:hidden">
             <button
               className="flex items-center focus:outline-none"
               onClick={handleMenuClick}
@@ -45,6 +47,33 @@ export default function Header() {
                 <X className="w-8 h-8" />
               )}
             </button>
+
+            {/* Mobile nav Links */}
+            <Transition
+              show={isOpen}
+              enter="transition duration-150 transform origin-top-right"
+              enterFrom="opacity-0 scale-75"
+              enterTo="opacity-100 scale-100"
+              leave="transition duration-75 transform origin-top-right"
+              leaveTo="opacity-0 scale-75"
+            >
+              <Card
+                style={{ minWidth: "14rem" }}
+                className="absolute right-0 p-4 bg-white"
+              >
+                <ul>
+                  {links.map(link => (
+                    <li key={link.title}>
+                      <Link href={link.to}>
+                        <a className="block py-3 font-semibold text-gray-700 hover:text-gray-900">
+                          {link.title}
+                        </a>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            </Transition>
           </div>
 
           <ul className="hidden md:flex">
@@ -52,21 +81,6 @@ export default function Header() {
               <li key={link.title}>
                 <Link href={link.to}>
                   <a className="block ml-8 text-sm font-semibold tracking-wide text-gray-700 md:inline-block md:mt-0 transform transition-all ease-in-out duration-75 hover:text-gray-900">
-                    {link.title}
-                  </a>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Mobile nav Links */}
-        <div className={`w-full my-16 md:hidden ${!isOpen ? "hidden" : ""}`}>
-          <ul>
-            {links.map(link => (
-              <li key={link.title}>
-                <Link href={link.to}>
-                  <a className="block py-3 font-semibold text-gray-700 hover:text-gray-900">
                     {link.title}
                   </a>
                 </Link>

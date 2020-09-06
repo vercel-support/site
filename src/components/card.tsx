@@ -1,12 +1,15 @@
 export default function Card({
   className,
-  children
+  children,
+  style
 }: {
   className?: string;
+  style?: object;
   children: React.ReactNode;
 }) {
   return (
     <div
+      style={style}
       className={`${className ||
         ""} flex flex-col overflow-hidden bg-white rounded-lg shadow-lg`}
     >
