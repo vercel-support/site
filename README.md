@@ -5,7 +5,7 @@
 - [ ] Redesign blog-related pages to not use images
 - [ ] Transition from blog to a more *documents*-style presentation
 - [ ] Implement TinaCMS
-- [ ] Implement [next-mdx-remote](https://github.com/hashicorp/next-mdx-remote)
+- [x] Implement [next-mdx-remote](https://github.com/hashicorp/next-mdx-remote)
 - [ ] Migrate JavaScript to ReScript
 
 ## Someday
