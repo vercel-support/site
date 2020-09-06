@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import { useRef, useState } from "react";
 import HeaderLinks from "@lib/header_links.json";
 import { X, Menu } from "@images/heroicons/solid";
 import { trackGoal } from "fathom-client";
@@ -7,6 +7,7 @@ import Img from "react-optimized-image";
 import ProfileImg from "../../public/favicon-60x60.png";
 import { Transition } from "@tailwindui/react";
 import Card from "@components/card";
+import { useClickAway } from "use-click-away";
 
 const links = HeaderLinks;
 const trackMobileMenuGoal = () => trackGoal("RYQBIEQE", 0);
@@ -18,6 +19,10 @@ export default function Header() {
     setIsOpen(!isOpen);
     if (!isOpen) trackMobileMenuGoal();
   };
+
+  const mobileMenu = useRef(null);
+
+  useClickAway(mobileMenu, () => setIsOpen(false));
 
   return (
     <header className="w-full">
@@ -59,15 +64,13 @@ export default function Header() {
             >
               <Card
                 style={{ minWidth: "14rem" }}
-                className="absolute right-0 p-4 bg-white"
+                className="absolute right-0 p-4 text-pink-100 bg-pink-500"
               >
-                <ul>
+                <ul ref={mobileMenu}>
                   {links.map(link => (
                     <li key={link.title}>
                       <Link href={link.to}>
-                        <a className="block py-3 font-semibold text-gray-700 hover:text-gray-900">
-                          {link.title}
-                        </a>
+                        <a className="block py-3 font-medium">{link.title}</a>
                       </Link>
                     </li>
                   ))}
