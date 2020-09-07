@@ -1,11 +1,12 @@
 import Header from "./header";
+import * as React from "react";
 import { make as Footer } from "./footer.bs";
 
 export default function Layout({
   children,
   className,
 }: {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
 }) {
   const baseMainClasses = "flex-1 w-full container p-4 mx-auto sm:p-8";

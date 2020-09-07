@@ -67,7 +67,7 @@ export default function Header() {
                 className="absolute right-0 p-4 text-pink-100 bg-pink-500"
               >
                 <ul ref={mobileMenu}>
-                  {links.map(link => (
+                  {links.map((link) => (
                     <li key={link.title}>
                       <Link href={link.to}>
                         <a className="block py-2 font-bold">{link.title}</a>
@@ -80,7 +80,7 @@ export default function Header() {
           </div>
 
           <ul className="hidden md:flex">
-            {links.map(link => (
+            {links.map((link) => (
               <li key={link.title}>
                 <Link href={link.to}>
                   <a className="block ml-8 text-sm font-semibold tracking-wide text-gray-700 md:inline-block md:mt-0 transform transition-all ease-in-out duration-75 hover:text-gray-900">

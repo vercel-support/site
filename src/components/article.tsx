@@ -9,18 +9,18 @@ const ArticleTitle = ({ title }) => (
 export default function Article({ post }) {
   return (
     <article className="grid gap-4">
-      <div className="grid gap-1">
-        <div>
-          <Link href="/writing/[slug]" as={"/writing/" + post.data.slug}>
-            <a className="inline-block rounded-md focus:outline-none focus:shadow-outline-pink">
+      <Link href="/writing/[slug]" as={"/writing/" + post.data.slug}>
+        <a className="inline-block rounded-md focus:outline-none focus:shadow-outline-pink">
+          <div className="grid gap-1">
+            <div>
               <ArticleTitle title={post.data.title} />
-            </a>
-          </Link>
-        </div>
-        <PostMeta post={post} />
-      </div>
+            </div>
+            <PostMeta post={post} />
+          </div>
 
-      <p>{post.data.description}</p>
+          <p>{post.data.description}</p>
+        </a>
+      </Link>
 
       <PostTags tags={post.data.tags} limit={3} />
     </article>
