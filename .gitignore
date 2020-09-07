@@ -39,3 +39,6 @@ public/sw.js*
 /lib
 *.bs.js
 .merlin
+
+# mdx
+.mdx-data
