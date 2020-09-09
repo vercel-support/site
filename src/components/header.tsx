@@ -4,7 +4,7 @@ import HeaderLinks from "@lib/header_links.json";
 import { X, Menu } from "@images/heroicons/solid";
 import { trackGoal } from "fathom-client";
 import Img from "react-optimized-image";
-import ProfileImg from "../../public/favicon-60x60.png";
+import ProfileImg from "../../public/favicon-128x128.png";
 import { Transition } from "@tailwindui/react";
 import Card from "@components/card";
 import useDismiss from "use-dismiss";
