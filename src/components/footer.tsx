@@ -4,7 +4,7 @@ export default function Footer() {
       <span>Copyright © {new Date().getFullYear()}.&nbsp;</span>
 
       <a
-        className="hover:underline text-key"
+        className="text-pink-600 hover:underline"
         href="https://nextjs.org"
         target="_blank"
         rel="noreferrer noopener"
