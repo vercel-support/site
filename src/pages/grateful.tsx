@@ -9,9 +9,9 @@ export default function Grateful() {
         description="Support Brandon Pittman's open source work."
       />
 
-      <h1 className="text-4xl font-bold">Support My Work</h1>
+      <h1>Support My Work</h1>
 
-      <p className="mt-4 text-lg">
+      <p>
         If you're interested in showing support for the projects I work on or
         you'd just like to say "Thanks for being such a great guy", there are a
         couple good ways to do so. If you'd like to get something for yourself
@@ -22,10 +22,18 @@ export default function Grateful() {
           rel="noopener noreferrer"
         >
           consider signing up for Fathom Analytics with my affiliate link.
+        </a>{" "}
+        or maybe{" "}
+        <a
+          href="https://mailbrew.com/?utm_source=blp&utm_campaign=affiliate"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          try Mailbrew for reading email newsletters in a better way.
         </a>
       </p>
 
-      <p className="mt-4 text-lg">
+      <p>
         If you don't need any analytics, I have a patronage page over at{" "}
         <a
           href="https://www.buymeacoffee.com/blp"
