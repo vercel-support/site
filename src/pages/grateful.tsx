@@ -1,5 +1,6 @@
 import Layout from "@components/layout";
 import SEO from "@components/seo";
+import { trackGoal } from "fathom-client";
 
 export default function Grateful() {
   return (
@@ -17,6 +18,7 @@ export default function Grateful() {
         couple good ways to do so. If you'd like to get something for yourself
         and support me at the same time,{" "}
         <a
+          onClick={() => trackGoal("CIHFDIOL", 0)}
           href="https://usefathom.com/ref/HTO6KY"
           target="_blank"
           rel="noopener noreferrer"
@@ -25,6 +27,7 @@ export default function Grateful() {
         </a>{" "}
         or maybe{" "}
         <a
+          onClick={() => trackGoal("XUEDPKNH", 0)}
           href="https://mailbrew.com/?utm_source=blp&utm_campaign=affiliate"
           target="_blank"
           rel="noreferrer noopener"
