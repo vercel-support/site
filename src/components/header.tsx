@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import HeaderLinks from "@lib/header_links.json";
 import { X, Menu } from "@images/heroicons/solid";
 import { trackGoal } from "fathom-client";
@@ -20,9 +20,7 @@ export default function Header() {
     if (!isOpen) trackMobileMenuGoal();
   };
 
-  const mobileMenu = useRef(null);
-
-  useDismiss(mobileMenu, () => setIsOpen(false));
+  const mobileMenuRef = useDismiss(() => setIsOpen(false));
 
   return (
     <header className="w-full">
@@ -66,7 +64,7 @@ export default function Header() {
                 style={{ minWidth: "14rem" }}
                 className="absolute right-0 p-4 text-pink-100 bg-pink-500"
               >
-                <ul ref={mobileMenu}>
+                <ul ref={mobileMenuRef}>
                   {links.map(link => (
                     <li key={link.title}>
                       <Link href={link.to}>

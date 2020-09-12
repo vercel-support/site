@@ -39,11 +39,9 @@
     "remark-html": "^12.0.0",
     "remark-parse": "^8.0.3",
     "remark-rehype": "^7.0.0",
-    "tailwindcss-plugin-fancy": "^2.4.3",
-    "trash-cli": "^3.1.0",
+    "tailwindcss-plugin-fancy": "^2.4.4",
     "unified": "^9.2.0",
-    "use-click-away": "^12.0.1",
-    "use-dismiss": "^1.0.1",
+    "use-dismiss": "^2.0.0",
     "webpack": "^4.44.1"
   },
   "devDependencies": {
@@ -53,7 +51,7 @@
     "@types/react": "^16.9.49",
     "bs-platform": "^8.2.0",
     "gentype": "^3.35.0",
-    "tailwindcss": "^1.8.5",
+    "tailwindcss": "^1.8.8",
     "typescript": "^4.0.2"
   },
   "license": "ISC"
