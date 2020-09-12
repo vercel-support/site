@@ -1,3 +1,3 @@
-export default function useOgpImage(title: string) {
-  return `https://blp-og-image.vercel.app/${encodeURI(title)}?theme=dark`;
+export default function useOgpImage(title: string, theme = "dark") {
+  return `https://blp-og-image.vercel.app/${encodeURI(title)}?theme=${theme}`;
 }
