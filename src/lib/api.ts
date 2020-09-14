@@ -27,22 +27,22 @@ export async function queryPost(slug: string) {
   data = {
     ...data,
     date: data.date.toISOString(),
-    timeToRead: readingTime(content).text
+    timeToRead: readingTime(content).text,
   };
 
   return {
     data,
     content,
-    source
+    source,
   };
 }
 
 export const getPostSlugs = () =>
-  globby.sync(`${postsDirectory}/**.md`).map(path => basename(path));
+  globby.sync(`${postsDirectory}/**.md`).map((path) => basename(path));
 
 export async function getAllPosts() {
   const slugs = getPostSlugs();
-  const posts = await Promise.all(slugs.map(slug => queryPost(slug)));
+  const posts = await Promise.all(slugs.map((slug) => queryPost(slug)));
   return posts.sort((post1: Post, post2: Post) =>
     post1.data.date > post2.data.date ? -1 : 1
   );
@@ -50,6 +50,6 @@ export async function getAllPosts() {
 
 export async function getAllTags(): Promise<string[]> {
   const posts = await getAllPosts();
-  const tags = posts.map(post => post.data.tags).flat(Infinity);
+  const tags = posts.map((post) => post.data.tags).flat(Infinity);
   return Array.from(new Set(tags));
 }
