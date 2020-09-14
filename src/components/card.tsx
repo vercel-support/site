@@ -1,4 +1,12 @@
-export default function Card({ className, children, style }) {
+export default function Card({
+  className,
+  children,
+  style,
+}: {
+  className?: string;
+  children: React.ReactElement;
+  style?: React.CSSProperties;
+}) {
   return (
     <div
       style={style}
