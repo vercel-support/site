@@ -30,7 +30,7 @@
     "next-compose-plugins": "^2.2.0",
     "next-mdx-remote": "^1.0.0",
     "next-optimized-images": "^3.0.0-canary.5",
-    "next-pwa": "^3.1.3",
+    "next-pwa": "^3.1.4",
     "postcss-100vh-fix": "^0.1.1",
     "postcss-preset-env": "^6.7.0",
     "react": "^16.13.1",
@@ -45,7 +45,7 @@
     "remark-rehype": "^7.0.0",
     "tailwindcss-plugin-fancy": "^2.4.4",
     "unified": "^9.2.0",
-    "use-dismiss": "^2.0.0",
+    "use-dismiss": "^2.0.2",
     "webpack": "^4.44.1"
   },
   "devDependencies": {
@@ -72,7 +72,7 @@
     "husky": ">=4",
     "lint-staged": ">=10",
     "prettier": "^2.1.1",
-    "tailwindcss": "^1.8.8",
+    "tailwindcss": "^1.8.9",
     "typescript": "^4.0.2"
   },
   "license": "ISC",
