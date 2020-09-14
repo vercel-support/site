@@ -1,7 +1,8 @@
+import Cta from "@components/cta";
 import Link from "next/link";
+
 import { make as Layout } from "../components/Layout.bs";
 import { make as SEO } from "../components/SEO.bs";
-import Cta from "@components/cta";
 
 export default function Index() {
   return (

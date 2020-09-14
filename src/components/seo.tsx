@@ -1,9 +1,9 @@
-import Head from "next/head";
 import useOgpImage from "@hooks/use-ogp-image";
+import Head from "next/head";
 
 export default function SEO({
   title = "Brandon's Site",
-  description = "Brandon's site."
+  description = "Brandon's site.",
 }) {
   const image = useOgpImage(title);
   return (

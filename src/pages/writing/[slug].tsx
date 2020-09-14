@@ -1,8 +1,8 @@
-import Layout from "@components/layout";
-import SEO from "@components/seo";
 import Author from "@components/author";
-import { queryPost, getAllPosts } from "@lib/api";
+import Layout from "@components/layout";
 import PostMeta from "@components/post_meta";
+import SEO from "@components/seo";
+import { getAllPosts, queryPost } from "@lib/api";
 import hydrate from "next-mdx-remote/hydrate";
 
 export default function Post({ source, data }) {
@@ -36,8 +36,8 @@ export async function getStaticProps({ params }) {
     props: {
       source,
       content,
-      data
-    }
+      data,
+    },
   };
 }
 
@@ -45,13 +45,13 @@ export async function getStaticPaths() {
   const posts = await getAllPosts();
 
   return {
-    paths: posts.map(posts => {
+    paths: posts.map((posts) => {
       return {
         params: {
-          slug: posts.data.slug
-        }
+          slug: posts.data.slug,
+        },
       };
     }),
-    fallback: false
+    fallback: false,
   };
 }

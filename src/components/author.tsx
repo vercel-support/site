@@ -1,18 +1,18 @@
-import React from "react";
-import { trackGoal } from "fathom-client";
-import TwitterIcon from "@images/twitter.svg";
-import GithubIcon from "@images/github.svg";
-import DribbbleIcon from "@images/dribbble.svg";
-import Img, { Svg } from "react-optimized-image";
-import ProfileImg from "../../public/favicon-192x192.png";
 import Card from "@components/card";
-import cn from "classnames";
+import DribbbleIcon from "@images/dribbble.svg";
+import GithubIcon from "@images/github.svg";
+import TwitterIcon from "@images/twitter.svg";
+import { trackGoal } from "fathom-client";
+import React from "react";
+import Img, { Svg } from "react-optimized-image";
+
+import ProfileImg from "../../public/favicon-192x192.png";
 
 const trackTwitterGoal = () => trackGoal("IFOPB1RM", 0);
 const trackGithubGoal = () => trackGoal("JOZATR2E", 0);
 const trackDribbbleGoal = () => trackGoal("EGN48GIU", 0);
 
-export default function Author({ className }) {
+export default function Author() {
   return (
     <Card className="mt-32">
       <aside className="max-w-md p-8 mx-auto prose sm:prose-lg">

@@ -1,13 +1,14 @@
+import Card from "@components/card";
+import { Menu, X } from "@images/heroicons/solid";
+import HeaderLinks from "@lib/header_links.json";
+import { Transition } from "@tailwindui/react";
+import { trackGoal } from "fathom-client";
 import Link from "next/link";
 import { useState } from "react";
-import HeaderLinks from "@lib/header_links.json";
-import { X, Menu } from "@images/heroicons/solid";
-import { trackGoal } from "fathom-client";
 import Img from "react-optimized-image";
-import ProfileImg from "../../public/favicon-128x128.png";
-import { Transition } from "@tailwindui/react";
-import Card from "@components/card";
 import useDismiss from "use-dismiss";
+
+import ProfileImg from "../../public/favicon-128x128.png";
 
 const links = HeaderLinks;
 const trackMobileMenuGoal = () => trackGoal("RYQBIEQE", 0);
@@ -65,7 +66,7 @@ export default function Header() {
                 className="absolute right-0 p-4 text-pink-100 bg-pink-500"
               >
                 <ul ref={mobileMenuRef}>
-                  {links.map(link => (
+                  {links.map((link) => (
                     <li key={link.title}>
                       <Link href={link.to}>
                         <a className="block py-2 font-bold">{link.title}</a>
@@ -78,7 +79,7 @@ export default function Header() {
           </div>
 
           <ul className="hidden md:flex">
-            {links.map(link => (
+            {links.map((link) => (
               <li key={link.title}>
                 <Link href={link.to}>
                   <a className="block ml-8 text-sm font-semibold tracking-wide text-gray-700 md:inline-block md:mt-0 transform transition-all ease-in-out duration-75 hover:text-gray-900">

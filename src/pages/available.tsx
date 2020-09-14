@@ -1,6 +1,7 @@
 import Card from "@components/card";
 import ContactForm from "@components/contactForm";
 import Layout from "@components/layout";
+
 import { make as SEO } from "../components/SEO.bs";
 
 export default function Available() {

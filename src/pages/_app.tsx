@@ -1,11 +1,12 @@
 import "tailwindcss/tailwind.css";
 import "../css/dank-mono.css";
 import "../css/prism-night-owl.css";
-import React, { useEffect } from "react";
-import Router from "next/router";
+
 import { StaticKitProvider } from "@statickit/react";
-import Head from "next/head";
 import * as Fathom from "fathom-client";
+import Head from "next/head";
+import Router from "next/router";
+import React, { useEffect } from "react";
 
 Router.events.on("routeChangeComplete", () => {
   Fathom.trackPageview();
@@ -14,7 +15,7 @@ Router.events.on("routeChangeComplete", () => {
 export default function App({ Component, pageProps }) {
   useEffect(() => {
     Fathom.load("EXCJWHRT", {
-      excludedDomains: ["vercel.app", "now.sh", "localhost"]
+      excludedDomains: ["vercel.app", "now.sh", "localhost"],
     });
   }, []);
 

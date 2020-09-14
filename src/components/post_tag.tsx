@@ -1,6 +1,6 @@
 import { Tag } from "@images/heroicons/solid";
-import Link from "next/link";
 import _ from "lodash";
+import Link from "next/link";
 
 export default function PostTag({ tag }) {
   return (

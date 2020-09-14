@@ -1,9 +1,9 @@
-import React from "react";
-import TagIcon from "@images/icon-tag.svg";
-import { Svg } from "react-optimized-image";
 import Article from "@components/article";
 import Layout from "@components/layout";
 import SEO from "@components/seo";
+import TagIcon from "@images/icon-tag.svg";
+import React from "react";
+import { Svg } from "react-optimized-image";
 
 export default function TagTemplate({ pageContext, data }) {
   return (
@@ -19,7 +19,7 @@ export default function TagTemplate({ pageContext, data }) {
       </h1>
 
       <ul className="flex flex-wrap -mx-4">
-        {data.posts.nodes.map(post => (
+        {data.posts.nodes.map((post) => (
           <li
             key={post.frontmatter.slug}
             className="flex w-full p-4 mt-4 md:w-1/2 lg:w-1/3"

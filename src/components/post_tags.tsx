@@ -23,7 +23,7 @@ export default function PostTags({ tags, limit = 2 }) {
 
   return (
     <ul className="flex flex-wrap items-center">
-      {displayedTags().map(tag => (
+      {displayedTags().map((tag) => (
         <PostTag key={tag} tag={tag} />
       ))}
       {isOverLimit() && (

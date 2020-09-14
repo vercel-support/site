@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { get, set } from "idb-keyval";
+import { useState } from "react";
 
 export default function useFirstTimer() {
   const [state, setState] = useState(true);
@@ -19,6 +19,6 @@ export default function useFirstTimer() {
     (value: boolean): void => {
       setState(value);
       set("first-timer", value);
-    }
+    },
   ];
 }

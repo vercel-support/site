@@ -1,4 +1,4 @@
-import { useDebugValue, useCallback } from "react";
+import { useCallback, useDebugValue } from "react";
 
 export default function useGoal(id: string, cents = 0) {
   useDebugValue(id);
