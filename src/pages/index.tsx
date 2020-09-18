@@ -47,7 +47,7 @@ export default function Index() {
             <a
               href="https://twitter.com/brandonpittman"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer me"
             >
               Twitter
             </a>
@@ -55,7 +55,7 @@ export default function Index() {
             <a
               href="https://github.com/brandonpittman"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer me"
             >
               Github
             </a>
@@ -63,7 +63,7 @@ export default function Index() {
             <a
               href="https://dribbble.com/pittman"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer me"
             >
               Dribbble
             </a>
@@ -77,7 +77,7 @@ export default function Index() {
             <a
               href="https://buymeacoffee.com/blp"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer me"
             >
               buying me a coffee.
             </a>
