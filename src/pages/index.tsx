@@ -1,14 +1,14 @@
 import Cta from "@components/cta";
 import Link from "next/link";
 
-import { make as Layout } from "../components/Layout.bs";
-import { make as SEO } from "../components/SEO.bs";
+import Layout from "@components/layout";
+import SEO from "@components/seo";
 
 export default function Index() {
   return (
     <>
       <SEO title="Home" description="Brandon Pittman's personal website." />
-      <Layout className="max-w-2xl grid gap-8">
+      <Layout className="max-w-2xl space-y-8">
         <div className="prose sm:prose-lg">
           <p className="mt-8">
             Looking for someone to help you build a JAMstack website or
@@ -84,7 +84,7 @@ export default function Index() {
           </p>
         </div>
 
-        <div className="flex justify-center">
+        <div className="flex items-center justify-center">
           <Cta href="/available">Send me a message</Cta>
         </div>
       </Layout>

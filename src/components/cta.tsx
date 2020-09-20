@@ -1,9 +1,10 @@
 import Link from "next/link";
+import React from "react";
 
 interface CtaProps {
   href: string;
   className?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 export default function Cta({ href, className = "", children }: CtaProps) {
