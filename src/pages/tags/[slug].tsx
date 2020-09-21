@@ -31,7 +31,7 @@ export default function Tags({ posts, title }) {
           title={title}
           description={`Posts from Brandon Pittman tagged: ${title}`}
         />
-        <h1 className="text-3xl font-bold">Posts tagged &quot{title}&quot</h1>
+        <h1 className="text-3xl font-bold">Posts tagged {title}</h1>
         <ul className="flex flex-wrap -mx-4">
           {posts.map((post) => (
             <li
