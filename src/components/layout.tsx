@@ -9,13 +9,22 @@ export default function Layout({
   children?: React.ReactNode;
   className?: string;
 }) {
-  const baseMainClasses = "flex-1 w-full container p-4 mx-auto sm:p-8";
+  const baseMainClasses =
+    "flex-1 w-full container p-4 mx-auto sm:p-8 focus:outline-none";
   const mainClasses = baseMainClasses.concat(" ").concat(className);
 
   return (
     <div className="flex flex-col min-h-screen text-lg bg-gray-50">
+      <a
+        href="#skip-content-target"
+        className="sr-only focus:not-sr-only focus:shadow-outline-pink hover:shadow-outline-pink"
+      >
+        Skip to main content
+      </a>
       <Header />
-      <main className={mainClasses}> {children}</main>
+      <main tabIndex={-1} id="skip-content-target" className={mainClasses}>
+        {children}
+      </main>
       <Footer />
     </div>
   );
