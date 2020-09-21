@@ -11,7 +11,7 @@ export default function Article({ post }) {
   return (
     <article className="grid gap-4">
       <Link href="/writing/[slug]" as={"/writing/" + post.data.slug}>
-        <a className="inline-block rounded-md focus:outline-none focus:shadow-outline-pink">
+        <a className="grid gap-1 rounded-md focus:outline-none focus:shadow-outline-pink">
           <div className="grid gap-1">
             <div>
               <ArticleTitle title={post.data.title} />

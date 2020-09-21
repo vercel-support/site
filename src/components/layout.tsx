@@ -1,7 +1,6 @@
+import Footer from "@components/footer";
+import Header from "@components/header";
 import * as React from "react";
-
-import { make as Footer } from "./footer.bs";
-import Header from "./header";
 
 export default function Layout({
   children,
