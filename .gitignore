@@ -42,3 +42,5 @@ public/sw.js*
 
 # mdx
 .mdx-data
+
+workbox-*.js
