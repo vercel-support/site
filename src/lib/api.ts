@@ -23,7 +23,11 @@ export async function queryPost(slug: string) {
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   let { data, content } = matter(fileContents);
-  const source = await renderToString(content);
+  const source = await renderToString(content, {
+    mdxOptions: {
+      remarkPlugins: [require("remark-external-links")],
+    },
+  });
   data = {
     ...data,
     date: data.date.toISOString(),

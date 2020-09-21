@@ -8,6 +8,7 @@ const withPlugins = require("next-compose-plugins");
 const withImages = require("next-optimized-images");
 const withMdx = require("@next/mdx")({
   rehypePlugins: [require("@mapbox/rehype-prism")],
+  remarkPlugins: [require("remark-external-links")],
 });
 
 module.exports = withPlugins([withPWA, withMdx, withImages], {
