@@ -28,7 +28,7 @@ const About = () => (
       <a href="https://vuejs.org" target="_blank" rel="noopener noreferrer">
         Vue.js
       </a>{" "}
-      and quikcly fell in love. I left my job as a teacher and began working in
+      and quickly fell in love. I left my job as a teacher and began working in
       frontend development. Recently interested in functional programming, I got
       into{" "}
       <a
