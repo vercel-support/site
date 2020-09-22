@@ -4,6 +4,9 @@ import Head from "next/head";
 export default function SEO({
   title = "Brandon's Site",
   description = "Brandon's site.",
+}: {
+  title: string;
+  description: string;
 }) {
   const image = useOgpImage(title);
   return (

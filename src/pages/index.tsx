@@ -1,8 +1,7 @@
 import Cta from "@components/cta";
-import Link from "next/link";
-
 import Layout from "@components/layout";
 import SEO from "@components/seo";
+import Link from "next/link";
 
 export default function Index() {
   return (
@@ -18,10 +17,8 @@ export default function Index() {
             like Netlify and Zeit Now.
           </p>
 
-          <p className="relative my-8 text-3xl italic">
-            <strong>
-              I’m your guy for building forward-thinking progressive web apps.
-            </strong>
+          <p className="relative my-8 text-3xl italic font-bold">
+            I’m your guy for building forward-thinking progressive web apps.
           </p>
 
           <p className="mt-4">
@@ -67,7 +64,15 @@ export default function Index() {
             >
               Dribbble
             </a>
-            .
+            . You can read my backstory on the{" "}
+            <Link href="/about">
+              <a>About page</a>
+            </Link>
+            . If you want to get an idea in general of what I'm doing now, head
+            on over to the{" "}
+            <Link href="/now">
+              <a>Now page</a>
+            </Link>
           </p>
 
           <p className="mt-4">

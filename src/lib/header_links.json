@@ -1,18 +1,14 @@
-[
-  {
-    "title": "Blog",
-    "to": "/writing"
-  },
-  {
-    "title": "OmniFocus",
-    "to": "/focusing"
-  },
-  {
-    "title": "Contact",
-    "to": "/available"
-  },
-  {
-    "title": "Patronage",
-    "to": "/grateful"
-  }
-]
+{
+  "internal": [
+    {
+      "title": "Blog",
+      "to": "/writing"
+    }
+  ],
+  "external": [
+    {
+      "title": "Twitter",
+      "to": "https://twitter.com/brandonpittman"
+    }
+  ]
+}
