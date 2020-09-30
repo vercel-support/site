@@ -66,7 +66,7 @@ const About = () => (
         rel="noopener noreferrer author"
       >
         number of Tailwind plugins
-      </a>
+      </a>{" "}
       and promote the usage of atomic, functional, and utility-driven CSS
       whenever and wherever possible.
     </p>
