@@ -1,5 +1,6 @@
 import Author from "@components/author";
 import Layout from "@components/layout";
+import OldPostWarning from "@components/OldPostWarning";
 import PostMeta from "@components/post_meta";
 import SEO from "@components/seo";
 import { getAllPosts, queryPost } from "@lib/api";
@@ -11,13 +12,15 @@ export default function Post({ source, data }) {
   return (
     <Layout>
       <SEO title={data.title} description={data.description} />
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-2xl mx-auto space-y-8">
         <div className="grid gap-2">
           <h1 className="text-5xl font-bold ">{data.title}</h1>
           <PostMeta post={{ data }} />
         </div>
 
-        <p className="pl-4 my-16 border-l-4 border-pink-500 border-opacity-50 lead">
+        <OldPostWarning date={data.date} />
+
+        <p className="pl-4 border-l-4 border-blue-500 border-opacity-50 lead">
           {data.description}
         </p>
 
