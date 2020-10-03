@@ -53,7 +53,7 @@ export default function ContactForm() {
       <div className="flex justify-center">
         <button
           disabled={state.submitting}
-          className="inline-block w-full px-3 py-2 font-medium text-white no-underline bg-pink-500 shadow-md rounded-md hover:bg-pink-400 active:bg-pink-600 transition-colors duration-75 ease-out"
+          className="inline-block w-full px-3 py-2 font-medium text-white no-underline bg-blue-500 shadow-md rounded-md hover:bg-blue-400 active:bg-blue-600 transition-colors duration-75 ease-out"
         >
           Submit
         </button>

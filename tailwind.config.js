@@ -6,7 +6,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true
+    purgeLayersByDefault: true,
   },
   dark: "media",
   experimental: "all",
@@ -14,40 +14,40 @@ module.exports = {
     options: {
       keyframes: true,
       whitelistPatterns: whitelist,
-      whitelistPatternsChildren: whitelist
+      whitelistPatternsChildren: whitelist,
     },
     content: [
       "./src/components/**/*.{js,jsx,ts,tsx}",
       "./src/pages/**/*.{mdx,js,jsx,ts,tsx}",
-      "./content/**/*.{md,mdx}"
-    ]
+      "./content/**/*.{md,mdx}",
+    ],
   },
 
   theme: {
-    typography: theme => ({
+    typography: (theme) => ({
       default: {
         css: {
           a: {
-            color: theme("colors.pink.600]"),
+            color: theme("colors.blue.600]"),
             "&:hover": {
-              color: theme("colors.pink.500")
-            }
-          }
-        }
-      }
+              color: theme("colors.blue.500"),
+            },
+          },
+        },
+      },
     }),
     extend: {
       fontFamily: {
-        sans: ["Inter", ...defaultTheme.fontFamily.sans]
-      }
+        sans: ["Inter", ...defaultTheme.fontFamily.sans],
+      },
     },
-    container: { center: true, padding: "1rem" }
+    container: { center: true, padding: "1rem" },
   },
 
   variants: {},
 
   plugins: [
-    function({ addComponents, theme }) {
+    function ({ addComponents, theme }) {
       addComponents({
         ".float-label": {
           position: "relative",
@@ -59,19 +59,19 @@ module.exports = {
             transform: "translateX(.75rem)",
             transition: "transform 150ms ease-in-out, color 150ms ease-in-out",
             transformOrigin: "0%",
-            fontWeight: 700
+            fontWeight: 700,
           },
           "& input:not(:placeholder-shown) ~ span": {
-            transform: "scale(.9) translateX(.75rem) translateY(-2.25rem)"
+            transform: "scale(.9) translateX(.75rem) translateY(-2.25rem)",
           },
           "&:focus-within span": {
             transform: "scale(.9) translateX(.75rem) translateY(-2.25rem)",
-            color: theme("colors.key")
-          }
-        }
+            color: theme("colors.key"),
+          },
+        },
       });
     },
-    function({ addBase }) {
+    function ({ addBase }) {
       addBase({
         ".markdown": {
           "img, pre": {
@@ -79,13 +79,13 @@ module.exports = {
             marginRight: "-1rem",
             "@media (min-width: 640px)": {
               marginLeft: "0",
-              marginRight: "0"
-            }
-          }
-        }
+              marginRight: "0",
+            },
+          },
+        },
       });
     },
     ui,
-    fancy
-  ]
+    fancy,
+  ],
 };

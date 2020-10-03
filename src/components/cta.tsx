@@ -8,7 +8,7 @@ interface CtaProps {
 }
 
 export default function Cta({ href, className = "", children }: CtaProps) {
-  const classes = "inline-block px-3 py-2 font-medium rounded-md shadow-md bg-pink-500 hover:bg-pink-400 active:bg-pink-600 transition-colors duration-75 ease-out"
+  const classes = "inline-block px-3 py-2 font-medium rounded-md shadow-md bg-blue-500 hover:bg-blue-400 active:bg-blue-600 transition-colors duration-75 ease-out"
     .concat(" ")
     .concat(className);
 

@@ -63,7 +63,7 @@ export default function Header() {
             >
               <Card
                 style={{ minWidth: "14rem" }}
-                className="absolute right-0 p-4 text-pink-100 bg-pink-500"
+                className="absolute right-0 p-4 text-blue-100 bg-blue-500"
               >
                 <ul ref={mobileMenuRef}>
                   {links.internal.map((link) => (

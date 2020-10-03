@@ -17,7 +17,7 @@ export default function Layout({
     <div className="flex flex-col min-h-screen text-lg bg-gray-50">
       <a
         href="#skip-content-target"
-        className="sr-only focus:not-sr-only focus:shadow-outline-pink hover:shadow-outline-pink"
+        className="sr-only focus:not-sr-only focus:shadow-outline-blue hover:shadow-outline-blue"
       >
         Skip to main content
       </a>

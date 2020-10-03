@@ -16,7 +16,7 @@ export default function Footer() {
         {links.map((link) => (
           <li key={link.href} className="p-1">
             <Link href={link.href}>
-              <a className="text-pink-600 hover:underline">{link.label}</a>
+              <a className="text-blue-600 hover:underline">{link.label}</a>
             </Link>
           </li>
         ))}
@@ -26,7 +26,7 @@ export default function Footer() {
         <span className="p-1">
           This site is powered by{" "}
           <a
-            className="text-pink-600 hover:underline"
+            className="text-blue-600 hover:underline"
             href="https://nextjs.org"
             target="_blank"
             rel="noreferrer noopener"
@@ -38,7 +38,7 @@ export default function Footer() {
             href="https://github.com/brandonpittman/next-blog"
             target="_blank"
             rel="noreferrer noopener author"
-            className="text-pink-600 hover:underline"
+            className="text-blue-600 hover:underline"
           >
             GitHub.
           </a>

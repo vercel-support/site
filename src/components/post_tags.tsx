@@ -29,10 +29,10 @@ export default function PostTags({ tags, limit = 2 }) {
       {isOverLimit() && (
         <li>
           <button
-            className="relative z-10 flex items-center justify-center block px-2 py-1 mb-2 mr-2 text-xs bg-pink-200 border border-transparent rounded focus:outline-none transition-colors duration-75 ease-in-out focus:border-pink-700"
+            className="relative z-10 flex items-center justify-center block px-2 py-1 mb-2 mr-2 text-xs bg-blue-200 border border-transparent rounded focus:outline-none transition-colors duration-75 ease-in-out focus:border-blue-700"
             onClick={() => setIsFullDisplay(true)}
           >
-            <DotsHorizontal className="w-4 h-4 text-pink-700" />
+            <DotsHorizontal className="w-4 h-4 text-blue-700" />
           </button>
         </li>
       )}
