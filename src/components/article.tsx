@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import PostMeta from "./post_meta";
-import PostTags from "./post_tags";
+// import PostTags from "./post_tags";
 
 const ArticleTitle = ({ title }) => (
   <h2 className="text-3xl font-bold text-gray-900">{title}</h2>
@@ -23,7 +23,7 @@ export default function Article({ post }) {
         </a>
       </Link>
 
-      <PostTags tags={post.data.tags} limit={3} />
+      {/* <PostTags tags={post.data.tags} limit={3} /> */}
     </article>
   );
 }
