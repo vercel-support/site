@@ -44,3 +44,4 @@ public/sw.js*
 .mdx-data
 
 workbox-*.js
+.eslintcache
