@@ -8,7 +8,7 @@ const OldPostWarning = ({
   className?: string;
   date: string;
 }) => {
-  return differenceInMonths(new Date(date), new Date()) ? (
+  return differenceInMonths(new Date(date), new Date()) > 6 ? (
     <aside
       className={clsx(
         className,
