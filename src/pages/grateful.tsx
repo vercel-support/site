@@ -16,24 +16,24 @@ export default function Grateful() {
         If you're interested in showing support for the projects I work on or
         you'd just like to say "Thanks for being such a great guy", there are a
         couple good ways to do so. If you'd like to get something for yourself
-        and support me at the same time,{" "}
+        and support me at the same time, consider signing up for{" "}
         <a
           onClick={() => trackGoal("CIHFDIOL", 0)}
           href="https://usefathom.com/ref/HTO6KY"
           target="_blank"
           rel="noopener noreferrer"
         >
-          consider signing up for Fathom Analytics with my affiliate link.
+          Fathom Analytics
         </a>{" "}
-        or maybe{" "}
+       with my affiliate link or try{" "}
         <a
           onClick={() => trackGoal("XUEDPKNH", 0)}
           href="https://mailbrew.com/?utm_source=blp&utm_campaign=affiliate"
           target="_blank"
           rel="noreferrer noopener"
         >
-          try Mailbrew for reading email newsletters in a better way.
-        </a>
+          Mailbrew
+        </a>{" "}for reading email newsletters in a better way.
       </p>
 
       <p>
