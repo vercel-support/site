@@ -27,6 +27,7 @@ export default function App({ Component, pageProps }) {
           href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/inter.min.css"
         />
 
+        <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" sizes="57x57" href="/favicon-57x57.png" />
         <link rel="apple-touch-icon" sizes="60x60" href="/favicon-60x60.png" />
         <link rel="apple-touch-icon" sizes="72x72" href="/favicon-72x72.png" />
