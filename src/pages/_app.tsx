@@ -87,19 +87,6 @@ export default function App({ Component, pageProps }) {
         <meta name="msapplication-config" content="/browserconfig.xml" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#ffffff" />
-
-        <script
-          data-name="BMC-Widget"
-          src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
-          data-id="blp"
-          data-description="Support my open-source activities!"
-          data-message=""
-          data-color="#5F7FFF"
-          data-position="right"
-          data-x_margin="18"
-          data-y_margin="18"
-          defer
-        />
       </Head>
       <Component {...pageProps} />
     </StaticKitProvider>
