@@ -4,7 +4,7 @@ export default function Card({
   style,
 }: {
   className?: string;
-  children: React.ReactElement;
+  children: React.ReactElement | React.ReactElement[];
   style?: React.CSSProperties;
 }) {
   return (

@@ -3,12 +3,13 @@ import { Menu, X } from "@images/heroicons/solid";
 import HeaderLinks from "@lib/header_links.json";
 import { Transition } from "@tailwindui/react";
 import { trackGoal } from "fathom-client";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import Img from "react-optimized-image";
 import useDismiss from "use-dismiss";
 
-import ProfileImg from "../../public/favicon-128x128.png";
+const ProfileImg = "/favicon-128x128.png";
 
 const links = HeaderLinks;
 const trackMobileMenuGoal = () => trackGoal("RYQBIEQE", 0);
@@ -30,10 +31,12 @@ export default function Header() {
           <h1>
             <Link href="/">
               <a className="py-2">
-                <Img
+                <Image
                   src={ProfileImg}
+                  width={48}
+                  height={48}
                   alt="Brandon in a black kimono"
-                  className="w-8 h-8 rounded-full shadow shadow-outline-gray"
+                  className="rounded-full shadow-outline-gray"
                 />
               </a>
             </Link>
