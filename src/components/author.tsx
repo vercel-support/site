@@ -4,8 +4,6 @@ import GithubIcon from "@images/github.svg";
 import TwitterIcon from "@images/twitter.svg";
 import { trackGoal } from "fathom-client";
 import Image from "next/image";
-import React from "react";
-import Img, { Svg } from "react-optimized-image";
 
 const ProfileImg = "/favicon-128x128.png";
 
@@ -84,10 +82,7 @@ export default function Author() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Svg
-                src={TwitterIcon}
-                className="w-8 h-8 mr-4 text-blue-400 fill-current"
-              />
+              <TwitterIcon className="w-8 h-8 mr-4 text-blue-400 fill-current" />
             </a>
 
             <a
@@ -96,10 +91,7 @@ export default function Author() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Svg
-                src={GithubIcon}
-                className="w-8 h-8 mr-4 text-gray-900 fill-current"
-              />
+              <GithubIcon className="w-8 h-8 mr-4 text-gray-900 fill-current" />
             </a>
 
             <a
@@ -108,10 +100,7 @@ export default function Author() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Svg
-                src={DribbbleIcon}
-                className="w-8 h-8 mr-4 text-gray-900 fill-current"
-              />
+              <DribbbleIcon className="w-8 h-8 mr-4 text-gray-900 fill-current" />
             </a>
           </div>
         </div>

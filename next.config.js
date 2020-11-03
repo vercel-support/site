@@ -5,13 +5,13 @@ const withPWA = require("next-pwa")({
   },
 });
 const withPlugins = require("next-compose-plugins");
-const withImages = require("next-optimized-images");
+const withSvgr = require("next-svgr");
 const withMdx = require("@next/mdx")({
   rehypePlugins: [require("@mapbox/rehype-prism")],
   remarkPlugins: [require("remark-external-links")],
 });
 
-module.exports = withPlugins([withPWA, withMdx, withImages], {
+module.exports = withPlugins([withPWA, withMdx, withSvgr], {
   pageExtensions: ["js", "jsx", "ts", "tsx", "mdx", "bs.js"],
   async redirects() {
     return [
