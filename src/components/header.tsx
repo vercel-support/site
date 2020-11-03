@@ -3,15 +3,20 @@ import { Transition } from "@headlessui/react";
 import { Menu, X } from "@images/heroicons/solid";
 import HeaderLinks from "@lib/header_links.json";
 import { trackGoal } from "fathom-client";
+import { getBlurhash } from "next-blurhash";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { BlurhashCanvas } from "react-blurhash";
 import useDismiss from "use-dismiss";
 
 const ProfileImg = "/favicon-128x128.png";
 
 const links = HeaderLinks;
 const trackMobileMenuGoal = () => trackGoal("RYQBIEQE", 0);
+let imgHash: string;
+
+getBlurhash(ProfileImg).then((hash) => (imgHash = hash));
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,13 +35,23 @@ export default function Header() {
           <h1>
             <Link href="/">
               <a className="py-2">
-                <Image
-                  src={ProfileImg}
-                  width={48}
-                  height={48}
-                  alt="Brandon in a black kimono"
-                  className="rounded-full shadow-outline-gray"
-                />
+                <div className="relative">
+                  <BlurhashCanvas
+                    hash={imgHash}
+                    width={32}
+                    height={32}
+                    punch={1}
+                    className="absolute inset-0 w-full h-full"
+                  />
+
+                  <Image
+                    src={ProfileImg}
+                    width={48}
+                    height={48}
+                    alt="Brandon in a black kimono"
+                    className="rounded-full shadow-outline-gray"
+                  />
+                </div>
               </a>
             </Link>
           </h1>
