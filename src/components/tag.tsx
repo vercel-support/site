@@ -3,7 +3,6 @@ import Layout from "@components/layout";
 import SEO from "@components/seo";
 import TagIcon from "@images/icon-tag.svg";
 import React from "react";
-import { Svg } from "react-optimized-image";
 
 export default function TagTemplate({ pageContext, data }) {
   return (
@@ -14,7 +13,7 @@ export default function TagTemplate({ pageContext, data }) {
       />
 
       <h1 className="flex items-end text-2xl">
-        <Svg src={TagIcon} className="block w-8 h-8 mr-2" />
+        <TagIcon className="block w-8 h-8 mr-2" />
         Posts tagged with "{pageContext.tag}"
       </h1>
 

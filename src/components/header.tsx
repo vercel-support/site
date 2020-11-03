@@ -1,12 +1,11 @@
 import Card from "@components/card";
+import { Transition } from "@headlessui/react";
 import { Menu, X } from "@images/heroicons/solid";
 import HeaderLinks from "@lib/header_links.json";
-import { Transition } from "@tailwindui/react";
 import { trackGoal } from "fathom-client";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import Img from "react-optimized-image";
 import useDismiss from "use-dismiss";
 
 const ProfileImg = "/favicon-128x128.png";
