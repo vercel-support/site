@@ -13,6 +13,19 @@ const withMdx = require("@next/mdx")({
 
 module.exports = withPlugins([withPWA, withMdx, withSvgr], {
   pageExtensions: ["js", "jsx", "ts", "tsx", "mdx", "bs.js"],
+  async headers() {
+    return [
+      {
+        source: "/api/blurhash",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=3600",
+          },
+        ],
+      },
+    ];
+  },
   async redirects() {
     return [
       {

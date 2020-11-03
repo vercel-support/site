@@ -4,6 +4,7 @@ import GithubIcon from "@images/github.svg";
 import TwitterIcon from "@images/twitter.svg";
 import { trackGoal } from "fathom-client";
 import Image from "next/image";
+import { BlurhashCanvas } from "react-blurhash";
 
 const ProfileImg = "/favicon-128x128.png";
 
@@ -15,13 +16,19 @@ export default function Author() {
   return (
     <Card className="mt-32">
       <aside className="max-w-md p-8 mx-auto">
-        <div className="flex justify-center">
+        <div className="mx-auto relative w-32 overflow-hidden rounded-full shadow-outline-gray">
+          <BlurhashCanvas
+            hash="UDE2qFIp01xZMx%L9GE20gRj~AWE9[of^*xt"
+            className="absolute inset-0 w-full h-full"
+            width={32}
+            height={32}
+            punch={1}
+          />
           <Image
             src={ProfileImg}
             height={128}
             width={128}
             alt="Brandon in a black kimono"
-            className="rounded-full shadow-outline-gray"
           />
         </div>
 

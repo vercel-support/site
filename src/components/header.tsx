@@ -5,7 +5,8 @@ import HeaderLinks from "@lib/header_links.json";
 import { trackGoal } from "fathom-client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { BlurhashCanvas } from "react-blurhash";
 import useDismiss from "use-dismiss";
 
 const ProfileImg = "/favicon-128x128.png";
@@ -30,13 +31,22 @@ export default function Header() {
           <h1>
             <Link href="/">
               <a className="py-2">
-                <Image
-                  src={ProfileImg}
-                  width={48}
-                  height={48}
-                  alt="Brandon in a black kimono"
-                  className="rounded-full shadow-outline-gray"
-                />
+                <div className="relative overflow-hidden rounded-full shadow-outline-gray">
+                  <BlurhashCanvas
+                    hash="UDE2qFIp01xZMx%L9GE20gRj~AWE9[of^*xt"
+                    className="absolute inset-0 w-full h-full"
+                    width={32}
+                    height={32}
+                    punch={1}
+                  />
+
+                  <Image
+                    src={ProfileImg}
+                    width={48}
+                    height={48}
+                    alt="Brandon in a black kimono"
+                  />
+                </div>
               </a>
             </Link>
           </h1>
