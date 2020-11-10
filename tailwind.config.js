@@ -1,20 +1,12 @@
-const ui = require("@tailwindcss/ui");
 const fancy = require("tailwindcss-plugin-fancy");
 const whitelist = [/markdown/, /rich-text/, /primary/, /secondary/];
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
-  dark: "media",
-  experimental: "all",
   purge: {
     options: {
       keyframes: true,
-      whitelistPatterns: whitelist,
-      whitelistPatternsChildren: whitelist,
+      safelist: whitelist,
     },
     content: [
       "./src/components/**/*.{js,jsx,ts,tsx}",
@@ -85,7 +77,6 @@ module.exports = {
         },
       });
     },
-    ui,
     fancy,
   ],
 };

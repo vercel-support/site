@@ -16,7 +16,7 @@ export default function Author() {
   return (
     <Card className="mt-32">
       <aside className="max-w-md p-8 mx-auto">
-        <div className="relative w-32 mx-auto overflow-hidden rounded-full shadow-outline-gray">
+        <div className="relative w-32 h-32 mx-auto overflow-hidden rounded-full ring ring-gray-300">
           <BlurhashCanvas
             hash="UDE2qFIp01xZMx%L9GE20gRj~AWE9[of^*xt"
             className="absolute inset-0 w-full h-full"

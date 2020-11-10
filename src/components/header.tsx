@@ -31,7 +31,7 @@ export default function Header() {
           <h1>
             <Link href="/">
               <a className="py-2">
-                <div className="relative overflow-hidden rounded-full shadow-outline-gray">
+                <div className="relative w-12 h-12 overflow-hidden rounded-full ring ring-gray-300">
                   <BlurhashCanvas
                     hash="UDE2qFIp01xZMx%L9GE20gRj~AWE9[of^*xt"
                     className="absolute inset-0 w-full h-full"
