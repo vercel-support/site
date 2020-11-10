@@ -1,4 +1,4 @@
-import { useForm } from "@statickit/react";
+import { useForm } from "@formspree/react";
 
 export default function ContactForm() {
   const [state, handleSubmit] = useForm("contact-form");

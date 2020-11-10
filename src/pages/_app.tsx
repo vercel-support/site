@@ -2,7 +2,7 @@ import "tailwindcss/tailwind.css";
 import "../css/dank-mono.css";
 import "../css/prism-night-owl.css";
 
-import { StaticKitProvider } from "@statickit/react";
+import { FormspreeProvider } from "@formspree/react";
 import * as Fathom from "fathom-client";
 import Head from "next/head";
 import Router from "next/router";
@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }) {
   }, []);
 
   return (
-    <StaticKitProvider site="a3b65ef2871d">
+    <FormspreeProvider project="1543675199252070229">
       <Head>
         <link
           rel="stylesheet"
@@ -90,6 +90,6 @@ export default function App({ Component, pageProps }) {
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <Component {...pageProps} />
-    </StaticKitProvider>
+    </FormspreeProvider>
   );
 }

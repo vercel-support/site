@@ -8,12 +8,12 @@
     "start": "next start"
   },
   "dependencies": {
+    "@formspree/react": "^2.2.3",
     "@headlessui/react": "^0.2.0",
     "@mapbox/rehype-prism": "^0.5.0",
     "@mdx-js/loader": "^1.6.19",
     "@mdx-js/react": "^1.6.19",
     "@next/mdx": "^10.0.0",
-    "@statickit/react": "^2.1.1",
     "clsx": "^1.1.1",
     "date-fns": "^2.16.1",
     "fathom-client": "^3.0.0",
