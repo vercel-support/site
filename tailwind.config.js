@@ -1,6 +1,9 @@
 const fancy = require("tailwindcss-plugin-fancy");
-const whitelist = [/markdown/, /rich-text/, /primary/, /secondary/];
+const typography = require("@tailwindcss/typography");
+const forms = require("@tailwindcss/forms");
 const defaultTheme = require("tailwindcss/defaultTheme");
+
+const whitelist = [/markdown/, /rich-text/, /primary/, /secondary/];
 
 module.exports = {
   purge: {
@@ -16,22 +19,22 @@ module.exports = {
   },
 
   theme: {
-    typography: (theme) => ({
-      default: {
-        css: {
-          a: {
-            color: theme("colors.blue.600]"),
-            "&:hover": {
-              color: theme("colors.blue.500"),
-            },
-          },
-        },
-      },
-    }),
+    // typography: (theme) => ({
+    //   default: {
+    //     css: {
+    //       a: {
+    //         color: theme("colors.blue.600]"),
+    //         "&:hover": {
+    //           color: theme("colors.blue.500"),
+    //         },
+    //       },
+    //     },
+    //   },
+    // }),
     extend: {
-      fontFamily: {
-        sans: ["Inter", ...defaultTheme.fontFamily.sans],
-      },
+      // fontFamily: {
+      //   sans: ["Inter", ...defaultTheme.fontFamily.sans],
+      // },
     },
     container: { center: true, padding: "1rem" },
   },
@@ -78,5 +81,7 @@ module.exports = {
       });
     },
     fancy,
+    typography,
+    forms,
   ],
 };
