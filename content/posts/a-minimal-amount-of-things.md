@@ -70,7 +70,7 @@ I had a bad habit of putting things that didn’t belong in my personal task man
 
 Tasks that involve co-workers or even your spouse should live in another system. You can double up tasks in both an external and personal task system, but you’re better off creating personal reminders to check the shared task repository.
 
-Where I haven’t worked out what do is with wishlists (shopping lists for things you _someday_ want to buy and lists for books to read or games to play. These are things I _want to do_, but I feel weird having a project for a boom series where reading each book is its own separate task. I’m further annoyed that since these tasks are ever going to be in an Area of Focus, they float in the un-sectioned sidebar—taunting me.
+Where I haven’t worked out what do is with wishlists (shopping lists for things you _someday_ want to buy and lists for books to read or games to play. These are things I _want to do_, but I feel weird having a project for a book series where reading each book is its own separate task. I’m further annoyed that since these tasks are ever going to be in an Area of Focus, they float in the un-sectioned sidebar—taunting me.
 
 ## Simplify Tags
 
