@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { cx } from "@/styles";
 import { differenceInMonths } from "date-fns";
 
 const OldPostWarning = ({
@@ -10,9 +10,9 @@ const OldPostWarning = ({
 }) => {
   return differenceInMonths(new Date(date), new Date()) <= -6 ? (
     <aside
-      className={clsx(
+      className={cx(
         className,
-        "p-4 text-sm text-orange-700 bg-orange-100 border-l-4 border-orange-500"
+        "p-4 text-sm text-yellow-700 bg-yellow-200 border-l-4 border-yellow-500 rounded-r-md shadow-sm"
       )}
       role="alert"
     >
