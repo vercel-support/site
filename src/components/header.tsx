@@ -6,7 +6,7 @@ import { trackGoal } from "fathom-client";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { BlurhashCanvas } from "react-blurhash";
+import { PROFILE_IMG_BASE64 } from "@lib/constants";
 import useDismiss from "use-dismiss";
 
 const ProfileImg = "/favicon-128x128.png";
@@ -32,12 +32,12 @@ export default function Header() {
             <Link href="/">
               <a className="py-2">
                 <div className="relative w-12 h-12 overflow-hidden rounded-full ring ring-gray-300">
-                  <BlurhashCanvas
-                    hash="UDE2qFIp01xZMx%L9GE20gRj~AWE9[of^*xt"
-                    className="absolute inset-0 w-full h-full"
-                    width={32}
-                    height={32}
-                    punch={1}
+                  <img
+                    src={PROFILE_IMG_BASE64}
+                    alt=""
+                    aria-hidden
+                    className="absolute inset-0 object-cover object-center w-full h-full"
+                    style={{ filter: "blur(24px)", transform: "scale(1.2)" }}
                   />
 
                   <Image
