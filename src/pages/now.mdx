@@ -1,17 +1,16 @@
-import Lead from "@components/NowLead";
 import Layout from "@components/layout";
+import Lead from "@components/NowLead";
 import SEO from "@components/seo";
-import format from "date-fns/fp/format";
+
 const meta = {
-  date: "2020-12-04",
+	date: "2020-12-04",
 };
-const lastUpdated = format("MMMM d, yyyy")(new Date(meta.date));
 
 <SEO title="Now" description="What I'm up to now." />
 
 # Now
 
-<Lead lastUpdated={lastUpdated} />
+<Lead date={meta.date} />
 
 ## Family
 
@@ -39,4 +38,6 @@ It's a little bit about my history and a little bit about development culture
 (and just culture in general) here in Japan, where I've lived for over 15
 years.
 
-export default ({ children }) => <Layout className="prose">{children}</Layout>;
+export default ({ children }) => (
+  <Layout className="prose sm:prose-lg">{children}</Layout>
+);

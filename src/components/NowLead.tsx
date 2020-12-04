@@ -1,4 +1,7 @@
-const NowLead = ({ lastUpdated }) => {
+import format from "date-fns/fp/format";
+
+const NowLead = ({ date }) => {
+  const lastUpdated = format("MMMM d, yyyy")(new Date(date));
   return (
     <p>
       <span className="block">
