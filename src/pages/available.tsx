@@ -1,7 +1,8 @@
 import Card from "@components/card";
 import ContactForm from "@components/contactForm";
 import Layout from "@components/layout";
-const meta = {
+
+export const meta = {
   title: "Contact",
   description: "Get in touch with Brandon Pittman.",
 };

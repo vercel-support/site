@@ -2,7 +2,7 @@ import Cta from "@components/cta";
 import Layout from "@components/layout";
 import Link from "next/link";
 
-const meta = {
+export const meta = {
   title: "Home",
   description: "Brandon Pittman's personal website.",
 };

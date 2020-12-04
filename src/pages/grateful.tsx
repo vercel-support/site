@@ -1,6 +1,7 @@
 import Layout from "@components/layout";
 import { trackGoal } from "fathom-client";
-const meta = {
+
+export const meta = {
   title: "Patronage",
   description: "Support Brandon Pittman's open source work.",
 };

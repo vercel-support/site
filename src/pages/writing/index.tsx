@@ -2,7 +2,7 @@ import Article from "../../components/article";
 import Layout from "../../components/layout";
 import { getAllPosts } from "../../lib/api";
 
-const meta = {
+export const meta = {
   title: "Brandon's Blog",
   description: "Recent blog posts from Brandon Pittman.",
 };
