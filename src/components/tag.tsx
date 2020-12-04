@@ -1,17 +1,15 @@
 import Article from "@components/article";
 import Layout from "@components/layout";
-import SEO from "@components/seo";
 import TagIcon from "@images/icon-tag.svg";
 import React from "react";
 
 export default function TagTemplate({ pageContext, data }) {
+  const meta = {
+    title: pageContext.tag,
+    description: `Posts tagged with ${pageContext.tag}.`,
+  };
   return (
-    <Layout max-width="container">
-      <SEO
-        title={pageContext.tag}
-        description={`Posts tagged with ${pageContext.tag}.`}
-      />
-
+    <Layout max-width="container" meta={meta}>
       <h1 className="flex items-end text-2xl">
         <TagIcon className="block w-8 h-8 mr-2" />
         Posts tagged with "{pageContext.tag}"

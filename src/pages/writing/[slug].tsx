@@ -2,16 +2,15 @@ import Author from "@components/author";
 import Layout from "@components/layout";
 import OldPostWarning from "@components/OldPostWarning";
 import PostMeta from "@components/post_meta";
-import SEO from "@components/seo";
 import { getAllPosts, queryPost } from "@lib/api";
 import hydrate from "next-mdx-remote/hydrate";
 
 export default function Post({ source, data }) {
   const content = hydrate(source);
+  const meta = { title: data.title, description: data.description };
 
   return (
-    <Layout>
-      <SEO title={data.title} description={data.description} />
+    <Layout meta={meta}>
       <div className="max-w-2xl mx-auto space-y-12">
         <div className="grid gap-2">
           <h1 className="text-5xl font-bold ">{data.title}</h1>

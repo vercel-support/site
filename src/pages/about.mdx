@@ -1,8 +1,10 @@
 import Layout from "@components/layout";
 import SEO from "@components/seo";
 import Link from "next/link";
-
-<SEO title="About" description="What I'm all about." />
+const meta = {
+  title: "About",
+  description: "What I'm all about.",
+};
 
 # About
 
@@ -82,5 +84,7 @@ local friends to play board games a couple times a month.
 </p>
 
 export default ({ children }) => (
-  <Layout className="prose sm:prose-lg">{children}</Layout>
+  <Layout className="prose sm:prose-lg" meta={meta}>
+    {children}
+  </Layout>
 );

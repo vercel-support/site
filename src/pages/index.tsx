@@ -1,13 +1,16 @@
 import Cta from "@components/cta";
 import Layout from "@components/layout";
-import SEO from "@components/seo";
 import Link from "next/link";
+
+const meta = {
+  title: "Home",
+  description: "Brandon Pittman's personal website.",
+};
 
 export default function Index() {
   return (
     <>
-      <SEO title="Home" description="Brandon Pittman's personal website." />
-      <Layout className="max-w-2xl space-y-8">
+      <Layout className="max-w-2xl space-y-8" meta={meta}>
         <div className="prose sm:prose-lg">
           <p className="mt-8">
             Looking for someone to help you build a JAMstack website or

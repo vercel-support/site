@@ -1,15 +1,13 @@
 import Layout from "@components/layout";
-import SEO from "@components/seo";
 import { trackGoal } from "fathom-client";
+const meta = {
+  title: "Patronage",
+  description: "Support Brandon Pittman's open source work.",
+};
 
 export default function Grateful() {
   return (
-    <Layout className="max-w-2xl text-lg prose sm:prose-lg">
-      <SEO
-        title="Patronage"
-        description="Support Brandon Pittman's open source work."
-      />
-
+    <Layout meta={meta} className="max-w-2xl text-lg prose sm:prose-lg">
       <h1>Support My Work</h1>
 
       <p>
@@ -25,7 +23,7 @@ export default function Grateful() {
         >
           Fathom Analytics
         </a>{" "}
-       with my affiliate link or try{" "}
+        with my affiliate link or try{" "}
         <a
           onClick={() => trackGoal("XUEDPKNH", 0)}
           href="https://mailbrew.com/?utm_source=blp&utm_campaign=affiliate"
@@ -33,7 +31,8 @@ export default function Grateful() {
           rel="noreferrer noopener"
         >
           Mailbrew
-        </a>{" "}for reading email newsletters in a better way.
+        </a>{" "}
+        for reading email newsletters in a better way.
       </p>
 
       <p>

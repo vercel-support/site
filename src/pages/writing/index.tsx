@@ -1,7 +1,11 @@
 import Article from "../../components/article";
 import Layout from "../../components/layout";
-import SEO from "../../components/seo";
 import { getAllPosts } from "../../lib/api";
+
+const meta = {
+  title: "Brandon's Blog",
+  description: "Recent blog posts from Brandon Pittman.",
+};
 
 export async function getStaticProps() {
   const posts = await getAllPosts();
@@ -13,12 +17,7 @@ export async function getStaticProps() {
 
 export default function Writing({ posts }) {
   return (
-    <Layout className="max-w-3xl mx-auto">
-      <SEO
-        title="Brandon's Blog"
-        description="Recent blog posts from Brandon Pittman."
-      />
-
+    <Layout className="max-w-3xl mx-auto" meta={meta}>
       <h1 className="text-4xl font-bold">Recent Blog Posts</h1>
 
       <ul className="mt-16 grid gap-16">

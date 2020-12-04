@@ -1,16 +1,15 @@
 import Layout from "@components/layout";
 import Lead from "@components/NowLead";
 import SEO from "@components/seo";
-
+const date = "2020-12-04";
 const meta = {
-	date: "2020-12-04",
+  title: "Now",
+  description: "What I'm up to now.",
 };
-
-<SEO title="Now" description="What I'm up to now." />
 
 # Now
 
-<Lead date={meta.date} />
+<Lead date={date} />
 
 ## Family
 
@@ -39,5 +38,7 @@ It's a little bit about my history and a little bit about development culture
 years.
 
 export default ({ children }) => (
-  <Layout className="prose sm:prose-lg">{children}</Layout>
+  <Layout className="prose sm:prose-lg" meta={meta}>
+    {children}
+  </Layout>
 );

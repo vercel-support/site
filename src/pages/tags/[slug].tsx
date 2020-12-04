@@ -1,6 +1,5 @@
 import Article from "../../components/article";
 import Layout from "../../components/layout";
-import SEO from "../../components/seo";
 import { getAllPosts, getAllTags } from "../../lib/api";
 
 export async function getStaticProps({ params }) {
@@ -24,13 +23,13 @@ export async function getStaticPaths() {
 }
 
 export default function Tags({ posts, title }) {
+  const meta = {
+    title: title,
+    description: `Posts from Brandon Pittman tagged: ${title}`,
+  };
   return (
-    <Layout>
+    <Layout meta={meta}>
       <>
-        <SEO
-          title={title}
-          description={`Posts from Brandon Pittman tagged: ${title}`}
-        />
         <h1 className="text-3xl font-bold">Posts tagged {title}</h1>
         <ul className="flex flex-wrap -mx-4">
           {posts.map((post) => (
