@@ -1,6 +1,6 @@
 {
   "name": "site",
-  "version": "1.3.0",
+  "version": "1.5.0",
   "scripts": {
     "vercel-build": "next build",
     "dev": "next",
@@ -75,7 +75,6 @@
   "license": "ISC",
   "husky": {
     "hooks": {
-      "prepare-commit-msg": "npx --no-install devmoji -e --lint",
       "pre-commit": "lint-staged"
     }
   },
