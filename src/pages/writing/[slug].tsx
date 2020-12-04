@@ -5,10 +5,8 @@ import PostMeta from "@components/post_meta";
 import { getAllPosts, queryPost } from "@lib/api";
 import hydrate from "next-mdx-remote/hydrate";
 import CustomLink from "@components/Link";
-import Image from "next/image";
 
 const components = {
-  img: Image,
   a: CustomLink,
 };
 

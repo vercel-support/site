@@ -3,14 +3,6 @@ import Header from "@components/header";
 import * as React from "react";
 import { cx } from "@/styles";
 import SEO from "@components/seo";
-import { MDXProvider } from "@mdx-js/react";
-import Image from "next/image";
-import Link from "@components/Link";
-
-const components = {
-  img: Image,
-  a: Link,
-};
 
 export default function Layout({
   children,
@@ -30,7 +22,7 @@ export default function Layout({
   );
 
   return (
-    <MDXProvider components={components}>
+    <>
       <SEO title={meta.title} description={meta.description} />
       <div className="flex flex-col min-h-screen text-lg bg-gray-50">
         <a
@@ -45,6 +37,6 @@ export default function Layout({
         </main>
         <Footer />
       </div>
-    </MDXProvider>
+    </>
   );
 }

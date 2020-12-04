@@ -4,12 +4,10 @@ import matter from "gray-matter";
 import renderToString from "next-mdx-remote/render-to-string";
 import { basename, join } from "path";
 import readingTime from "reading-time";
-import Image from "next/image";
-import Link from "@components/Link";
+import CustomLink from "@components/Link";
 
 const components = {
-  img: Image,
-  a: Link,
+  a: CustomLink,
 };
 
 const postsDirectory = join(process.cwd(), "content/posts");
