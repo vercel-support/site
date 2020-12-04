@@ -7,25 +7,18 @@ const withPWA = require("next-pwa")({
 const withPlugins = require("next-compose-plugins");
 const withSvgr = require("next-svgr");
 const withMdx = require("@next/mdx")({
-  rehypePlugins: [require("@mapbox/rehype-prism")],
-  remarkPlugins: [require("remark-external-links")],
+  options: {
+    rehypePlugins: [require("@mapbox/rehype-prism")],
+    remarkPlugins: [
+      require("remark-external-links"),
+      require("remark-slug"),
+      require("remark-prism"),
+    ],
+  },
 });
 
 module.exports = withPlugins([withPWA, withMdx, withSvgr], {
   pageExtensions: ["js", "jsx", "ts", "tsx", "mdx", "bs.js"],
-  // async headers() {
-  //   return [
-  //     {
-  //       source: "/api/blurhash",
-  //       headers: [
-  //         {
-  //           key: "Cache-Control",
-  //           value: "public, max-age=3600",
-  //         },
-  //       ],
-  //     },
-  //   ];
-  // },
   async redirects() {
     return [
       {

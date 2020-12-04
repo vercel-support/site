@@ -31,7 +31,11 @@ export async function queryPost(slug: string) {
   const source = await renderToString(content, {
     components,
     mdxOptions: {
-      remarkPlugins: [require("remark-external-links")],
+      remarkPlugins: [
+        require("remark-external-links"),
+        require("remark-slug"),
+        require("remark-prism"),
+      ],
     },
   });
   data = {
