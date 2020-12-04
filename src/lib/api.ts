@@ -4,6 +4,13 @@ import matter from "gray-matter";
 import renderToString from "next-mdx-remote/render-to-string";
 import { basename, join } from "path";
 import readingTime from "reading-time";
+import Image from "next/image";
+import Link from "@components/Link";
+
+const components = {
+  img: Image,
+  a: Link,
+};
 
 const postsDirectory = join(process.cwd(), "content/posts");
 
@@ -24,6 +31,7 @@ export async function queryPost(slug: string) {
   const fileContents = fs.readFileSync(fullPath, "utf8");
   let { data, content } = matter(fileContents);
   const source = await renderToString(content, {
+    components,
     mdxOptions: {
       remarkPlugins: [require("remark-external-links")],
     },

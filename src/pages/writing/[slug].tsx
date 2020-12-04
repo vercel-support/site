@@ -4,9 +4,16 @@ import OldPostWarning from "@components/OldPostWarning";
 import PostMeta from "@components/post_meta";
 import { getAllPosts, queryPost } from "@lib/api";
 import hydrate from "next-mdx-remote/hydrate";
+import CustomLink from "@components/Link";
+import Image from "next/image";
+
+const components = {
+  img: Image,
+  a: CustomLink,
+};
 
 export default function Post({ source, data }) {
-  const content = hydrate(source);
+  const content = hydrate(source, { components });
   const meta = { title: data.title, description: data.description };
 
   return (
