@@ -82,7 +82,7 @@ Things lets you apply a tag to an area or project and all the tags contained whi
 
 ## Wrap-Up
 
-While my experience may not convince you remove all complexity from your current setup, I hope that it makes you think about how you might be able to simplify how you use whichever task manager you use. It’s amazing how much calmer you can feel when your task list doesn’t feel _busy_. }
+While my experience may not convince you remove all complexity from your current setup, I hope that it makes you think about how you might be able to simplify how you use whichever task manager you use. It’s amazing how much calmer you can feel when your task list doesn’t feel _busy_.
 
 If you have any thoughts about the ideas presented in this post, please reach out either through the [contact form](/available) on this site or over [Twitter](https://twitter.com/brandonpittman)
 
