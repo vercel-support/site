@@ -8,11 +8,11 @@ import Head from "next/head";
 import Router from "next/router";
 import React, { useEffect } from "react";
 import { MDXProvider } from "@mdx-js/react";
-//import Image from "next/image";
+import Image from "next/image";
 import Link from "@components/Link";
 
 const components = {
-  //  img: Image,
+  Image,
   a: Link,
 };
 
