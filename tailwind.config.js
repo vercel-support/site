@@ -19,19 +19,25 @@ module.exports = {
   },
 
   theme: {
-    // typography: (theme) => ({
-    //   default: {
-    //     css: {
-    //       a: {
-    //         color: theme("colors.blue.600]"),
-    //         "&:hover": {
-    //           color: theme("colors.blue.500"),
-    //         },
-    //       },
-    //     },
-    //   },
-    // }),
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            img: {
+              marginTop: 0,
+              marginBottom: 0,
+            },
+          },
+        },
+        lg: {
+          css: {
+            img: {
+              marginTop: 0,
+              marginBottom: 0,
+            },
+          },
+        },
+      },
       // fontFamily: {
       //   sans: ["Inter", ...defaultTheme.fontFamily.sans],
       // },
