@@ -47,3 +47,7 @@ I spent a lot of time studying programming. I don't think I went about it most e
 When I finally left the teaching gig, it was for all the wrong reasons. I was feeling pressure to get a _real job_. Being an English teacher in Japan carries a special scent of failure and desperation. I had been telling everyone for over a year that I was gonna become a programmer _when I got a little better at it_. So I took the first programming job I could find. It was at the same time the worst choice I ever made, but also the best one I could've made. That next job was the most stressful experience of my life. It was a learning experience though. I learned what most programmers were actually like. I learned that people _pushing `<div>`s_ aren't the same people we see giving keynote addresses at a fancy conference. Most of the work programmers do can be tedious and soul-crushing. But I'll save that story for another time.
 
 I'll leave this first _Developed in Isolation_ story on a bright note. Taking that shit job got me out of the teaching job, showed me what the real world in Japan was really like, and helped me figure out what kind of developer I wanted to be like. It focused me. It made me see what kind of technologies I wanted to work with. It opened my eyes.
+
+---
+
+This post was originally part of the *Developed in Isolation* newsletter. [Subscribe to the newsletter](https://buttondown.email/developedinisolation) to read the next issue when it comes out. 
