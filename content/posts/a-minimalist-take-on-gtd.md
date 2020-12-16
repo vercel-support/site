@@ -58,7 +58,7 @@ Here's the part where I tell you that maybe you don't need your fancy task manag
 
 ### Paper Lists Force Focus
 
-The biggest reason to go analog with your task management is the ability to focus. Software task managers lead you down the path of fiddling. OmniFocus is a powerful tool, but with great power comes constant fiddling. I've said it in a previous post on GTD minimalism but it bears repeating—OmniFocus users spend most of their time massaging OmniFocus. Any serious OmniFocus users probably can tell you about the hours and hours they've spent crafting the perfect sidebar folder structure, perspectives, and AppleScripts to automate their workflow. Smart people have written [books](https://www.beingproductive.org) on OmniFocus. [Notecards can be fiddly](http://www.43folders.com/2004/09/03/introducing-the-hipster-pda), sure, but far less so that software.[^hipsterpda]
+The biggest reason to go analog with your task management is the ability to focus. Software task managers lead you down the path of fiddling. OmniFocus is a powerful tool, but with great power comes constant fiddling. I've said it in a previous post on GTD minimalism but it bears repeating—OmniFocus users spend most of their time massaging OmniFocus. Any serious OmniFocus users probably can tell you about the hours and hours they've spent crafting the perfect sidebar folder structure, perspectives, and AppleScripts to automate their workflow. Smart people have written [books](https://www.beingproductive.org) on OmniFocus. [Notecards can be fiddly](http://www.43folders.com/2004/09/03/introducing-the-hipster-pda), sure, but far less so that software.[^1]
 
 ## Building Habits > Completing Tasks
 
@@ -70,4 +70,4 @@ Instead of creating a to-do to remind yourself to take something to work, put it
 
 [papergtd]: https://www.vitalsmarts.com/crucialskills/2018/02/paper-vs-apps-the-tools-in-your-gtd-system/
 
-[^hipsterpda]: The Hipster PDA was created in a time before the iPhone. it was followed by a decade of Apple nerds searching for the perfect notes app.
+[^1]: The Hipster PDA was created in a time before the iPhone. it was followed by a decade of Apple nerds searching for the perfect notes app.
