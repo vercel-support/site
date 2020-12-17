@@ -5,6 +5,7 @@ import renderToString from "next-mdx-remote/render-to-string";
 import { basename, join } from "path";
 import readingTime from "reading-time";
 import CustomLink from "@components/Link";
+import { performance } from "perf_hooks";
 
 const components = {
   a: CustomLink,
@@ -23,26 +24,31 @@ export interface Post {
   };
 }
 
-export async function queryPost(slug: string) {
+export async function queryPost(slug: string, queryWithPlugins = false) {
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   let { data, content } = matter(fileContents);
+  const t2 = performance.now();
+  const remarkPlugins = [
+    ...(queryWithPlugins
+      ? [require("remark-slug"), require("remark-prism")]
+      : []),
+  ];
   const source = await renderToString(content, {
     components,
     mdxOptions: {
-      remarkPlugins: [
-        require("remark-external-links"),
-        require("remark-slug"),
-        require("remark-prism"),
-      ],
+      remarkPlugins,
     },
   });
+  const t3 = performance.now();
   data = {
     ...data,
     date: data.date.toISOString(),
     timeToRead: readingTime(content).text,
   };
+
+  console.log(`${data.title}: ${(t3 - t2) / 1000}`);
 
   return {
     data,
@@ -54,9 +60,11 @@ export async function queryPost(slug: string) {
 export const getPostSlugs = () =>
   globby.sync(`${postsDirectory}/**.md`).map((path) => basename(path));
 
-export async function getAllPosts() {
+export async function getAllPosts(queryWithPlugins = false) {
   const slugs = getPostSlugs();
-  const posts = await Promise.all(slugs.map((slug) => queryPost(slug)));
+  const posts = await Promise.all(
+    slugs.map((slug) => queryPost(slug, queryWithPlugins))
+  );
   return posts.sort((post1: Post, post2: Post) =>
     post1.data.date > post2.data.date ? -1 : 1
   );

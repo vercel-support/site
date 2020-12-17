@@ -37,7 +37,7 @@ export default function Post({ source, data }) {
 }
 
 export async function getStaticProps({ params }) {
-  const { data, content, source } = await queryPost(params.slug);
+  const { data, content, source } = await queryPost(params.slug, true);
 
   return {
     props: {
