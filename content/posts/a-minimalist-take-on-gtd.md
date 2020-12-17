@@ -62,7 +62,7 @@ The biggest reason to go analog with your task management is the ability to focu
 
 ## Building Habits > Completing Tasks
 
-The last thing I'd like to leave you with is that habits > tasks. If you can get the task out of your to-do list and bake it into your routine, all the better. This doesn't apply to one-off tasks, but anything you do regularly that's in your to-do list is a potential habit you could create and one less task stealing focus more important things you've got written down. It can be useful to schedule repeating tasks to get yourself doing the habit you want to build. Once you start doing that thing without needing the reminder, **delete it from your task manager**.
+The last thing I'd like to leave you with is that habits > tasks. If you can get the task out of your to-do list and bake it into your routine, all the better. This doesn't apply to one-off tasks, but anything you do regularly that's in your to-do list is a potential habit you could create and one less task stealing focus from more important things you've got written down. It can be useful to schedule repeating tasks to get yourself doing the habit you want to build. Once you start doing that thing without needing the reminder, **delete it from your task manager**.
 
 I'd also urge you to look for ways to give yourself physical cues to do things. I'll never forget a wonderful idea from _Loveline_'s Dr. Drew. He had a shot or something that he wanted to take home to vaccinate his kids with, and it needed to be refrigerated. Knowing that this was the sort of thing that he could easily forget, he put his car keys with the shot in the fridge. This ensured he'd remember the shot because he couldn't start his car without his keys.
 
