@@ -28,7 +28,7 @@ export default function Post({ source, data }) {
           {data.description}
         </p>
 
-        <div className="prose sm:prose-lg">{content}</div>
+        <div className="prose sm:prose-lg dark:prose-dark">{content}</div>
 
         <Author />
       </div>

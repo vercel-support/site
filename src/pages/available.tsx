@@ -9,7 +9,7 @@ export const meta = {
 
 export default function Available() {
   return (
-    <Layout className="prose sm:prose-lg" meta={meta}>
+    <Layout className="prose sm:prose-lg dark:prose-dark" meta={meta}>
       <h1 className="mx-auto text-center">Send me a message</h1>
 
       <Card className="max-w-md px-6 py-8 mx-auto mt-8">

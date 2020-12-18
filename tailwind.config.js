@@ -6,6 +6,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 const whitelist = [/markdown/, /rich-text/, /primary/, /secondary/];
 
 module.exports = {
+  darkMode: "class",
   purge: {
     options: {
       keyframes: true,
@@ -20,7 +21,7 @@ module.exports = {
 
   theme: {
     extend: {
-      typography: {
+      typography: (theme) => ({
         DEFAULT: {
           css: {
             img: {
@@ -37,7 +38,50 @@ module.exports = {
             },
           },
         },
-      },
+        dark: {
+          css: {
+            color: theme("colors.gray.300"),
+            a: {
+              color: theme("colors.blue.400"),
+              "&:hover": {
+                color: theme("colors.blue.600"),
+              },
+              code: { color: theme("colors.blue.400") },
+            },
+            blockquote: {
+              borderLeftColor: theme("colors.gray.700"),
+              color: theme("colors.gray.300"),
+            },
+            code: {
+              color: theme("colors.gray.300"),
+            },
+            "h1,h2,h3,h4": {
+              color: theme("colors.gray.100"),
+              "scroll-margin-top": theme("spacing.32"),
+            },
+            hr: { borderColor: theme("colors.gray.700") },
+            ol: {
+              li: {
+                "&:before": { color: theme("colors.gray.500") },
+              },
+            },
+            ul: {
+              li: {
+                "&:before": { backgroundColor: theme("colors.gray.500") },
+              },
+            },
+            strong: { color: theme("colors.gray.300") },
+            thead: {
+              color: theme("colors.gray.100"),
+            },
+            tbody: {
+              tr: {
+                borderBottomColor: theme("colors.gray.700"),
+              },
+            },
+          },
+        },
+      }),
       // fontFamily: {
       //   sans: ["Inter", ...defaultTheme.fontFamily.sans],
       // },
@@ -45,7 +89,11 @@ module.exports = {
     container: { center: true, padding: "1rem" },
   },
 
-  variants: {},
+  variants: {
+    extend: {
+      typography: ["dark"],
+    },
+  },
 
   plugins: [
     function ({ addComponents, theme }) {

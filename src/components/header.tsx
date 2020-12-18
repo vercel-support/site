@@ -26,7 +26,7 @@ export default function Header() {
 
   return (
     <header className="w-full">
-      <nav className="w-full px-4 py-4 pb-4 bg-white border-b sm:px-16">
+      <nav className="w-full px-4 py-4 pb-4 bg-white border-b sm:px-16 dark:border-transparent dark:bg-black dark:text-white dark:shadow">
         <div className="flex items-center justify-between w-full">
           <h1>
             <Link href="/">
@@ -106,7 +106,7 @@ export default function Header() {
             {links.internal.map((link) => (
               <li key={link.title}>
                 <Link href={link.to}>
-                  <a className="block ml-8 text-sm font-semibold tracking-wide text-gray-700 md:inline-block md:mt-0 transform transition-all ease-in-out duration-75 hover:text-gray-900">
+                  <a className="block ml-8 text-sm font-semibold tracking-wide text-gray-700 md:inline-block md:mt-0 transform transition-all ease-in-out duration-75 hover:text-gray-900 dark:text-gray-50">
                     {link.title}
                   </a>
                 </Link>
@@ -118,7 +118,7 @@ export default function Header() {
                   target="_blank"
                   rel="noopener noreferrer author"
                   href={link.to}
-                  className="block ml-8 text-sm font-semibold tracking-wide text-gray-700 md:inline-block md:mt-0 transform transition-all ease-in-out duration-75 hover:text-gray-900"
+                  className="block ml-8 text-sm font-semibold tracking-wide text-gray-700 md:inline-block md:mt-0 transform transition-all ease-in-out duration-75 hover:text-gray-900 dark:text-gray-50"
                 >
                   {link.title}
                 </a>

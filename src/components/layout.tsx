@@ -24,7 +24,7 @@ export default function Layout({
   return (
     <>
       <SEO title={meta.title} description={meta.description} />
-      <div className="flex flex-col min-h-screen text-lg bg-gray-50">
+      <div className="flex flex-col min-h-screen text-lg bg-gray-50 dark:bg-black dark:text-gray-50">
         <a
           href="#skip-content-target"
           className="sr-only focus:not-sr-only focus:ring hover:ring"

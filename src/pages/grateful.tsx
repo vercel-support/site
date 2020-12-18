@@ -8,7 +8,10 @@ export const meta = {
 
 export default function Grateful() {
   return (
-    <Layout meta={meta} className="max-w-2xl text-lg prose sm:prose-lg">
+    <Layout
+      meta={meta}
+      className="max-w-2xl text-lg prose sm:prose-lg dark:prose-dark"
+    >
       <h1>Support My Work</h1>
 
       <p>

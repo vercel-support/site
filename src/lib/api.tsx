@@ -48,8 +48,6 @@ export async function queryPost(slug: string, queryWithPlugins = false) {
     timeToRead: readingTime(content).text,
   };
 
-  console.log(`${data.title}: ${(t3 - t2) / 1000}`);
-
   return {
     data,
     content,

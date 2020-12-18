@@ -11,7 +11,7 @@ export default function Index() {
   return (
     <>
       <Layout className="max-w-2xl space-y-8" meta={meta}>
-        <div className="prose sm:prose-lg">
+        <div className="prose sm:prose-lg dark:prose-dark">
           <p className="mt-8">
             Looking for someone to help you build a JAMstack website or
             frontend-heavy application? You may not even need a backend. If you
