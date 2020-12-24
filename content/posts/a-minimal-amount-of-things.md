@@ -12,7 +12,7 @@ If you’ve followed me for a while, you may know that I was a **die-hard** Omni
 
 I used Things back in v1 and I liked it then. I went nuts on listening to productivity gurus who told me I need to reach _Inbox Zero_ and schedule projects out like…
 
-```taskpaper
+```
 Fix Broken chair:
 1. Go to store
 2. Buy hammer

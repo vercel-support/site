@@ -6,9 +6,13 @@ const withPWA = require("next-pwa")({
 });
 const withPlugins = require("next-compose-plugins");
 const withSvgr = require("next-svgr");
+const mdxPrism = require("mdx-prism");
 const withMdx = require("@next/mdx")({
   options: {
-    rehypePlugins: [require("@mapbox/rehype-prism")],
+    rehypePlugins: [
+      mdxPrism,
+      // require("@mapbox/rehype-prism")
+    ],
     remarkPlugins: [
       require("remark-external-links"),
       require("remark-slug"),

@@ -5,7 +5,6 @@ import renderToString from "next-mdx-remote/render-to-string";
 import { basename, join } from "path";
 import readingTime from "reading-time";
 import CustomLink from "@components/Link";
-import { performance } from "perf_hooks";
 
 const components = {
   a: CustomLink,
@@ -29,19 +28,15 @@ export async function queryPost(slug: string, queryWithPlugins = false) {
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   let { data, content } = matter(fileContents);
-  const t2 = performance.now();
-  const remarkPlugins = [
-    ...(queryWithPlugins
-      ? [require("remark-slug"), require("remark-prism")]
-      : []),
-  ];
+  const remarkPlugins = [...(queryWithPlugins ? [require("remark-slug")] : [])];
+  const rehypePlugins = [...(queryWithPlugins ? [require("mdx-prism")] : [])];
   const source = await renderToString(content, {
     components,
     mdxOptions: {
       remarkPlugins,
+      rehypePlugins,
     },
   });
-  const t3 = performance.now();
   data = {
     ...data,
     date: data.date.toISOString(),

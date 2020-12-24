@@ -116,4 +116,8 @@ pre {
 code.language-text {
   @apply text-gray-900 bg-gray-100 font-normal whitespace-pre-wrap;
 }
+.remark-highlight-code-line {
+  box-shadow: inset 3px 0px 0 0px theme(colors.pink.500);
+  @apply block px-6 -mx-6 bg-gray-900;
+}
 /* purgecss end ignore */
