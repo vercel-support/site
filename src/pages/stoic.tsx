@@ -24,7 +24,7 @@ const Stoic = () => {
   const { author, quote } = getRandomQuote(quotes);
 
   return (
-    <Layout className="prose prose-dark" meta={meta}>
+    <Layout className="prose dark:prose-dark" meta={meta}>
       <h2>Random Stoic Quote</h2>
       <blockquote>{quote}</blockquote>
       <i>{author}</i>
