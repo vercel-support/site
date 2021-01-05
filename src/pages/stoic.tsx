@@ -10,7 +10,7 @@ const Stoic = ({ author, quote }: { author: string; quote: string }) => {
   return (
     <Layout className="prose dark:prose-dark" meta={meta}>
       <h2>Random Stoic Quote</h2>
-      <blockquote>{quote}</blockquote>
+      <blockquote className="whitespace-pre-line">{quote}</blockquote>
       <i>{author}</i>
     </Layout>
   );
