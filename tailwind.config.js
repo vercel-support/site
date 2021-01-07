@@ -122,6 +122,9 @@ module.exports = {
     },
     function ({ addBase }) {
       addBase({
+        body: {
+          overscrollBehavior: "none",
+        },
         ".markdown": {
           "img, pre": {
             marginLeft: "-1rem",
