@@ -1,6 +1,7 @@
 const fancy = require("tailwindcss-plugin-fancy");
 const typography = require("@tailwindcss/typography");
 const forms = require("@tailwindcss/forms");
+const lineClamp = require("@tailwindcss/line-clamp");
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 const whitelist = [/markdown/, /rich-text/, /primary/, /secondary/];
@@ -140,5 +141,6 @@ module.exports = {
     fancy,
     typography,
     forms,
+    lineClamp,
   ],
 };

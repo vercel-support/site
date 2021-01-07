@@ -15,12 +15,11 @@
     "@mdx-js/loader": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "@next/mdx": "^10.0.3",
-    "@plaiceholder/base64": "^1.0.0",
     "@plaiceholder/next": "^1.0.0",
     "@tailwindcss/forms": "^0.2.1",
     "autoprefixer": "^10.1.0",
     "date-fns": "^2.16.1",
-    "devmoji": "^2.1.13",
+    "@plaiceholder/base64": "^1.0.0",
     "fathom-client": "^3.0.0",
     "globby": "^11.0.1",
     "gray-matter": "^4.0.2",
@@ -48,6 +47,8 @@
     "use-dismiss": "^2.0.2"
   },
   "devDependencies": {
+    "devmoji": "^2.1.13",
+    "@tailwindcss/line-clamp": "^0.1.0",
     "@tailwindcss/typography": "^0.3.1",
     "@testing-library/dom": "^7.29.0",
     "@testing-library/jest-dom": "^5.11.6",
