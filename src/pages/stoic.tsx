@@ -1,6 +1,8 @@
+import * as React from "react";
 import Layout from "@components/layout";
 import { quotes, getRandomQuote } from "./api/stoic";
 import { useRouter, NextRouter } from "next/router";
+import { cx } from "@/styles";
 
 const meta = {
   title: "Random Stoic Quote",
@@ -10,12 +12,17 @@ const meta = {
 type Philosopher = "Marcus Aurelius" | "Seneca";
 type StoicProps = { author: Philosopher; text: string; source: string };
 
-const refreshData = (router: NextRouter) => {
-  router.replace(router.asPath);
-};
-
 const Stoic = ({ author, text, source }: StoicProps) => {
+  const [isRefreshing, setIsRefreshing] = React.useState(false);
   const router = useRouter();
+  const refreshData = (router: NextRouter) => {
+    setIsRefreshing(true);
+    router.replace(router.asPath);
+  };
+
+  React.useEffect(() => {
+    setIsRefreshing(false);
+  }, [author, text, source]);
 
   return (
     <Layout className="prose dark:prose-dark" meta={meta}>
@@ -23,7 +30,10 @@ const Stoic = ({ author, text, source }: StoicProps) => {
         <h2 className="flex items-center space-x-2">
           <span>Random Stoic Quote</span>
           <button
-            className="px-2 py-1 my-4 text-xs font-medium text-blue-400 border border-transparent rounded-md focus:ring focus:outline-none"
+            className={cx(
+              isRefreshing ? "animate-spin" : "focus:ring",
+              "px-2 py-1 my-4 text-xs font-medium text-blue-400 border border-transparent rounded-md focus:outline-none"
+            )}
             onClick={() => refreshData(router)}
           >
             <span className="sr-only">Refresh quote</span>
