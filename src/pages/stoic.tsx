@@ -31,7 +31,7 @@ const Stoic = ({ author, text, source }: StoicProps) => {
           <span>Random Stoic Quote</span>
           <button
             className={cx(
-              isRefreshing ? "animate-spin" : "focus:ring",
+              isRefreshing ? "animate-spin-reverse" : "focus:ring",
               "px-2 py-1 my-4 text-xs font-medium text-blue-400 border border-transparent rounded-md focus:outline-none"
             )}
             onClick={() => refreshData(router)}

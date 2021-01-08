@@ -22,6 +22,16 @@ module.exports = {
 
   theme: {
     extend: {
+      animation: {
+        "spin-reverse": "spin-reverse 1s linear infinite",
+      },
+      keyframes: {
+        "spin-reverse": {
+          to: {
+            transform: "rotate(-1turn)",
+          },
+        },
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {
