@@ -26,7 +26,7 @@ const Stoic = ({ author, text, source }: StoicProps) => {
 
   return (
     <Layout className="prose dark:prose-dark" meta={meta}>
-      <div>
+      <div className="-mt-16">
         <h2 className="flex items-center space-x-2">
           <span>Random Stoic Quote</span>
           <button
@@ -62,7 +62,24 @@ const Stoic = ({ author, text, source }: StoicProps) => {
       <div>
         <h2>Why Stoicism?</h2>
         <p>
-          Nothing's made a mark on me as of late quite the way Stoicism has.
+          Nothing's made a mark on me as of late quite the way Stoicism has. The
+          main reason I was interested in Stoicism was the idea that the Stoics
+          knew how to quell feelings of rage. I have battled my bad temper my
+          whole life, and the idea of learning to control it was appealing. The
+          most notable result of reading Stoic philosophy and journaling twice a
+          day has been a reduction in not instances of anger but a shortening in
+          how long those feelings of anger last. Where I use to stew in the
+          juices of anger for hours, I've been able to quickly stop myself, and
+          ask "Why are you angry? Did that person you feel offended you{" "}
+          <i>intend to offend you</i>? Or are they possibly having a bad day and
+          slighted you by mistake? Or is it even possible that you just
+          perceived it as a slight?"
+        </p>
+        <p>
+          There's an idea in Stoicism that you are not in control of anything
+          but your own thoughts. Because you're in control of your own mind
+          though, any offense you perceive is just that, your perception. If you
+          do not feel like a victim, then you are not a victim.
         </p>
       </div>
     </Layout>
