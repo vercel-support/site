@@ -28,7 +28,7 @@ const Stoic = ({ author, text, source }: StoicProps) => {
     <Layout className="prose dark:prose-dark" meta={meta}>
       <div>
         <div className="-mt-16">
-          <h2 className="flex items-center space-x-2">
+          <h2 className="flex items-center space-x-1">
             <span>Random Stoic Quote</span>
             <button
               className={cx(
