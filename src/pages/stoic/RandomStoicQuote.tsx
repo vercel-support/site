@@ -45,7 +45,7 @@ export default function RandomStoicQuote({ author, text, source }: StoicProps) {
         </h2>
         <blockquote className="whitespace-pre-line">{text}</blockquote>
         <i>
-          {author} - {source}
+          {author} {source ? `— ${source}` : null}
         </i>
       </div>
     </div>

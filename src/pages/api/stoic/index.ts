@@ -1,8 +1,9 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import seneca from "./seneca";
 import marcus from "./marcus";
-export const quotes = [...seneca, ...marcus];
-export type Philosopher = "Marcus Aurelius" | "Seneca";
+import epictetus from "./epictetus";
+export const quotes = [...seneca, ...marcus, ...epictetus];
+export type Philosopher = "Marcus Aurelius" | "Seneca" | "Epictetus";
 export type StoicProps = { author: Philosopher; text: string; source: string };
 
 export const getRandomQuote = (data: typeof quotes) =>
