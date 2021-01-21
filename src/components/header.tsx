@@ -75,7 +75,7 @@ export default function Header() {
             >
               <Card
                 style={{ minWidth: "14rem" }}
-                className="absolute right-0 p-4 text-blue-100 bg-blue-500"
+                className="absolute right-0 p-4 dark:text-blue-100 dark:bg-blue-500 dark:to-transparent dark:from-transparent text-white bg-gradient-to-r from-gray-700 via-gray-900 to-black"
               >
                 <ul ref={mobileMenuRef}>
                   {links.internal.map((link) => (
