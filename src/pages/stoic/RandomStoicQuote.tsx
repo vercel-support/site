@@ -7,7 +7,6 @@ export default function RandomStoicQuote({ author, text, source }: StoicProps) {
   const [isRefreshing, setIsRefreshing] = React.useState(false);
   const router = useRouter();
   const refreshData = (router: NextRouter) => {
-    console.log("refreshing");
     setIsRefreshing(true);
     router.replace(router.asPath);
   };
