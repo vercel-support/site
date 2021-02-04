@@ -1,4 +1,3 @@
-import Author from "@components/author";
 import Layout from "@components/layout";
 import OldPostWarning from "@components/OldPostWarning";
 import PostMeta from "@components/post_meta";
@@ -29,8 +28,6 @@ export default function Post({ source, data }) {
         </p>
 
         <div className="prose sm:prose-lg dark:prose-dark">{content}</div>
-
-        <Author />
       </div>
     </Layout>
   );
