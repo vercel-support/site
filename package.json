@@ -46,7 +46,7 @@
     "remark-slug": "^6.0.0",
     "swr": "^0.4.2",
     "use-dismiss": "^2.0.2",
-    "use-idb-keyval": "^0.2.1",
+    "use-idb-keyval": "^0.3.0",
     "webpack": "^5.24.1"
   },
   "devDependencies": {

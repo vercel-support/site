@@ -9417,10 +9417,10 @@ use-dismiss@^2.0.2:
   resolved "https://registry.yarnpkg.com/use-dismiss/-/use-dismiss-2.0.2.tgz#b322066fd5176db30830d09912c4ebd233764f29"
   integrity sha512-iZsD0pZFdcodOFeu33Al0arngkqMEkVA5opHfUZyW3IElVNuA017IU15NSnV0kNng7Th7eZwe4H0ffvcAhV3ug==
 
-use-idb-keyval@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/use-idb-keyval/-/use-idb-keyval-0.2.1.tgz#9fbfe53be2e39439e9b95dbae0c48ae5e96ccc00"
-  integrity sha512-hlr55CYw3m0K9PDEgIU3jI8704GUc8fyneQ5iQmnmuonWw/QVAjuKX58mncbbaM3eOuWTQ/To45h9Nrn75lqhw==
+use-idb-keyval@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/use-idb-keyval/-/use-idb-keyval-0.3.0.tgz#a77a0215db8e5eb67d0461ef255f4735538c8ee9"
+  integrity sha512-pC3eLXoCV4Opjqz0Y92DSb7Ml/ijcq+DBhObGXRu35/akJ27Prqnwv3Vl6jHqxUBW28YF+9ukA53fBhOIWTP5w==
 
 use-subscription@1.5.1:
   version "1.5.1"

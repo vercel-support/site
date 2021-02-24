@@ -1,5 +1,4 @@
 module.exports = {
-  //plugins: ["simple-import-sort"],
   root: true,
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -25,7 +24,7 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
-    "prettier/@typescript-eslint",
+    "plugin:react-hooks/recommended",
     "plugin:prettier/recommended", // Make sure this is always the last element in the array.
   ],
   rules: {
@@ -38,7 +37,6 @@ module.exports = {
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "react/no-unescaped-entities": "off",
-    //"simple-import-sort/sort": "error",
     "jsx-a11y/anchor-is-valid": [
       "error",
       {

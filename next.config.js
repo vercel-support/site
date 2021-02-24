@@ -22,6 +22,9 @@ const withMdx = require("@next/mdx")({
 });
 
 module.exports = withPlugins([withPWA, withMdx, withSvgr], {
+  future: {
+    webpack5: true,
+  },
   pageExtensions: ["js", "jsx", "ts", "tsx", "mdx", "bs.js"],
   async redirects() {
     return [

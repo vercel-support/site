@@ -6,23 +6,27 @@ import { ThemeProvider } from "next-themes";
 import { FormspreeProvider } from "@formspree/react";
 import * as Fathom from "fathom-client";
 import Head from "next/head";
-import Router from "next/router";
+import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import { MDXProvider } from "@mdx-js/react";
 import Image from "next/image";
 import Link from "@components/Link";
+import useIdb from "use-idb-keyval";
 
 const components = {
   Image,
   a: Link,
 };
 
-Router.events.on("routeChangeComplete", () => {
-  Fathom.trackPageview();
-});
-
 export default function App({ Component, pageProps }) {
+  const router = useRouter();
+  const [pageVisitCount, setPageVisitCount] = useIdb("pageVisitCount", 0);
   useEffect(() => {
+    router.events.on("routeChangeComplete", () => {
+      Fathom.trackPageview();
+      setPageVisitCount((prev: number) => prev + 1);
+    });
+
     Fathom.load("EXCJWHRT", {
       excludedDomains: ["vercel.app", "now.sh", "localhost"],
     });
